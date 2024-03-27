@@ -1,0 +1,100 @@
+country_event = {
+	id = 25015
+	title = "EVTNAME25015"
+	desc = "EVTDESC25015"
+
+	trigger = {
+		tag = YUA
+		NOT={has_country_flag=gengis_kan_academic}
+		civilized = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25015"
+		tech_school = gengis_kan_academic
+		set_country_flag=gengis_kan_academic
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 4851
+	title = "EVTNAME4851"
+	desc = "EVTDESC4851"
+
+	trigger = {
+		capital_scope = { continent = africa }
+		NOT={
+		    tag = EGY 
+		}
+		NOT={
+			tag = ARA 
+		}
+		NOT={has_country_flag=nigerlandia}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPA4851"
+		tech_school = nigerlandia
+		set_country_flag=nigerlandia
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 4852
+	title = "EVTNAME4852"
+	desc = "EVTDESC4852"
+
+	trigger = {
+		capital_scope = { continent = africa }
+		NOT={has_country_flag=nigerlandia2}
+		civilized = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPTA4852"
+		tech_school = nigerlandia
+		set_country_flag=nigerlandia2
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 4853
+	title = "EVTNAME4853"
+	desc = "EVTDESC4853"
+
+	trigger = {
+		OR={tag = ITA tag = ROM}
+		NOT={has_country_flag=italian_school}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPTA4853"
+		tech_school = italian_school
+		set_country_flag=italian_school
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

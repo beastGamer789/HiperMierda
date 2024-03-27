@@ -1,0 +1,63 @@
+country_event = {
+	id = 18502
+	title = "EVTNAME18502"
+	desc = "EVTDESC18502"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA18502"
+		ARA = {
+		    all_core = {
+			    add_core = TUR
+				remove_core = ARA
+			}
+		}
+		TUR = {
+		    inherit = ARA
+		}
+		any_country = {
+		    limit = {
+			    is_culture_group = arab
+				OR = {
+				    in_sphere = TUR
+				    vassal_of = TUR
+				}
+			}
+			annex_to = TUR
+		}
+	}
+}
+country_event = {
+	id = 18503
+	title = "EVTNAME18503"
+	desc = "EVTDESC18503"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Yes!"
+		prestige = 15
+		ARA = {all_core = {add_core = THIS}}
+		any_country = {
+		    limit = {
+			    is_culture_group = arab
+				OR = {
+				    in_sphere = TUR
+				    vassal_of = TUR
+				}
+			}
+			annex_to = TUR
+		}
+		ai_chance = {
+		    factor = 1
+        }
+	}
+	option = {
+		name = "EVTOPTA18503"
+		prestige = -30
+		ai_chance = {
+		    factor = 0
+        }
+	}
+}

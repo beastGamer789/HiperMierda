@@ -1,0 +1,45 @@
+
+political_decisions = {
+	claim_sahara_ald = {
+	    picture = algerian_sahara
+		potential = {
+			tag = ALD
+			NOT = {has_country_flag = claim_sahara_ald}
+		}
+		
+		allow = {
+		    prestige = 25
+			NOT = {year = 1870}
+		}
+		effect = {
+			prestige = 19
+			set_country_flag = claim_sahara_ald
+			ALD_1714 = {add_core = THIS}
+			ALD_1718 = {add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	grand_algeria = {
+	    picture = grand_algeria
+		potential = {
+			tag = ALD
+			NOT = {has_country_flag = claim_ald_neighbours}
+		}
+		
+		allow = {
+		    prestige = 45
+			FRA_1700 = {owned_by = THIS}
+		}
+		effect = {
+			prestige = 40
+			set_country_flag = claim_ald_neighbours
+			TUN_1726 = {add_core = THIS}
+			MOR_1683 = {add_core = THIS}
+			MOR_1688 = {add_core = THIS}
+			SIC_763 = {add_core = THIS}
+			SAR_765 = {add_core = THIS}
+		}
+	}
+}

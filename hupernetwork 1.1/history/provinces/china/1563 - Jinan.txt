@@ -1,0 +1,5 @@
+owner = QIN
+controller = QIN
+add_core = QIN
+trade_goods = cotton
+life_rating = 32

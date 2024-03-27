@@ -1,0 +1,76 @@
+country_event = {
+	id = 18547
+	title = "EVTNAME18547"
+	desc = "EVTDESC18547"
+	
+	trigger = {
+	    badboy = 1.65
+		NOT = {has_country_modifier = over_infamy_limit}
+	}
+	
+	mean_time_to_happen = {days=0}
+	immediate = {
+		add_country_modifier = {
+			name = over_infamy_limit
+			duration = -1
+		}}
+	option = {
+		name = "EVTOPTA18547"
+	}
+}
+
+country_event = {
+	id = 18548
+	title = "EVTNAME18548"
+	desc = "EVTDESC18548"
+	
+	trigger = {
+	    NOT={badboy = 1.65}
+		has_country_modifier = over_infamy_limit
+	}
+	
+	mean_time_to_happen = {days=0}
+	immediate = {remove_country_modifier = over_infamy_limit}
+	option = {
+		name = "EVTOPTA18548"
+	}
+}
+
+country_event = {
+	id = 18549
+	title = "EVTNAME18549"
+	desc = "EVTDESC18549"
+	
+	trigger = {
+	    war = yes
+		NOT = {has_country_modifier = noimmigration}
+	}
+	
+	mean_time_to_happen = {days=0}
+	immediate = {
+		add_country_modifier = {
+			name = noimmigration
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTA18549"
+	}
+}
+
+country_event = {
+	id = 18550
+	title = "EVTNAME18550"
+	desc = "EVTDESC18550"
+	
+	trigger = {
+	    war=no
+		has_country_modifier = noimmigration
+	}
+	
+	mean_time_to_happen = {days=0}
+	immediate = {remove_country_modifier = noimmigration}
+	option = {
+		name = "EVTOPTA18550"
+	}
+}

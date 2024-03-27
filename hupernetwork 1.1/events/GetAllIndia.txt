@@ -1,0 +1,121 @@
+country_event = {
+	id = 58301
+	title = "EVTNAME58301"
+	desc = "EVTDESC58301"
+	picture = rebellion
+
+	major = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA58301"
+		BRJ = {
+		    country_event = { id=58302 days=0 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB58301"
+		BRJ = {
+		    country_event = { id=58303 days=0 }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 58302
+	title = "EVTNAME58302"
+	desc = "EVTDESC58302"
+	picture = rebellion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA58302"
+		prestige = 4
+			1303 = {add_core = BRJ}
+			1312 = {add_core = BRJ}
+			1345 = {add_core = BRJ}
+			1235 = {add_core = BRJ}
+			1233 = {add_core = BRJ}
+			1227 = {add_core = BRJ}
+			1229 = {add_core = BRJ}
+			1230 = {add_core = BRJ}
+			1232 = {add_core = BRJ}
+			1228 = {add_core = BRJ}
+			1231 = {add_core = BRJ}
+			1226 = {add_core = BRJ}
+			1320 = {add_core = BRJ}
+			1224 = {add_core = BRJ}
+			1225 = {add_core = BRJ}
+			1223 = {add_core = BRJ}
+			1218 = {add_core = BRJ}
+			1219 = {add_core = BRJ}
+			1233 = {add_core = BRJ}
+			SIN = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			HND = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			SIK = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			BUR = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			KAL = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			MAK = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			PAN = {
+			    all_core = {
+					add_core = BRJ
+				}
+			}
+			ENG = {
+			    any_owned = {
+				    limit = {
+					    is_core = BRJ
+					}
+					secede_province = BRJ
+				}
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 58303
+	title = "EVTNAME58303"
+	desc = "EVTDESC58303"
+	picture = rebellion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA58303"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

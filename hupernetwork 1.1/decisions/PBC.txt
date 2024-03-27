@@ -1,0 +1,45 @@
+political_decisions = {
+
+	form_peru_bolivia = {
+
+	    picture = peru_bolivia
+	    potential = {
+		    #   
+			OR = {
+			    tag = PEU
+			    tag = SPU
+			    tag = BOL
+			}
+			NOT={exists = PBC}
+		}
+		allow = {
+		    OR = {
+			    PBC = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				AND = {PEU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}} BOL = {OR={tag = THIS vassal_of = THIS is_sphere_leader_of = THIS}}}
+				AND = {BOL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}} PEU = {OR={tag = THIS vassal_of = THIS is_sphere_leader_of = THIS}}}
+			}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			change_tag = PBC
+			any_country = {
+			    limit = {
+				    OR = { 
+                        accepted_culture = south_andean
+                        primary_culture = south_andean
+					}
+					OR = {
+					    vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

@@ -1,0 +1,205 @@
+army = {
+	name = "The Australia Garrison"
+	location = 2468
+	regiment = {
+		name= "1.8th Division"
+		type = hussar
+		home = 2468
+	}
+
+	regiment = {
+		name= "2.8th Division"
+		type = engineer
+		home = 2468
+	}
+
+	regiment = {
+		name= "3.8th Division"
+		type = infantry
+		home = 2497
+	}
+
+	regiment = {
+		name= "1.9th Division"
+		type = infantry
+		home = 2505
+	}
+
+	regiment = {
+		name= "2.9th Division"
+		type = infantry
+		home = 2475
+	}
+
+	regiment = {
+		name= "3.9th Division"
+		type = infantry
+		home = 2491
+	}
+
+	regiment = {
+		name= "1.1st Indian Division"
+		type = artillery
+		home = 2469
+	}
+
+	regiment = {
+		name= "2.1st Indian Division"
+		type = artillery
+		home = 2482
+	}
+
+	regiment = {
+		name= "3.1st Indian Division"
+		type = artillery
+		home = 2468
+	}
+
+	regiment = {
+		name= "1.2nd Indian Division"
+		type = artillery
+		home = 2473
+	}
+
+}
+
+navy = {
+	name = "East Asia Fleet"
+	location = 2468 #Calcutta
+	ship = {
+		name= "Essex"
+		type = manowar
+	}
+
+	ship = {
+		name= "Princess Charlotte"
+		type = manowar
+	}
+
+	ship = {
+		name= "Princess Royal"
+		type = frigate
+	}
+
+	ship = {
+		name= "Queen"
+		type = frigate
+	}
+
+	ship = {
+		name= "Hindostan"
+		type = frigate
+	}
+
+	ship = {
+		name= "Atlantic"
+		type = frigate
+	}
+
+	ship = {
+		name= "Barwell"
+		type = frigate
+	}
+
+	ship = {
+		name= "Hercules"
+		type = frigate
+	}
+
+}
+
+navy = {
+	name = "East Asia Transport Squadron"
+	location = 2468
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "6th Transport Flotilla"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "23th Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "24th Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "25th Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "26th Transport Flotilla"
+		type = clipper_transport
+	}
+}
+
+leader = {
+	name = "Hugh Gough"
+	date = 1830.1.1
+	type = land
+	personality = defence_2.1
+	background = attack_2.1
+	prestige = 0.1
+}
+
+leader = {
+	name = "George Pollock"
+	date = 1836.1.1
+	type = land
+	personality = defence_1.1
+	background = attack_1.1
+	prestige = 0.0
+}
+
+leader = {
+	name = "Charles Napier"
+	date = 1825.1.1
+	type = land
+	personality = defence_1.1
+	background = attack_2.1
+	prestige = 0.1
+}
+
+leader = {
+	name = "George Campbell of Inverneill"
+	date = 1836.1.1
+	type = land
+	personality = defence_2.1
+	background = attack_1.1
+	prestige = 0.0
+}
+
+leader = {
+	name = "Charles Austen"
+	date = 1836.1.1
+	type = sea
+	personality = defence_1.1
+	background = attack_2.1
+	prestige = 0.0
+}

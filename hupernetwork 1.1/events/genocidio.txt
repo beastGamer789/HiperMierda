@@ -1,0 +1,18 @@
+country_event = {
+	picture = Fascist
+	id = 9985
+	title = "EVTNAME9985"
+	desc = "EVTDESC9985"
+
+	trigger = {
+			has_country_flag = limpieza
+			NOT = { has_country_modifier = limpieza }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVTOPTA9985"
+		clr_country_flag = limpieza
+	}
+}

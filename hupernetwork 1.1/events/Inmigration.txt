@@ -1,0 +1,31 @@
+country_event = { 
+       id = 58019
+       title = "EVTNAME58019" 
+       desc = "EVTDESC58019" 
+	   trigger = {
+	       NOT = {
+			   has_country_flag = american_inmigration
+		   }
+		   OR = {
+		       capital_scope = { continent = south_america }
+		       capital_scope = { continent = oceania }
+			   AND = {
+			       capital_scope = { continent = north_america }
+				   NOT = {tag = USA}
+			   }
+		   }
+	   }
+	   
+	mean_time_to_happen = {
+		days = 1
+	}
+
+option = {
+     name = "EVTOPTA58019"
+	 
+	add_country_modifier = {
+		name = emigration_boom_rest
+		duration = -1
+	}
+	 set_country_flag = american_inmigration
+}}

@@ -1,0 +1,78 @@
+JAP = {
+	value = -200
+	truce_until="1837.1.1"
+}
+MGL = {
+	value = 200
+}
+
+army = {
+	name = "10th Green Standard Army"
+	location = 1612
+
+	regiment = {
+		name= "91st Green Standard"
+		type = hussar
+		home = 1508
+	}
+
+	regiment = {
+		name= "92nd Green Standard"
+		type = infantry
+		home = 1545
+	}
+
+	regiment = {
+		name= "93rd Green Standard"
+		type = infantry
+		home = 1612
+	}
+
+	regiment = {
+		name= "94th Green Standard"
+		type = infantry
+		home = 1509
+	}
+
+	regiment = {
+		name= "95th Green Standard"
+		type = infantry
+		home = 1546
+	}
+
+	regiment = {
+		name= "96th Green Standard"
+		type = infantry
+		home = 1613
+	}
+	
+    regiment = {
+		name= "103"
+		type = infantry
+		home = 1612
+	}
+	
+	regiment = {
+		name= "102"
+		type = infantry
+		home = 1612
+	}
+	
+	regiment = {
+		name= "101"
+		type = infantry
+		home = 1612
+	}
+	
+	regiment = {
+		name= "102"
+		type = artillery
+		home = 1612
+	}
+	
+	regiment = {
+		name= "103"
+		type = artillery
+		home = 1612
+	}
+}

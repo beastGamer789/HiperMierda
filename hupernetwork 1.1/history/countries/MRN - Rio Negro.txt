@@ -1,0 +1,50 @@
+capital = 2348
+primary_culture = patagonian
+religion = animist
+government = absolute_monarchy
+plurality = 25.0
+nationalvalue = nv_order
+literacy = 0.12
+non_state_culture_literacy = 0.02
+prestige = 5
+
+
+foreign_training1 = foreign_training5
+military_constructions1 = military_constructions4
+admin_reform1 = admin_reform5
+land_reform1 = land_reform4
+
+# Technologies
+navy_organisation = 1
+basic_farming = 1
+basic_mining = 1
+society_basicschools = 1
+strategic_mobility=1
+administrative_incivilizedresearch = 1
+society_schoolsmedicinesystem = 1
+administrative_bettertaxationsystem = 1
+administrative_newresearch = 1
+naval_bases = 1
+navy_organisation = 1
+infantry_incivilized = 1
+infantry_new_incivilized = 1
+infantry_newer_incivilized = 1
+society_semiadvancedschools = 1
+administrative_newresearch = 1
+
+slavery = no_slavery mili = mili_no
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = jefferson_method
+political_parties = underground_parties
+
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = no_pensions 
+school_reforms = no_schools

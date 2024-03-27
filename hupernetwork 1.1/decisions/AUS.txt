@@ -1,0 +1,130 @@
+political_decisions = {
+	enact_dual_monarchy = {
+		potential = {
+			tag = AUS
+			war = no
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = empire
+				government = prussian_constitutionalism
+			}
+			any_owned_province = {
+				is_core = HUN
+			}
+			NOT = {
+				has_country_flag = dual_monarchy_done
+			}
+		}
+	
+		allow = {
+			OR = {
+			    exists = ART
+			    exists = ITA
+			    exists = RME
+				nationalism_n_imperialism = 1
+			}
+			OR = {
+			    exists = GER
+			    exists = SGF
+			    exists = NGF
+			}
+		}
+	
+		effect = {
+			all_core = {
+				add_core = KUK
+			}
+			all_core = {
+				limit = {
+					NOT = {
+						culture = german
+					}
+				}
+				remove_core = AUS
+			}
+			any_pop = {
+				limit = {
+					culture = hungarian
+				}
+				militancy = -2
+			}
+			any_pop = {
+				limit = {
+					NOT = {
+						OR = {
+							culture = hungarian
+							culture = german
+						}
+					}
+				}
+				militancy = 2
+			}
+						
+			add_accepted_culture = hungarian
+		    add_accepted_culture = slovak
+		    add_accepted_culture = slovene
+		    add_accepted_culture = croat
+			change_tag = KUK
+			set_country_flag = dual_monarchy_done
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	the_grunderzeit = {
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			owns = 619
+			NOT = {
+				has_country_flag = grunderzeit_we_have_done
+			}
+		}
+		allow = {
+			iron_railroad = 1
+			cheap_iron = 1
+		}
+		effect = {
+			619 = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.2
+					}
+				}
+				life_rating = 5
+			}
+			prestige = 10
+			set_country_flag = grunderzeit_we_have_done
+		}
+	}
+	poland_auspart = {
+	    picture = aus_polandpart
+		potential = {
+			OR = {
+				tag = KUK
+				tag = DNB
+			}
+			owns = 703
+			NOT = {
+				has_country_flag = poland_auspart
+			}
+		}
+		allow = {
+		    prestige = 100
+			war = no
+			NOT = {average_militancy = 2.5}
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+		    badboy = 15
+		    add_accepted_culture = polish
+			RUS_713 = {add_core = THIS}
+			set_country_flag = poland_auspart
+		}
+	}
+}

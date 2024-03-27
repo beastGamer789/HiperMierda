@@ -1,0 +1,36 @@
+country_event = {
+	id = 60200
+	title = "EVTNAME60200"
+	desc = "EVTDESC60200"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA60200"
+		government = empire
+	}
+}
+country_event = {
+	id = 60201
+	title = "EVTNAME60201"
+	desc = "EVTDESC60201"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA60201"
+		government = roman_democracy
+	}
+}
+country_event = {
+	id = 60202
+	title = "EVTNAME60202"
+	desc = "EVTDESC60202"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA60202"
+		government = absolute_monarchy_roman
+	}
+}

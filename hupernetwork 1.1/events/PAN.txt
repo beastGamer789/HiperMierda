@@ -1,0 +1,36 @@
+country_event = {
+    id = 91749
+	title = "EVTNAME91749"
+	desc = "EVTDESC91749"
+	trigger={
+	   OR={tag = BHS tag=PAN tag=AFG}
+	   THIS = {war_with = ENG}
+	   NOT={has_country_modifier = the_british_agression}
+	}
+	mean_time_to_happen = {days=15}
+	immediate={
+        add_country_modifier = {
+            name = the_british_agression
+            duration = -1
+        }
+	}
+	option={
+	    name = "EVTOPA91749"
+	}
+}
+country_event = {
+    id = 91750
+	title = "EVTNAME91750"
+	desc = "EVTDESC91750"
+	trigger={
+	   has_country_modifier = the_british_agression
+	   war=no
+	}
+	mean_time_to_happen = {days=15}
+	immediate={
+        remove_country_modifier=the_british_agression
+	}
+	option = {
+	    name ="EVTOPA91750"
+	}
+}

@@ -1,0 +1,6 @@
+owner = MAA
+controller = MAA
+add_core = MAA
+add_core = CHL
+trade_goods = grain
+life_rating = 35

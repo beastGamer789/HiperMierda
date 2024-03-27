@@ -1,0 +1,8 @@
+owner = HOL
+controller = HOL
+add_core = HOL
+add_core = DEN
+add_core = SCH
+add_core = GER add_core = NGF
+trade_goods = cattle
+life_rating = 35

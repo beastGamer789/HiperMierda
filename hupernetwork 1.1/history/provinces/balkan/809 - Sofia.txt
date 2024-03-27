@@ -1,0 +1,12 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = BUL
+terrain = sofia
+trade_goods = iron
+life_rating = 35
+#state_building = {
+#	level = 1
+#	building = lumber_mill
+#	upgrade = yes
+#}

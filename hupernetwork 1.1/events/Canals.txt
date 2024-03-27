@@ -1,0 +1,78 @@
+country_event = {
+	id = 61000
+	title = "EVTNAME61000"
+	desc = "EVTDESC61000"
+		trigger = {
+			is_canal_enabled = 1
+			owns = 369
+			NOT = { has_country_modifier = kiel_canal_petition }
+		}
+	mean_time_to_happen = {
+		days = 0
+	}
+    immediate = {
+		add_country_modifier = {
+			name = kiel_canal_petition
+			duration = 365
+		}
+    }
+	option = {
+		name = "EVTOPA61000"
+		money = 250000
+		add_country_modifier = {
+			name = kiel_canal_petition
+			duration = 365
+		}
+}}
+	
+country_event = {
+	id = 61001
+	title = "EVTNAME61001"
+	desc = "EVTDESC61001"
+		trigger = {
+			has_global_flag = suez_canal_built
+			owns = 1755
+			is_canal_enabled = 2
+			NOT = { has_country_modifier = suez_canal_petition }
+		}
+	mean_time_to_happen = {
+		days = 0
+	}
+    immediate = {
+		add_country_modifier = {
+			name = suez_canal_petition
+			duration = 365
+		}
+    }
+	option = {
+		name = "EVTOPA61001"
+		money = 500000
+		add_country_modifier = {
+			name = suez_canal_petition
+			duration = 365
+		}
+		}
+}
+
+country_event = {
+	id = 61002
+	title = "EVTNAME61002"
+	desc = "EVTDESC61002"
+		trigger = {
+			owns = 1723
+			is_canal_enabled = 3
+			NOT = { has_country_modifier = panama_canal_petition }
+		}
+	mean_time_to_happen = {
+		days = 0
+	}
+    immediate = {
+		add_country_modifier = {
+			name = panama_canal_petition
+			duration = 365
+		}
+    }
+	option = {
+		name = "EVTOPA61002"
+			money = 500000
+}}

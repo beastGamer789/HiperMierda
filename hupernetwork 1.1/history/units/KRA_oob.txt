@@ -1,0 +1,20 @@
+leader = {
+	name = "Kiti el Creador Inmigrante"
+	date = 1836.1.1
+	type = land
+	personality = defence_4.1
+	background = attack_4.1
+	prestige = 1
+	picture = "pancho13"
+}
+
+army = {
+	name = "Armia Krakówiej"
+	location = 703
+	
+	regiment = {
+		name = "1. Brygada"
+		type = infantry
+		home = 703
+	}
+}

@@ -1,0 +1,18 @@
+country_event = {
+	id = 25002
+	title = "EVTNAME25002"
+	desc = "EVTDESC25002"
+	trigger = {
+	    is_independant = no
+		ai = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA25002"
+		prestige = -1000
+	}
+}

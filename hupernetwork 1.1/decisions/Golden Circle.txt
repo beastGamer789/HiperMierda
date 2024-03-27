@@ -1,0 +1,56 @@
+political_decisions = {
+    form_golden_circle = {
+	    picture = golden_circle
+	    potential = {
+		    tag = CSA
+			NOT = {
+			    exists = GCI
+			}
+		}
+		allow = {
+		    war = no
+			is_independant = yes
+		}
+		effect = {
+		    prestige = 25
+			badboy=10
+			change_tag = CHA
+			CSA={all_core={remove_core=CSA}}
+			ENG_2228={add_core=THIS}
+			ENG_2224={add_core=THIS}
+			ENG_203={add_core=THIS}
+			MEX={all_core={add_core=THIS}}
+			HAI={all_core={add_core=THIS}}
+			PRI={all_core={add_core=THIS}}
+			CUB={all_core={add_core=THIS}}
+            add_accepted_culture = afro_caribeno
+            add_accepted_culture = afro_caribbean
+            add_accepted_culture = afro_antillean
+            add_accepted_culture = caribeno
+            add_accepted_culture = mexican
+		}
+	}
+    expand_golden_circle = {
+	    picture = caribe
+	    potential = {
+		    tag = CSI
+			NOT={has_country_flag=expand_golden_circle}
+		}
+		allow = {
+		    war = no
+			all_core={owned_by=THIS}
+		}
+		effect = {
+		    prestige = 12
+			badboy=16
+			set_country_flag=expand_golden_circle
+			VNZ={all_core={add_core=THIS}}
+			UCA={all_core={add_core=THIS}}
+			CLM_2251={add_core=THIS}
+			CLM_1723={add_core=THIS}
+            add_accepted_culture = central_american
+            add_accepted_culture = north_andean
+            add_accepted_culture = north_andean
+		}
+	}
+}

@@ -1,0 +1,127 @@
+
+political_decisions = {
+
+	form_arabia = {
+
+		potential = {
+			ARA = { exists = no }
+			is_culture_group = arab
+		}
+		
+		allow = {
+			OR = { 
+				AND = { 
+					any_neighbor_country = {
+						OR = {
+						    in_sphere = this
+						    vassal_of = this
+						}
+						is_culture_group = arab
+						relation = { who = THIS value = 100 }
+					}
+				}
+				AND = {
+					tag = NEJ
+					HDJ = { 
+						all_core = { 
+							owned_by = THIS 
+						} 
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 20
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				remove_core = THIS 
+				add_core = ARA
+			}
+			change_tag = ARA
+			random_country = {
+				limit = {
+					is_culture_group = THIS
+					in_sphere = THIS
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				country_event = 111011928
+			}
+			add_accepted_culture = union
+			any_country = {
+				limit = {
+					is_culture_group = THIS
+				}
+				all_core = {
+					add_core = ARA
+				}
+			}
+			any_country = {
+				limit = {
+					is_culture_group = THIS
+					OR = {
+					    vassal_of = THIS
+					    in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	arabian_pan_nationalism =  {
+	    picture = arabian_flag
+	    potential = {
+		    tag = ARA
+			NOT={has_country_flag=arabian_pan_nationalism}
+		}
+		allow = {
+			is_greater_power = yes
+		    war = no
+		}
+		effect = {
+			any_country = {
+			    any_owned = {
+				    limit = { culture = arab}
+					add_core = ARA
+				}
+			}
+			PER = {
+			    all_core = {
+					add_core = ARA
+				}
+			}
+			TUR = {
+			    all_core = {
+					add_core = ARA
+				}
+			}
+			add_accepted_culture =  persian
+			add_accepted_culture =  azerbaijani
+			add_accepted_culture =  baluchi
+			add_accepted_culture =  turkish
+			add_accepted_culture =  north_caucasian
+			add_accepted_culture =  tatar
+		    add_accepted_culture = kurdish
+		    add_accepted_culture = bosniak
+		    add_accepted_culture = albanian
+		    add_accepted_culture = sudanese
+			PER = {all_core={add_core=THIS}}
+			CRI = {all_core={add_core=THIS}}
+			ARM = {all_core={add_core=THIS}}
+			GEO = {all_core={add_core=THIS}}
+			AZB = {all_core={add_core=THIS}}
+			RUS_1090 = {add_core=THIS}
+			RUS_1052 = {add_core=THIS}
+			
+			set_country_flag=arabian_pan_nationalism
+		}
+	}
+}

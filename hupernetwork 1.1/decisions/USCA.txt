@@ -1,0 +1,88 @@
+political_decisions = {
+    form_usca = {
+	    picture = usca
+	    potential = {
+		    NOT = {exists=UCA}
+			OR = {
+			     tag = GUA
+				 tag = HON
+				 tag = ELS
+				 tag = NIC
+				 tag = COS
+			}
+		}
+		allow = {
+		   ELS = {
+		       all_core = {
+			       owner = {
+				       OR = {
+					       tag = THIS
+						   vassal_of = THIS
+						   in_sphere = THIS
+					   }
+				   }
+		       }
+		   }
+		   COS = {
+		       all_core = {
+			       owner = {
+				       OR = {
+					       tag = THIS
+						   vassal_of = THIS
+						   in_sphere = THIS
+					   }
+				   }
+		       }
+		   }
+		   2186 = {owner = {OR = {tag = THIS vassal_of = THIS in_sphere = THIS}}}
+		   2187 = {owner = {OR = {tag = THIS vassal_of = THIS in_sphere = THIS}}}
+		   2188 = {owner = {OR = {tag = THIS vassal_of = THIS in_sphere = THIS}}}
+		   2189 = {owner = {OR = {tag = THIS vassal_of = THIS in_sphere = THIS}}}
+		   HON = {
+		       all_core = {
+			       owner = {
+				       OR = {
+					       tag = THIS
+						   vassal_of = THIS
+						   in_sphere = THIS
+					   }
+				   }
+		       }
+		   }
+		   NIC = {
+		       all_core = {
+			       owner = {
+				       OR = {
+					       tag = THIS
+						   vassal_of = THIS
+						   in_sphere = THIS
+					   }
+				   }
+		       }
+		   }
+		}
+		effect = {
+		    prestige = 24
+		    change_tag = UCA
+		}
+	}
+	
+    claim_neighbours_territories = {
+	    picture = batalla_epica
+	    potential = {
+		    tag = UCA
+			NOT = {has_global_flag = usca_claim_neighbours_territories}
+		}
+		allow = {
+		    is_greater_power = yes
+		}
+		effect = {
+		    prestige = 50
+			set_global_flag = usca_claim_neighbours_territories
+			MEX_2183 = {add_core = UCA}
+			CLM_1723 = {add_core = UCA}
+			CLM_2251 = {add_core = UCA}
+		}
+	}
+}	
+

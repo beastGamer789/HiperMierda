@@ -1,0 +1,789 @@
+ ##########################################
+# Issues that parties have.
+##########################################
+party_issues = {
+	trade_policy = {
+		protectionism = {
+			max_tariff = 1
+			min_tariff = -1
+		}
+		free_trade = {
+			max_tariff = 1
+			min_tariff = -1
+		}
+	}
+	economic_policy = {
+		laissez_faire = {
+			factory_owner_cost = 0.3
+			factory_output = 0.05
+			
+			rules = {
+				build_factory = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = yes
+				pop_open_factory = yes
+				delete_factory_if_no_input = yes
+				pop_build_factory_invest = yes
+				pop_expand_factory_invest = yes
+				open_factory_invest = yes
+				allow_foreign_investment = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+		interventionism = {
+			factory_owner_cost = 0.5
+			
+			rules = {
+				build_factory = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = yes
+				pop_open_factory = yes
+				delete_factory_if_no_input = yes
+				pop_build_factory_invest = yes
+				pop_expand_factory_invest = yes
+				open_factory_invest = yes
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				allow_foreign_investment = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+		worldbank = {
+			factory_owner_cost = 0
+			
+			rules = {
+				build_factory = no
+				expand_factory = no
+				open_factory = no
+				destroy_factory = no
+				build_railway = no
+				factory_priority = no
+				can_subsidise = yes
+				pop_build_factory = no
+				pop_expand_factory = no
+				pop_open_factory = no
+				delete_factory_if_no_input = no
+				pop_build_factory_invest = no
+				pop_expand_factory_invest = no
+				open_factory_invest = no
+				build_factory_invest = no
+				expand_factory_invest = no
+				build_railway_invest = no
+				allow_foreign_investment = no
+				can_invest_in_pop_projects = no
+			}
+		}
+		state_capitalism = {
+			min_tax = 0.25
+			factory_owner_cost = 0.6
+			rules = {
+				build_factory = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes		
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = no
+				pop_open_factory = yes
+				delete_factory_if_no_input = no
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+		planned_economy = {
+			min_tax = 0.5
+			
+			factory_throughput = 0.05
+			factory_owner_cost = -1	#negative costs, can't build.
+			rules = {
+				build_factory = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes		
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = no
+				pop_expand_factory = no
+				pop_open_factory = no				
+				delete_factory_if_no_input = no		
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+	}
+	citizenship_policy = {
+		residency = {
+			rules = { primary_culture_voting = yes }
+		}
+		limited_citizenship = {
+			rules = { culture_voting = yes }
+			global_assimilation_rate = 0.10
+		}
+		full_citizenship = {
+			rules = { all_voting = yes }
+			global_assimilation_rate = 0.25
+		}
+	}
+	war_policy = {
+		jingoism = {
+			max_military_spending = 1.0
+			supply_consumption = 0.1
+			war_exhaustion_effect = 0.5
+			is_jingoism = yes
+			cb_generation_speed_modifier = 0.3
+			mobilization_impact = 4
+			org_regain = 0.5
+			reinforce_speed = 0.5
+		}
+		pro_military = {
+			max_military_spending = 1.0
+			war_exhaustion_effect = 0.7
+			cb_generation_speed_modifier = 0.2
+			mobilization_impact = 3
+			org_regain = 0.25
+			reinforce_speed = 0.25
+		}
+		anti_military = {
+			max_military_spending = 0.75
+			supply_consumption = -0.25
+			war_exhaustion_effect = 1.2
+			cb_generation_speed_modifier = -0.2
+			mobilization_impact = 2
+			org_regain = -0.25
+			reinforce_speed = -0.25
+		}
+		pacifism = {
+			max_military_spending = 0.5
+			supply_consumption = -0.5
+			war_exhaustion_effect = 1.5
+			cb_generation_speed_modifier = -0.4
+			mobilization_impact = 1
+			org_regain = -0.5
+			reinforce_speed = -0.5
+		}
+	}
+}
+
+##########################################
+# Political reforms.
+##########################################
+political_reforms = {
+	slavery = {
+		yes_slavery = {
+			rules = { slavery_allowed = yes }
+		}
+		no_slavery = {
+			rules = { slavery_allowed = no }
+			allow = { 
+				OR = {
+					NOT = { 
+						has_country_flag = the_slavery_debate
+					}
+					year = 1875
+				}
+			}
+
+			global_immigrant_attract = 0.01
+		}
+	}
+	
+
+	vote_franschise = {
+		next_step_only = yes
+		none_voting = {
+			rich_vote = 0
+			middle_vote = 0
+			poor_vote = 0
+		}
+		landed_voting = {
+			rich_vote = 1
+			middle_vote = 0
+			poor_vote = 0
+			
+			global_immigrant_attract = 0.01
+		}
+		wealth_weighted_voting = {
+			rich_vote = 2
+			middle_vote = 1
+			poor_vote = 0
+			
+			global_immigrant_attract = 0.02
+		}
+		wealth_voting = {
+			rich_vote = 1
+			middle_vote = 1
+			poor_vote = 0
+			
+			global_immigrant_attract = 0.03
+		}
+		universal_weighted_voting = {
+			rich_vote = 3
+			middle_vote = 2
+			poor_vote = 1
+			
+			global_immigrant_attract = 0.04
+		}
+		universal_voting = {
+			rich_vote = 1
+			middle_vote = 1
+			poor_vote = 1
+			
+			global_immigrant_attract = 0.05
+		}
+	}
+	
+	
+	upper_house_composition = {
+		party_appointed = {
+			rules = { same_as_ruling_party = yes }
+		}
+		appointed = {
+			rules = { rich_only = yes }
+			global_immigrant_attract = 0.01
+		}
+		state_equal_weight = {
+			rules = { state_vote = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+			global_immigrant_attract = 0.02
+		}
+		population_equal_weight = {
+			rules = { population_vote = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+			global_immigrant_attract = 0.03
+		}
+	}
+
+	voting_system = {
+		first_past_the_post = {
+			rules = { largest_share = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+		}
+		jefferson_method = {
+			rules = { dhont = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}
+		}
+		proportional_representation = {
+			rules = { sainte_laque = yes }
+			allow = { 
+				NOT = { vote_franschise = none_voting }
+			}			
+		}
+	}
+	public_meetings = {
+		no_meeting = {
+			#no immediate effect
+		}
+		yes_meeting = {
+			issue_change_speed = 1
+			global_immigrant_attract = 0.01
+			suppression_points_modifier = -0.25
+		}
+
+	}
+	press_rights = {
+		next_step_only = yes
+		state_press = {
+			literacy_con_impact = -0.25
+			suppression_points_modifier = 0.25
+		}
+		censored_press = {
+			issue_change_speed = 0.25
+			global_immigrant_attract = 0.01
+		}
+		free_press = {
+			literacy_con_impact = 0.25
+			issue_change_speed = 0.5
+			global_immigrant_attract = 0.02
+			suppression_points_modifier = -0.25
+		}
+	}
+	trade_unions = {
+		next_step_only = yes
+		no_trade_unions = {
+			#no immediate effect
+		}
+		state_controlled = {
+			social_reform_desire = 0.1
+			global_immigrant_attract = 0.01
+		}
+		non_socialist = {
+			social_reform_desire = 0.2
+			global_immigrant_attract = 0.02
+		}
+		all_trade_unions = {
+			social_reform_desire = 0.3
+			global_immigrant_attract = 0.03
+		}
+	}
+	
+	political_parties = {
+		next_step_only = yes
+		underground_parties = {
+			ruling_party_support = 0.2
+			global_immigrant_attract = 0.01
+		}
+		harassment = {
+			ruling_party_support = 0.15
+			global_immigrant_attract = 0.02
+		}
+		gerrymandering = {
+			ruling_party_support = 0.10
+			global_immigrant_attract = 0.03
+		}
+		non_secret_ballots = {
+			ruling_party_support = 0.05
+			global_immigrant_attract = 0.04
+		}
+		secret_ballots = {
+			global_immigrant_attract = 0.05
+		}
+	}
+}
+
+##########################################
+# Social reforms.
+##########################################
+social_reforms = {
+	wage_reform = {
+		administrative = yes
+		next_step_only = yes
+		no_minimum_wage = {
+		}
+		trinket_wage = {
+			minimum_wage = 0.20
+			administrative_multiplier = 1
+			global_immigrant_attract = 0.01
+		}
+		low_minimum_wage = {
+			minimum_wage = 0.40
+			administrative_multiplier = 2
+			global_immigrant_attract = 0.02
+		}
+		acceptable_minimum_wage = {
+			minimum_wage = 0.60
+			administrative_multiplier = 3
+			global_immigrant_attract = 0.03
+		}
+		good_minimum_wage = {
+			minimum_wage = 0.80
+			administrative_multiplier = 4
+			global_immigrant_attract = 0.04
+		}
+	}
+	work_hours = {
+		administrative = yes
+		next_step_only = yes
+		no_work_hour_limit = {
+		}
+		fourteen_hours = {
+			factory_throughput = -0.05
+			poor_luxury_needs = -0.05
+			middle_luxury_needs = -0.05
+			administrative_multiplier = 1
+			global_immigrant_attract = 0.01
+		}
+		twelve_hours = {
+			factory_throughput = -0.10
+			poor_luxury_needs = -0.10
+			middle_luxury_needs = -0.10
+			administrative_multiplier = 2
+			global_immigrant_attract = 0.02
+		}
+		ten_hours = {
+			factory_throughput = -0.15
+			poor_luxury_needs = -0.15
+			middle_luxury_needs = -0.15
+			administrative_multiplier = 3
+			global_immigrant_attract = 0.03
+		}
+		eight_hours = {
+			factory_throughput = -0.20
+			poor_luxury_needs = -0.20
+			middle_luxury_needs = -0.20
+			administrative_multiplier = 4
+			global_immigrant_attract = 0.04
+		}
+	}
+	safety_regulations = {
+		administrative = yes
+		next_step_only = yes
+		no_safety = {
+		}
+		trinket_safety = {
+			factory_cost = 0.25
+			rich_everyday_needs = -0.05
+			middle_everyday_needs = -0.05
+			poor_everyday_needs = -0.05
+			administrative_multiplier = 1
+			global_immigrant_attract = 0.01
+		}
+		low_safety = {
+			factory_cost = 0.50
+			rich_everyday_needs = -0.10
+			middle_everyday_needs = -0.10
+			poor_everyday_needs = -0.10
+			administrative_multiplier = 2
+			global_immigrant_attract = 0.02
+		}
+		acceptable_safety = {
+			factory_cost = 0.75
+			rich_everyday_needs = -0.15
+			middle_everyday_needs = -0.15
+			poor_everyday_needs = -0.15
+			administrative_multiplier = 3
+			global_immigrant_attract = 0.03
+		}
+		good_safety = {
+			factory_cost = 1.0
+			rich_everyday_needs = -0.20
+			middle_everyday_needs = -0.20
+			poor_everyday_needs = -0.20
+			administrative_multiplier = 4
+			global_immigrant_attract = 0.04
+		}
+	}
+	
+	unemployment_subsidies = {
+		next_step_only = yes
+		no_subsidies = {
+		}
+		trinket_subsidies = {
+			unemployment_benefit = 0.25
+			global_immigrant_attract = 0.01
+		}
+		low_subsidies = {
+			unemployment_benefit = 0.50
+			global_immigrant_attract = 0.02
+		}
+		acceptable_subsidies = {
+			unemployment_benefit = 0.75
+			global_immigrant_attract = 0.03
+		}
+		good_subsidies = {
+			unemployment_benefit = 1.0
+			global_immigrant_attract = 0.04
+		}
+	}
+	pensions = {
+		next_step_only = yes
+		no_pensions = {
+		}
+		trinket_pensions = {
+			pension_level	= 0.05
+			global_immigrant_attract = 0.01
+		}
+		low_pensions = {
+			pension_level	= 0.10
+			global_immigrant_attract = 0.02
+		}
+		acceptable_pensions = {
+			pension_level	= 0.15
+			global_immigrant_attract = 0.03
+		}
+		good_pensions = {
+			pension_level	= 0.20
+			global_immigrant_attract = 0.04
+		}
+	}	
+	health_care = {
+		administrative = yes
+		next_step_only = yes
+		no_health_care = {
+		}
+		trinket_health_care = {
+			global_population_growth = 0.002
+			administrative_multiplier = 1
+			global_immigrant_attract = 0.01
+		}
+		low_health_care = {
+			global_population_growth = 0.004
+			administrative_multiplier = 2
+			global_immigrant_attract = 0.02
+		}
+		acceptable_health_care = {
+			global_population_growth = 0.006
+			administrative_multiplier = 3
+			global_immigrant_attract = 0.03
+		}
+		good_health_care = {
+			global_population_growth = 0.008
+			administrative_multiplier = 4
+			global_immigrant_attract = 0.04
+		}
+	}
+
+	school_reforms = {
+		next_step_only = yes
+		administrative = yes
+		no_schools = {
+		}
+		low_schools = {
+			education_efficiency_modifier = 0.1
+			global_immigrant_attract = 0.02
+			administrative_multiplier = 1
+		}
+		acceptable_schools = {
+			education_efficiency_modifier = 0.15
+			global_immigrant_attract = 0.03
+			administrative_multiplier = 2
+		}
+		good_schools = {
+			education_efficiency_modifier = 0.2
+			global_immigrant_attract = 0.04
+			administrative_multiplier = 3
+		}
+	}	
+}
+
+economic_reforms = {
+	land_reform1 = {
+		next_step_only = yes
+		land_reform2 = {
+			#
+		}
+		land_reform3 = {
+		     civilization_progress_modifier = 0.025
+			 on_execute = {effect = {activate_technology = basic_mining}}
+			technology_cost = 1500
+			#
+		}
+		land_reform4 = {
+		     civilization_progress_modifier = 0.05
+			 on_execute = {effect = {activate_technology = basic_farming}}
+			technology_cost = 1500
+			#
+		}
+		land_reform5 = {
+		     civilization_progress_modifier = 0.10
+			 on_execute = {effect = {activate_technology = intermedium_farming}}
+			technology_cost = 1500
+			#
+		}
+		land_reform6 = {
+		     civilization_progress_modifier = 0.15
+			 on_execute = {effect = {activate_technology = intermedium_mining}}
+			technology_cost = 1750
+			#
+		}
+		land_reform7 = {
+		     civilization_progress_modifier = 0.20
+			 on_execute = {effect = {activate_technology = advanced_farming}}
+			technology_cost = 1750
+			#
+		}
+		land_reform8 = {
+		     civilization_progress_modifier = 0.25
+			 on_execute = {effect = {activate_technology = advanced_mining}}
+			technology_cost = 2000
+			#
+		}
+	}
+	admin_reform1 = {
+		next_step_only = yes
+		admin_reform2 = {
+			#
+		}
+		admin_reform3 = {
+		     civilization_progress_modifier = 0.0125
+			 on_execute = {effect = {activate_technology = society_basicschools}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform4 = {
+		     civilization_progress_modifier = 0.05
+			 on_execute = {effect = {activate_technology = society_schoolsmedicinesystem}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform5 = {
+		     civilization_progress_modifier = 0.025
+			 on_execute = {effect = {activate_technology = society_semiadvancedschools}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform6 = {
+		     civilization_progress_modifier = 0.075
+			 on_execute = {effect = {activate_technology = society_advancedschoolsmedicinesystem}}
+			technology_cost = 1750
+			#
+		}
+		admin_reform7 = {
+		     civilization_progress_modifier = 0.10
+			 on_execute = {effect = {activate_technology = society_westernschools}}
+			technology_cost = 1750
+			#
+		}
+		admin_reform8 = {
+		     civilization_progress_modifier = 0.125
+			 on_execute = {effect = {activate_technology = society_westernschoolsmedicinesystem}}
+			technology_cost = 2000
+			#
+		}
+	}
+	admin_reform21 = {
+		next_step_only = yes
+		admin_reform22 = {
+			#
+		}
+		admin_reform23 = {
+		     civilization_progress_modifier = 0.0125
+			 on_execute = {effect = {activate_technology = administrative_incivilizedresearch}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform24 = {
+		     civilization_progress_modifier = 0.025
+			 on_execute = {effect = {activate_technology = administrative_bettertaxationsystem}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform25 = {
+		     civilization_progress_modifier = 0.05
+			 on_execute = {effect = {activate_technology = administrative_newresearch}}
+			technology_cost = 1500
+			#
+		}
+		admin_reform26 = {
+		     civilization_progress_modifier = 0.075
+			 on_execute = {effect = {activate_technology = administrative_advancedtaxationsystem}}
+			technology_cost = 1750
+			#
+		}
+		admin_reform27 = {
+		     civilization_progress_modifier = 0.10
+			 on_execute = {effect = {activate_technology = administrative_westernresearch}}
+			technology_cost = 1750
+			#
+		}
+		admin_reform28 = {
+		     civilization_progress_modifier = 0.125
+			 on_execute = {effect = {activate_technology = administrative_railroads}}
+			technology_cost = 2000
+			#
+		}
+	}
+}
+
+military_reforms = {
+	foreign_training1 = {
+		next_step_only = yes
+		
+		foreign_training2 = {
+		     #
+			research_points_on_conquer = 1
+		}
+		foreign_training3 = {
+		     civilization_progress_modifier = 0.025
+			 on_execute = {effect = {activate_technology = infantry_incivilized}}
+			 research_points_on_conquer = 1
+			technology_cost = 1500
+		     #
+		}
+		foreign_training4 = {
+		     civilization_progress_modifier = 0.05
+			 on_execute = {effect = {activate_technology = infantry_new_incivilized}}
+			 research_points_on_conquer = 1
+			technology_cost = 1500
+		     #
+		}
+		foreign_training5 = {
+		     civilization_progress_modifier = 0.10
+			 on_execute = {effect = {activate_technology = infantry_newer_incivilized}}
+			 research_points_on_conquer = 1
+			technology_cost = 1500
+		     #
+		}
+		foreign_training6 = {
+		     civilization_progress_modifier = 0.15
+			 on_execute = {effect = {activate_technology = incivilized_forts}}
+			 research_points_on_conquer = 1
+			technology_cost = 1750
+		     #
+		}
+		foreign_training7 = {
+		     civilization_progress_modifier = 0.20
+			 on_execute = {effect = {activate_technology = infantry_civilized_incivilized}}
+			 research_points_on_conquer = 1
+			technology_cost = 1750
+		     #
+		}
+		foreign_training8 = {
+		     civilization_progress_modifier = 0.25
+			 on_execute = {effect = {activate_technology = infantry_artillery_incivilized}}
+			 research_points_on_conquer = 1
+			technology_cost = 2000
+		     #
+		}
+	}
+	military_constructions1 = {
+		next_step_only = yes
+		military_constructions2 = {
+		    #
+		}
+		military_constructions3 = {
+		     civilization_progress_modifier = 0.025
+			 on_execute = {effect = {activate_technology = naval_bases}}
+			technology_cost = 1500
+		    #
+		}
+		military_constructions4 = {
+		     civilization_progress_modifier = 0.05
+			 on_execute = {effect = {activate_technology = navy_organisation}}
+			technology_cost = 1500
+		    #
+		}
+		military_constructions5 = {
+		    #
+		     civilization_progress_modifier = 0.10
+			 on_execute = {effect = {activate_technology = navy_newsystem}}
+			technology_cost = 1500
+		}
+		military_constructions6 = {
+		     civilization_progress_modifier = 0.15
+			 on_execute = {effect = {activate_technology = navy_organisationsystem}}
+			technology_cost = 1750
+		    #
+		}
+		military_constructions7 = {
+		     civilization_progress_modifier = 0.20
+			 on_execute = {effect = {activate_technology = navy_organisation2}}
+			technology_cost = 1750
+		    #
+		}
+		military_constructions8 = {
+		     civilization_progress_modifier = 0.25
+			 on_execute = {effect = {activate_technology = navy_westernorganisation}}
+			technology_cost = 2000
+		    #
+		}
+	}		
+}

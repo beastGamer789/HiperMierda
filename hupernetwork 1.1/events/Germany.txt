@@ -1,0 +1,279 @@
+country_event = {
+	id = 48201
+	title = "EVTNAME48201"
+	desc = "EVTDESC48201"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48201"
+		FROM = {country_event = { id=48202 days =0 }}
+		ai_chance = {
+			factor = 3
+            modifier = {
+                factor = 9999
+				AUS = {vassal_of = GER}
+            }
+		}
+	}
+	option = {
+		name = "EVTOPTB48201"
+		FROM = {country_event = { id=48203 days =0 }}
+		ai_chance = {
+			factor = 3
+            modifier = {
+                factor = 1
+                relation = { who = GER NOT = {value = 0} }
+            }
+            modifier = {
+                factor = 1
+                relation = { who = GER NOT = {value = 100} }
+            }
+		}
+	}
+}
+country_event = {
+	id = 48202
+	title = "EVTNAME48202"
+	desc = "EVTDESC48202"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48202"
+		inherit = AUS
+		badboy = 60
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "EVTOPTB48202"
+		734 = {add_core = LOM}
+		any_country = {
+            leave_alliance = AUS
+		}
+		AUS = {country_event={id=48205 days=0}}
+		any_owned = {
+		    limit = {OR={culture=german culture=german }}
+			add_core = GER
+		}
+		badboy = 20
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 48203
+	title = "EVTNAME48203"
+	desc = "EVTDESC48203"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48203"
+		set_global_flag = austria_refuses
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = germany_takes_austria
+			}
+			
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "EVTOPTB48203"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 48204
+	title = "EVTNAME48204"
+	desc = "EVTDESC48204"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+	    months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA48204"
+		inherit = AUS
+		badboy = 60
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB48204"
+		734 = {add_core = LOM}
+		any_country = {
+            leave_alliance = AUS
+		}
+		AUS = {country_event={id=48205 days=0}}
+		inherit = AUS
+		any_owned = {
+		    limit = {OR={culture=german culture=german }}
+			add_core = GER
+		}
+		badboy = 20
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 48205
+	title = "EVTNAME48205"
+	desc = "EVTDESC48205"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPA48205"
+		    any_owned = {
+			    limit = {is_core = SIE}
+				secede_province = SIE
+			}
+		    any_owned = {
+			    limit = {is_core = RUT}
+				secede_province = RUT
+			}
+		    any_owned = {
+			    limit = {is_core = CZH NOT={OR={culture=german culture=german }}}
+				secede_province = CZH
+			}
+		    any_owned = {
+			    limit = {is_core = SLO}
+				secede_province = SLO
+			}
+		    any_owned = {
+			    limit = {is_core = CRO}
+				secede_province = CRO
+			}
+		    any_owned = {
+			    limit = {is_core = POL NOT={is_core = GER}}
+				secede_province = POL
+			}
+		    any_owned = {
+			    limit = {is_core = TRE}
+				secede_province = TRE
+			}
+		    any_owned = {
+			    limit = {is_core = VEN}
+				secede_province = VEN
+			}
+		    any_owned = {
+			    limit = {is_core = LOM}
+				secede_province = LOM
+			}
+		    any_owned = {
+			    limit = {is_core = HUN}
+				secede_province = HUN
+			}
+		    any_owned = {
+			    limit = {is_core = SER}
+				secede_province = SER
+			}
+			FROM={inherit = THIS}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = 48206
+	title = "EVTNAME48206"
+	desc = "EVTDESC48206"
+	picture = rebellion
+	
+	trigger = {
+	    OR={tag = NGF tag = PRU}
+		OR = {
+		     owns = 571
+		     owns = 569
+		     owns = 586
+		     owns = 587
+		     owns = 588
+		     owns = 589
+		     owns = 590
+		     owns = 591
+		     owns = 593
+		     owns = 596
+		     owns = 597
+		     owns = 595
+		     owns = 598
+		     owns = 602
+		     owns = 600
+		     owns = 601
+		     owns = 592
+		     owns = 599
+		}
+		NOT={has_country_modifier = north_controlling_south}
+	}
+	
+	option = {
+		name = "EVTOPTA48206"
+		add_country_modifier = {
+		    name = north_controlling_south
+		    duration = -1
+		}
+	}
+}
+country_event = {
+	id = 48207
+	title = "EVTNAME48207"
+	desc = "EVTDESC48207"
+	picture = rebellion
+	
+	trigger = {
+	    OR = {
+	    tag = GER
+		    NOT={
+		        OR = {
+		            owns = 571
+		            owns = 569
+		            owns = 586
+		            owns = 587
+		            owns = 588
+		            owns = 589
+		            owns = 590
+		            owns = 591
+		            owns = 593
+		            owns = 596
+		            owns = 597
+		            owns = 595
+		            owns = 598
+		            owns = 602
+		            owns = 600
+		            owns = 601
+		            owns = 592
+		            owns = 599
+		        }
+		    }
+		}
+		has_country_modifier = north_controlling_south
+	}
+	
+	option = {
+		name = "EVTOPTA48207"
+		remove_country_modifier = north_controlling_south
+	}
+}

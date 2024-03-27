@@ -1,0 +1,57 @@
+
+political_decisions = {
+
+	australia_to_indonesia = {
+        picture=indonesia_apply
+		potential = {
+			tag = AST
+	        NOT={has_country_flag=australia_to_indonesia}
+		}
+		
+		allow = {
+		    is_independant=yes
+		}
+		effect = {
+			prestige = 20
+			set_country_flag=australia_to_indonesia
+			INO={all_core={add_core=THIS}}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	canada_to_usa = {
+        picture=usa
+		potential = {
+			tag = CAN
+	        NOT={has_country_flag=canada_to_usa}
+		}
+		
+		allow = {
+		    is_independant=yes
+		}
+		effect = {
+			prestige = 20
+			set_country_flag=canada_to_usa
+			set_country_flag=commonwealth_to_usa
+			add_accepted_culture=yankee
+			add_accepted_culture=french_canadian
+			add_accepted_culture=boer
+			add_accepted_culture=dixie
+			USA_201 = {add_core=THIS}
+			USA_2556 = {add_core=THIS}
+			USA_218 = {add_core=THIS}
+			USA_211 = {add_core=THIS}
+			USA_220 = {add_core=THIS}
+			USA_219 = {add_core=THIS}
+			USA_231 = {add_core=THIS}
+			USA_223 = {add_core=THIS}
+			USA_247 = {add_core=THIS}
+			USA_243 = {add_core=THIS}
+			USA_232 = {add_core=THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

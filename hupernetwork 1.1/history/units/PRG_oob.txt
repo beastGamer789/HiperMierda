@@ -1,0 +1,81 @@
+leader = {
+	name = "Carlos Antonio López"
+	date = 1836.1.1
+	type = land
+	personality = defence_4.1
+	background = attack_4.1
+}
+
+army = {
+	name = "Ejército del Paraguay"
+	location = 2339
+	regiment = {
+		name= "1.1ra División de Infantería"
+		type = hussar
+		home = 2339
+	}
+
+	regiment = {
+		name= "2.1ra División de Infantería"
+		type = infantry
+		home = 2339
+	}
+	
+		regiment = {
+		name= "3.1ra División de Infantería"
+		type = infantry
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "4.1ra División de Infantería"
+		type = infantry
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "5.1ra División de Infantería"
+		type = infantry
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "6.1ra División de Infantería"
+		type = artillery
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "7.1ra División de Infantería"
+		type = artillery
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "8.1ra División de Infantería"
+		type = artillery
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "9.1ra División de Infantería"
+		type = artillery
+		home = 2339
+	}
+
+
+	regiment = {
+		name= "10.1ra División de Infantería"
+		type = artillery
+		home = 2339
+	}
+
+
+}
+

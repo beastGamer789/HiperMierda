@@ -1,0 +1,37 @@
+political_decisions = {
+	anchluss = {
+    picture = austria
+	    potential = {
+		    tag = GER
+			OR={
+			exists = AUS
+			exists = KUK
+			}
+			NOT = {has_global_flag = anchluss}
+		}
+		allow = {
+			war = no
+			OR={
+			AUS = {
+			    OR = {
+				    in_sphere = THIS
+					vassal_of = THIS
+				}
+			}
+			KUK = {
+			    OR = {
+				    in_sphere = THIS
+					vassal_of = THIS
+				}
+			}
+			}
+		    #
+		}
+		effect = {
+		    #
+			set_global_flag = anchluss
+			KUK = {country_event = { id=48201 days =0 }}
+			AUS = {country_event = { id=48201 days =0 }}
+		}
+	}	
+}

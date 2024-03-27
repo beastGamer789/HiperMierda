@@ -1,0 +1,84 @@
+political_decisions = {
+	accept_the_balkans = {
+	    picture = balkans
+	    potential = {
+		    #   
+			NOT = {has_country_flag = accept_the_balkans}
+			tag = BYZ
+		}
+		allow = {
+		    prestige = 50
+			ruling_party_ideology = socialist
+			war = no
+			TUR_809 = {owned_by = THIS}
+			TUR_810 = {owned_by = THIS}
+			TUR_806 = {owned_by = THIS}
+			TUR_853 = {owned_by = THIS}
+			TUR_803 = {owned_by = THIS}
+			MON_2582 = {owned_by = THIS}
+			SER_794 = {owned_by = THIS}
+			TUR_788 = {owned_by = THIS}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			set_country_flag = accept_the_balkans
+			add_accepted_culture = serb
+			add_accepted_culture = bulgarian
+			add_accepted_culture = albanian
+			add_accepted_culture = bosniak
+			add_accepted_culture = romanian
+			TUR_809 = {add_core = THIS}
+			TUR_810 = {add_core = THIS}
+			TUR_806 = {add_core = THIS}
+			TUR_853 = {add_core = THIS}
+			TUR_803 = {add_core = THIS}
+			MON_2582 = {add_core = THIS}
+			SER_794 = {add_core = THIS}
+			TUR_788 = {add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_ninth_crusade = {
+	    picture = jerusalen
+	    potential = {
+		    #   
+			NOT = {has_country_flag = the ninth crusade}
+			tag = BYZ
+		}
+		allow = {
+		    prestige = 250
+			owns = 876
+			owns = 1745
+		    #
+		}
+		effect = {
+		    #
+			badboy = 25
+			TUR_881 = {add_core = THIS}	
+			TUR_884 = {add_core = THIS}	
+			TUR_876 = {add_core = THIS}	
+			TUR_885 = {add_core = THIS}	
+			TUR_889 = {add_core = THIS}	
+			EGY_897 = {add_core = THIS}	
+			EGY_903 = {add_core = THIS}	
+			EGY_915 = {add_core = THIS}	
+			EGY_921 = {add_core = THIS}	
+			EGY_910 = {add_core = THIS}	
+			EGY_1746 = {add_core = THIS}	
+			EGY_1828 = {add_core = THIS}	
+			EGY_1750 = {add_core = THIS}	
+			EGY_1762 = {add_core = THIS}	
+			EGY_1753 = {add_core = THIS}	
+			EGY_1758 = {add_core = THIS}	
+			EGY_1771 = {add_core = THIS}	
+			set_country_flag = the ninth crusade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

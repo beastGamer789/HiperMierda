@@ -1,0 +1,57 @@
+political_decisions = {
+	
+	pop_growth_500k = {
+	    picture = popgrowth
+	    potential = {
+			money = 500000
+			NOT={has_country_modifier = pop_growth_cooldown}
+		}
+		effect = {
+		    money = -500000
+		    add_country_modifier = {
+			    name = pop_growth_cooldown
+			    duration = 365
+		    }
+		    any_pop={
+		        limit={OR={is_accepted_culture=yes is_primary_culture =yes}} 
+		    	reduce_pop = 1.003
+		    }
+		}
+	}
+	pop_growth_1M = {
+	    picture = popgrowth
+	    potential = {
+			money = 1000000
+			NOT={has_country_modifier = pop_growth_cooldown}
+		}
+		effect = {
+		    money = -1000000
+		    add_country_modifier = {
+			    name = pop_growth_cooldown
+			    duration = 365
+		    }
+		    any_pop={
+		        limit={OR={is_accepted_culture=yes is_primary_culture =yes}} 
+			    reduce_pop = 1.006
+		    }
+		}
+	}
+	pop_growth_2M = {
+	    picture = popgrowth
+	    potential = {
+			NOT={has_country_modifier = pop_growth_cooldown}
+			money = 2000000
+		}
+		effect = {
+		    money = -2000000
+		    add_country_modifier = {
+			    name = pop_growth_cooldown
+			    duration = 365
+		    }
+		    any_pop={
+		        limit={OR={is_accepted_culture=yes is_primary_culture =yes}} 
+			    reduce_pop = 1.012
+		    }
+		}
+	}
+}

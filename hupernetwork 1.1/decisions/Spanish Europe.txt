@@ -1,0 +1,110 @@
+political_decisions = {
+####################################################################
+    spanish_supremacy = {
+	    picture = spanish_empireflag
+	    potential = {
+		    OR = {
+			    tag = IBE
+			    tag = SCM
+			    tag = SPC
+			}
+		    NOT = {
+		        has_country_flag = spanish_supremacy
+		    }
+			owns = 762
+			owns = 757
+			owns = 754
+		}
+		allow = {
+		    year = 1838
+		}
+		effect = {
+		    prestige = 20
+			TUS = {all_core = {add_core = THIS}}
+			766 = {add_core = THIS}
+			BEL_394 = {add_core = THIS}
+			BEL_387 = {add_core = THIS}
+			SIC = {all_core = {add_core = THIS}}
+			397 = {add_core = THIS}
+			765 = {add_core = THIS}
+			set_country_flag = spanish_supremacy
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    spanish_crown = {
+	    picture = spanish_empireflag
+	    potential = {
+			NOT = {exists = SCR has_country_flag = form_spanish_crown}
+			has_country_flag = spanish_supremacy
+		}
+		allow = {
+			TUS = {all_core = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}}
+			766 = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}
+			BEL_394 = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}
+			BEL_387 = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}
+			397 = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}
+			765 = {owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}
+			SIC = {all_core={owner = {OR={vassal_of = THIS in_sphere = THIS tag = THIS}}}}
+		}
+		effect = {
+		    prestige = 24
+		    change_tag = SCR
+			TUS = {all_core = {add_core = THIS}}
+			766 = {add_core = THIS}
+			BEL_394 = {add_core = THIS}
+			BEL_387 = {add_core = THIS}
+			397 = {add_core = THIS}
+			765 = {add_core = THIS}
+			SIC = {all_core = {add_core = THIS}}
+			SPC = {all_core = {remove_core = SPC}}
+			SCM = {all_core = {remove_core = SCM}}
+			set_country_flag = form_spanish_crown
+			add_accepted_culture = wallonian
+			add_accepted_culture = flemish
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS}}
+				any_owned = {
+				    limit = {is_core = THIS}
+					secede_province = THIS
+				}
+			}
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS} OR={
+				accepted_culture = flemish
+				accepted_culture = wallonian
+				accepted_culture = italian
+				primary_culture = flemish
+				primary_culture = wallonian
+				primary_culture = italian
+				}}
+			}
+				country_event = { id=11101 days=0 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    spanish_asimilation = {
+	    picture = spanish_empireflag
+	    potential = {
+			has_country_flag = spanish_supremacy
+			NOT={has_country_flag=spanish_asimilation}
+		}
+		allow = {
+		    prestige = 80
+			ITA = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+			war = no
+		    NOT={badboy = 15}
+		}
+		effect = {
+		    prestige = 16
+			add_accepted_culture = italian
+			set_country_flag=spanish_asimilation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+    }
+}

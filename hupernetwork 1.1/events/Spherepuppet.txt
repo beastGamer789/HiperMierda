@@ -1,0 +1,115 @@
+country_event = {
+	id = 809198
+	title = "EVTNAME809198"
+	desc = "EVTDESC809198"
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "EVTOPTB809198"
+		FROM={casus_belli = { target = THIS type = make_puppet months = 12 }}
+		ai_chance = {
+			modifier = {
+				factor = 100000000
+				NOT = {
+					relation = { who = FROM value = 195 }
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA809198"
+		FROM = {inherit = THIS}
+		FROM = {release_vassal = THIS}
+		FROM = {diplomatic_influence = { who = THIS value = 300 level = 5 influence_value = 100}}
+		FROM = {relation = { who = THIS value = -400}}
+        ai_chance = {
+			modifier = {
+				factor = 100000000
+					relation = { who = FROM value = 195 }
+			}
+		}
+	}
+}
+country_event = {
+	id = 809199
+	title = "EVTNAME809199"
+	desc = "EVTDESC809199"
+	
+	trigger = {
+	    has_country_flag=puppet_sphere
+		NOT={has_country_modifier = puppet_sphere}
+	}
+	mean_time_to_happen = {days=0}
+
+	option = {
+		name = "EVTOPTA809199"
+		clr_country_flag=puppet_sphere
+		any_country = {
+			limit = {
+				   in_sphere = THIS
+				is_vassal = no
+				exists = yes
+			}
+			country_event = {id=809198 days=0}
+		}
+	}
+}
+
+country_event = {
+	id = 809200
+	title = "EVTNAME809200"
+	desc = "EVTDESC809200"
+	
+	trigger = {
+	    has_country_flag=puppet_sphere_conquer
+		NOT={has_country_modifier = puppet_sphere_conquer}
+	}
+	mean_time_to_happen = {days=0}
+
+	option = {
+		name = "EVTOPTA809200"		
+		clr_country_flag=puppet_sphere_conquer
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				OR={
+				civilized=no
+				substate_of = THIS
+				}
+			}
+			country_event = {id=809201 days=0}
+		}
+	}
+}
+
+country_event = {
+	id = 809201
+	title = "EVTNAME809201"
+	desc = "EVTDESC809201"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA809201"
+		ai_chance = {
+			modifier = {
+				factor = 100000000
+				NOT = {
+					relation = { who = FROM value = 195 }
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB809201"
+		FROM = {inherit = THIS}
+        ai_chance = {
+			modifier = {
+				factor = 100000000
+					relation = { who = FROM value = 195 }
+			}
+		}
+	}
+}

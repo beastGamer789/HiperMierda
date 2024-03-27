@@ -1,0 +1,14 @@
+country_event={
+    id=914618
+	title="EVTNAME914618"
+	desc = "EVTDESC914618"
+	trigger = {
+	    tag = FRA
+		300={controlled_by=THIS}
+	}
+	mean_time_to_happen={days=0}
+	fire_only_once = yes
+	option={
+	    name="EVTOPA914618"
+	}
+}

@@ -1,0 +1,115 @@
+political_decisions = {
+	restore_mexican_empire = {
+		potential = {
+			tag = MEX
+			government = democracy
+			liberal = 20
+			NOT = {
+				has_country_flag = we_have_tried_this_once
+			}
+		}
+		allow = {
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = reactionary
+			}
+			conservative = 40
+			average_militancy = 4
+		}
+		effect = {
+			government = hms_government
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 8
+				}
+			}
+			set_country_flag = we_have_tried_this_once
+		}
+	}
+	mex_manifest_destinity = {
+	    picture = batalla_epica
+		potential = {
+			tag = MEX
+			war = no
+			NOT = {
+				has_country_flag = mexican_batalla_epica
+			}
+		}
+	
+		allow = {
+			owns = 134
+			THIS = {
+			    all_core = {
+				    owned_by = THIS
+				}
+			}
+			prestige = 40
+			nationalism_n_imperialism = 1
+		}
+	
+		effect = {
+		    prestige = 10
+			set_country_flag = mexican_batalla_epica
+		    79 = {add_core = THIS}
+		    78 = {add_core = THIS}
+		    80 = {add_core = THIS}
+		    82 = {add_core = THIS}
+		    81 = {add_core = THIS}
+		    83 = {add_core = THIS}
+		    92 = {add_core = THIS}
+		    91 = {add_core = THIS}
+		    93 = {add_core = THIS}
+		    114 = {add_core = THIS}
+		    115 = {add_core = THIS}
+		    113 = {add_core = THIS}
+		    116 = {add_core = THIS}
+		    111 = {add_core = THIS}
+		    112 = {add_core = THIS}
+		    110 = {add_core = THIS}
+		    139 = {add_core = THIS}
+		    141 = {add_core = THIS}
+		    142 = {add_core = THIS}
+		    143 = {add_core = THIS}
+		    144 = {add_core = THIS}
+		    145 = {add_core = THIS}
+		    146 = {add_core = THIS}
+		    147 = {add_core = THIS}
+		    148 = {add_core = THIS}
+		    149 = {add_core = THIS}
+		    150 = {add_core = THIS}
+		    153 = {add_core = THIS}
+		    152 = {add_core = THIS}
+		    151 = {add_core = THIS}
+		    154 = {add_core = THIS}
+		    156 = {add_core = THIS}
+		    155 = {add_core = THIS}
+		    158 = {add_core = THIS}
+		    157 = {add_core = THIS}
+		    118 = {add_core = THIS}
+		    131 = {add_core = THIS}
+		    130 = {add_core = THIS}
+		    129 = {add_core = THIS}
+		    108 = {add_core = THIS}
+		    109 = {add_core = THIS}
+		    106 = {add_core = THIS}
+		    107 = {add_core = THIS}
+		    126 = {add_core = THIS}
+		    128 = {add_core = THIS}
+		    127 = {add_core = THIS}
+		    125 = {add_core = THIS}
+		    123 = {add_core = THIS}
+		    124 = {add_core = THIS}
+		    122 = {add_core = THIS}
+		    121 = {add_core = THIS}
+		    120 = {add_core = THIS}
+		    117 = {add_core = THIS}
+		    119 = {add_core = THIS}
+			UCA = {
+			    all_core = {
+				    add_core = THIS
+				}
+			}
+		}
+	}	
+}

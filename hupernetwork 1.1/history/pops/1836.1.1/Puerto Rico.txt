@@ -1,0 +1,187 @@
+#Puerto Rico (89000)	
+#Ruled by Spain 1836 
+#Puerto Rico (89000/89000 POPS)
+2222 = {
+	aristocrats = {
+		culture = spanish
+		religion = catholic
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = spanish
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = spanish
+		religion = catholic
+		size = 2500
+	}
+
+	artisans = {
+		culture = spanish
+		religion = catholic
+		size = 50
+	}
+
+	soldiers = {
+		culture = spanish
+		religion = catholic
+		size = 50
+	}
+
+	aristocrats = {
+		culture = caribeno
+		religion = catholic
+		size = 500
+	}
+
+	bureaucrats = {
+		culture = caribeno
+		religion = catholic
+		size = 25
+	}
+
+	clergymen = {
+		culture = caribeno
+		religion = catholic
+		size = 3000
+	}
+
+	artisans = {
+		culture = caribeno
+		religion = catholic
+		size = 450
+	}
+
+	soldiers = {
+		culture = caribeno
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = caribeno
+		religion = catholic
+		size = 40000
+	}
+
+	artisans = {
+		culture = caribeno
+		religion = catholic
+		size = 3200
+	}
+
+	soldiers = {
+		culture = caribeno
+		religion = catholic
+		size = 2000
+	}
+
+	farmers = {
+		culture = caribeno
+		religion = catholic
+		size = 48700
+	}
+
+	slaves = {
+		culture = caribeno
+		religion = catholic
+		size = 1
+	}
+
+}
+3251 = {
+	aristocrats = {
+		culture = spanish
+		religion = catholic
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = spanish
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = spanish
+		religion = catholic
+		size = 250
+	}
+
+	artisans = {
+		culture = spanish
+		religion = catholic
+		size = 50
+	}
+
+	soldiers = {
+		culture = spanish
+		religion = catholic
+		size = 1000
+	}
+
+	aristocrats = {
+		culture = caribeno
+		religion = catholic
+		size = 500
+	}
+
+	bureaucrats = {
+		culture = caribeno
+		religion = catholic
+		size = 125
+	}
+
+	clergymen = {
+		culture = caribeno
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = caribeno
+		religion = catholic
+		size = 450
+	}
+
+	soldiers = {
+		culture = caribeno
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = caribeno
+		religion = catholic
+		size = 20000
+	}
+
+	artisans = {
+		culture = caribeno
+		religion = catholic
+		size = 2200
+	}
+
+	soldiers = {
+		culture = caribeno
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = caribeno
+		religion = catholic
+		size = 20700
+	}
+
+	slaves = {
+		culture = caribeno
+		religion = catholic
+		size = 0
+	}
+
+}

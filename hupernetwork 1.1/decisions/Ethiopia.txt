@@ -1,0 +1,54 @@
+political_decisions = {
+####################################################################
+    eth_get_djibouty = {
+	    picture = yibuty
+	    potential = {
+		    OR = {
+			    tag = AKS
+			    tag = ETH
+			}
+			NOT = { has_country_flag = eth_get_djibouty }
+		}
+		allow = {
+		    war = no
+			prestige = 13
+		}
+		effect = {			
+		    prestige = 1
+			1875 = {secede_province = THIS}
+			1875 = {add_core = THIS}
+			set_country_flag = eth_get_djibouty
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    form_aksum = {
+	    picture = aksum
+	    potential = {
+		    tag = ETH
+			NOT = { exists = AKS }
+		}
+		allow = {
+		    war = no
+			prestige = 35
+		}
+		effect = {			
+		    prestige = 21
+			change_tag = AKS
+			add_accepted_culture = african_minor
+			add_accepted_culture = somali
+			EGY_1827 = {add_core = THIS}
+			ENG_1848 = {add_core = THIS}
+			EGY_1834 = {add_core = THIS}
+			EGY_1838 = {add_core = THIS}
+			1868 = {add_core = THIS}
+			ENG_1868 = {add_core = THIS}
+			YEM_1173 = {add_core = THIS}
+			HDJ_1151 = {add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

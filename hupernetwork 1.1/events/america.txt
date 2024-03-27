@@ -1,0 +1,22 @@
+country_event = {
+    id = 9919
+    title = "EVTNAME9919"
+    desc = "EVTDESC9919"
+
+    trigger = {
+        tag = PRG
+        NOT = { has_country_flag = paraguayan_army }
+    }
+    mean_time_to_happen = {
+        days = 0
+    }
+    immediate = { set_country_flag = paraguayan_army }
+    option = {
+        name = "EVTOPTA9919"
+        prestige = 15
+        add_country_modifier = {
+            name = paraguayan_army
+            duration = -1
+        }
+    }
+}

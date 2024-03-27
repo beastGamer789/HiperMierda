@@ -1,0 +1,97 @@
+political_decisions = {
+
+form_japan_empire = {
+        picture = japan
+		potential = {
+		    NOT = {exists = IMJ}
+		    NOT = {exists = JAP}
+			NOT = {exists = TKG}
+			OR = {
+			    tag = CHO
+			    tag = KAG
+			    tag = SAT
+			    tag = YZW
+			    tag = SEN
+			    tag = TOS
+			}
+			war = no
+				}
+			effect = {
+				change_tag = IMJ
+			}
+		ai_will_do = {
+			factor = 100
+		}	
+		
+	}
+form_japan = {
+        picture = japan
+		potential = {
+		    NOT = {exists = JAP}
+			tag = IMJ
+				}
+				allow = {
+				    RYU = {all_core={owner={OR={tag=THIS in_sphere=THIS}}}}
+				    IMJ = {all_core={owner={tag=THIS}}}
+				    KOR = {all_core={owner={OR={tag=THIS vassal_of = THIS}}}}
+				}
+			effect = {
+			    prestige = 50
+				change_tag = JAP
+		        1649 = {
+			        change_province_name = "Tokyo"
+		        }
+				add_accepted_culture = manchu
+				add_accepted_culture = korean
+				IMJ = {all_core={remove_core=IMJ add_core = JAP}}
+				RYU = {all_core={remove_core=RYU add_core = JAP}}
+				KOR = {all_core={add_core = JAP}}
+				EZO = {all_core={remove_core=EZO}}
+				inherit = KOR
+			}
+		ai_will_do = {
+			factor = 100
+		}	
+		
+	}
+korea_vassal = {
+        picture = korea
+		potential = {
+		    NOT = {has_global_flag = korea_vassal_do}
+			tag = IMJ
+				}
+				allow = {
+				    KOR = {in_sphere = THIS}
+				}
+			effect = {
+			    prestige = 50
+				set_global_flag = korea_vassal_do
+			    KOR = {
+			        country_event = { id=8173 days=0 }
+			    }
+			}
+		ai_will_do = {
+			factor = 100
+		}	
+				
+	}
+mission_to_taiwan_jpn = {
+        picture = taiwan
+		potential = {
+		    NOT = {has_global_flag = mission_to_taiwan_jpn}
+			OR={tag = IMJ tag = JAP}
+			is_greater_power = yes
+				}
+			effect = {
+			    prestige = 15
+				badboy = 10
+				2562 = {add_core = THIS}
+				1485 = {add_core = THIS}
+				set_global_flag = mission_to_taiwan_jpn
+			}
+		ai_will_do = {
+			factor = 100
+		}	
+		
+	}
+	}

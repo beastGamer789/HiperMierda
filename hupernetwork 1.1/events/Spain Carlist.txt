@@ -1,0 +1,580 @@
+country_event = {
+	id = 25001
+	title = "EVTNAME25001"
+	desc = "EVTDESC25001"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+	    NOT = {
+		    year = 1840
+		}
+		tag = SPA
+		487 = {controlled_by_rebels = yes}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25001"
+		prestige = -30
+		government = absolute_monarchy
+		SPA = {
+		    all_core = {
+			    remove_core = SPA
+				add_core = SPC
+			}
+		}
+		set_global_flag = spain_carlist
+		any_owned = {
+			limit = {
+				OR = {
+					controlled_by = REB
+					region = SPA_474
+					province_id = 477
+					province_id = 480
+					province_id = 495
+					province_id = 485
+					province_id = 509
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = conservative
+					factor = 0.6
+				}
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		change_tag = SPC
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = state_controlled
+		political_reform = underground_parties
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+			any_pop = {
+				militancy = -8
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 510 #Cordoba
+					province_id = 513 #Grenada
+					province_id = 491 #Ciudad Real
+					province_id = 506 #Cartagena
+					province_id = 516 #Jaen
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.30
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = 8
+					}
+				}
+			}
+		}
+		
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.1 value = reactionary }
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+				}
+			}
+			ideology = { factor = 0.1 value = reactionary }
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -8
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 3
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SIC
+				government = absolute_monarchy
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			THIS = {
+				diplomatic_influence = {
+					who = SIC
+					value = 100
+				}
+			}
+		}
+		casus_belli = { target = SIC type = sicilian_puppet months = 48 }
+	}
+}
+country_event = {
+	id = 25000
+	title = "EVTNAME25000"
+	desc = "EVTDESC25000"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+		tag = SPA
+		ai = no
+		NOT = { has_global_flag = spain_carlist }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25000"
+		prestige = 10
+		militancy = 5
+		consciousness = 3
+		set_global_flag = spain_carlist
+	}
+	
+	option = {
+		name = "EVTOPTB25000"
+		prestige = -10
+		government = absolute_monarchy
+		SPA = {
+		    all_core = {
+			    remove_core = SPA
+				add_core = SPC
+			}
+		}
+		set_global_flag = spain_carlist
+		any_owned = {
+			limit = {
+				OR = {
+					controlled_by = REB
+					region = SPA_474
+					province_id = 477
+					province_id = 480
+					province_id = 495
+					province_id = 485
+					province_id = 509
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = conservative
+					factor = 0.6
+				}
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		change_tag = SPC
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = state_controlled
+		political_reform = underground_parties
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+			any_pop = {
+				militancy = -8
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 510 #Cordoba
+					province_id = 513 #Grenada
+					province_id = 491 #Ciudad Real
+					province_id = 506 #Cartagena
+					province_id = 516 #Jaen
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.30
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = 8
+					}
+				}
+			}
+		}
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.1 value = reactionary }
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+				}
+			}
+			ideology = { factor = 0.1 value = reactionary }
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -8
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 3
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SIC
+				government = absolute_monarchy
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			THIS = {
+				diplomatic_influence = {
+					who = SIC
+					value = 100
+				}
+			}
+		}
+		casus_belli = { target = SIC type = sicilian_puppet months = 48 }
+	}
+}
+country_event = {
+	id = 25005
+	title = "EVTNAME25005"
+	desc = "EVTDESC25005"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+		tag = SPA
+		government = absolute_monarchy
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25005"
+		SPA = {
+		    all_core = {
+			    remove_core = SPA
+				add_core = SPC
+			}
+		}
+		set_global_flag = spain_carlist
+		any_owned = {
+			limit = {
+				OR = {
+					controlled_by = REB
+					region = SPA_474
+					province_id = 477
+					province_id = 480
+					province_id = 495
+					province_id = 485
+					province_id = 509
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = conservative
+					factor = 0.6
+				}
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		change_tag = SPC
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = state_controlled
+		political_reform = underground_parties
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+			any_pop = {
+				militancy = -8
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 510 #Cordoba
+					province_id = 513 #Grenada
+					province_id = 491 #Ciudad Real
+					province_id = 506 #Cartagena
+					province_id = 516 #Jaen
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.30
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = 8
+					}
+				}
+			}
+		}
+		
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.1 value = reactionary }
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+				}
+			}
+			ideology = { factor = 0.1 value = reactionary }
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -8
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 3
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SIC
+				government = absolute_monarchy
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			THIS = {
+				diplomatic_influence = {
+					who = SIC
+					value = 100
+				}
+			}
+		}
+		casus_belli = { target = SIC type = sicilian_puppet months = 48 }
+	}
+}
+country_event = {
+	id = 18505
+	title = "EVTNAME18505"
+	desc = "EVTDESC18505"
+	picture = rebellion
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA18505"
+		prestige = -40
+		government = carlist_goverment
+		any_country = {
+		     limit = {
+			      NOT = {tag = SPC} 
+			 }
+			 diplomatic_influence = {who = SIC value = 0 level = 3 influence_value = -100}
+		}
+		SPC = {diplomatic_influence = { who = SIC value = 300 level = 5 influence_value = 100}}
+		SPC = {relation = { who = SIC value = 300}}
+		
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = state_controlled
+		political_reform = underground_parties
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+			any_pop = {
+				militancy = -8
+				ideology = {
+					value = reactionary
+					factor = 0.3
+				}
+			}
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 510 #Cordoba
+					province_id = 513 #Grenada
+					province_id = 491 #Ciudad Real
+					province_id = 506 #Cartagena
+					province_id = 516 #Jaen
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.30
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = 8
+					}
+				}
+			}
+		}
+		
+		capital_scope = {
+			any_pop = {
+				ideology = { factor = 0.1 value = reactionary }
+			}
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+				}
+			}
+			ideology = { factor = 0.1 value = reactionary }
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -8
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 3
+			}
+		}
+	}
+}
+country_event = {
+	id = 18506
+	title = "EVTNAME18506"
+	desc = "EVTDESC18506"
+	picture = rebellion
+
+	trigger = {
+	     government = carlist_goverment
+		 tag = SIC
+		 NOT = {vassal_of = SPC}
+		 NOT = {vassal_of = IBE}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPTA18506"
+		government = absolute_monarchy
+	}
+}

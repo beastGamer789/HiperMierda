@@ -1,0 +1,38 @@
+country_event = {
+	id = 18504
+	title = "EVTNAME18504"
+	desc = "EVTDESC18504"
+	
+	trigger = {tag = MOS NOT={has_global_flag = mos_conquest_massina} war = no NOT={exists=SEG exists=DND}}
+	mean_time_to_happen = {
+	    months = 12
+	}
+	
+	immediate = {set_global_flag = mos_conquest_massina}
+	
+	option = {
+		name = "EVTOPTA18504"
+		prestige = 15
+				MAS = {
+		war = {
+		    target = MOS
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		ai_chance = {
+		    factor = 1
+        }
+	}
+	option = {
+		name = "EVTOPTB18504"
+		prestige = -30
+		ai_chance = {
+		    factor = 0
+        }
+	}
+}

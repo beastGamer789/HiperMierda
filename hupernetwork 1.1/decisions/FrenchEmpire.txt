@@ -1,0 +1,211 @@
+political_decisions = {
+	form_french_empire = {
+	    picture = french_empire_flag
+	    potential = {
+		    tag = FRA
+			NOT = {
+				has_global_flag = french_formed
+			}
+		}
+		allow = {
+            nationalism_n_imperialism = 1
+			war = no
+			prestige = 50
+		    #
+		}
+		effect = {
+		    #
+			set_global_flag = french_formed
+			change_tag = EMF
+			government = empire
+			
+		    FRA = {
+		        all_core = {
+			        remove_core = FRA
+				    add_core = EMF
+			    }
+		    }
+			LUX = {
+			    all_core = {
+				    add_core = EMF
+				}
+			}
+			WLL = {
+			    all_core = {
+				    add_core = EMF
+				}
+			}
+			SWI_605 = {
+				    add_core = EMF
+			}
+			SPA_498 = {
+				    add_core = EMF
+			}
+			465 = {
+				    add_core = EMF
+			}
+			466 = {
+				    add_core = EMF
+			}
+			472 = {
+				    add_core = EMF
+			}
+		}
+	}
+	annex_luxembourg = {
+	    picture = luxembourg
+	    potential = {
+		    tag = EMF
+			exists=LUX
+		}
+		allow = {
+			war = no
+			prestige = 50
+			LUX = {in_sphere=THIS}
+		    #
+		}
+		effect = {
+		    prestige = 13
+		    inherit = LUX
+		}
+	}
+	french_puppet_spain = {
+	    picture = spanish_empireflag
+	    potential = {
+		    tag = EMF
+			NOT={has_global_flag=french_puppet_spain}
+			OR = {
+			    exists = IBE
+			    exists = SPA
+			    exists = SPC
+			}
+		}
+		allow = {
+			war = no
+			CAT = {all_core = {owned_by=THIS}}
+			OR = {
+			    AND = {
+				    exists = IBE
+					IBE = {is_greater_power = no}
+				} 
+			    AND = {
+				    exists = SPC
+					SPC = {is_greater_power = no}
+				} 
+			    AND = {
+				    exists = SPA
+					SPA = {is_greater_power = no}
+				} 
+			}
+		    #
+		}
+		effect = {
+		    prestige = 30
+			set_global_flag=french_puppet_spain
+			casus_belli = { target = IBE type = make_puppet months = 48 }
+			casus_belli = { target = SPC type = make_puppet months = 48 }
+			casus_belli = { target = SPA type = make_puppet months = 48 }
+		}
+	}
+	french_italianconquest = {
+	    picture = form_italy
+	    potential = {
+		    tag = EMF
+			NOT={has_global_flag=french_italianconquest}
+		}
+		allow = {
+			war = no
+			prestige = 150
+			465 = {
+				    owned_by = THIS
+			}
+			466 = {
+				    owned_by = THIS
+			}
+			472 = {
+				    owned_by = THIS
+			}
+		    #
+		}
+		effect = {
+		    prestige = 13
+			badboy = 20
+			set_global_flag=french_italianconquest
+			SAR_720 = {add_core = THIS}
+			SAR_765 = {add_core = THIS}
+			MOD_739 = {add_core = THIS}
+			764 = {add_core = THIS}
+			763 = {add_core = THIS}
+			762 = {add_core = THIS}
+		}
+	}
+	french_switzconquest = {
+	    picture = switzerland_french
+	    potential = {
+		    tag = EMF
+			NOT={has_global_flag=french_switzconquest}
+		}
+		allow = {
+			war = no
+			SWI_605 = {owned_by = THIS}
+		    #
+		}
+		effect = {
+		    prestige = 21
+			badboy = 6
+			SWI = {all_core={add_core = THIS}}
+			set_global_flag=french_switzconquest
+		}
+	}
+	french_go_against_pope = {
+	    picture = form_italy
+	    potential = {
+		    tag = EMF
+			has_global_flag=french_italianconquest
+			NOT={has_global_flag=french_go_against_pope}
+		}
+		allow = {
+			war = no
+			prestige = 150
+			465 = {
+				    owned_by = THIS
+			}
+			466 = {
+				    owned_by = THIS
+			}
+			472 = {
+				    owned_by = THIS
+			}
+			SAR_720 = {
+				    owned_by = THIS
+			}
+			SAR_765 = {
+				    owned_by = THIS
+			}
+			MOD_739 = {
+				    owned_by = THIS
+			}
+			762 = {
+				    owned_by = THIS
+			}
+			763 = {
+				    owned_by = THIS
+			}
+			764 = {
+				    owned_by = THIS
+			}
+		    #
+		}
+		effect = {
+		    prestige = -45
+			set_global_flag=french_go_against_pope
+			badboy = 20
+			SAR_720 = {add_core = THIS}
+			749  = {add_core = THIS}
+			750  = {add_core = THIS}
+			751 = {add_core = THIS}
+			SIC_754 = {add_core = THIS}
+			TUS_744 = {add_core = THIS}
+		}
+	}	
+}

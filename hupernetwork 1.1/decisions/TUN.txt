@@ -1,0 +1,71 @@
+
+political_decisions = {
+	form_cartago = {
+	    picture = cartago
+		potential = {
+			tag = TUN
+			NOT = {exists = CRT}
+		}
+		
+		allow = {
+		    prestige = 25
+			764 = {owned_by = THIS}
+			763 = {owned_by = THIS}
+			762 = {owned_by = THIS}
+			FRA_1700 = {owned_by = THIS}
+		}
+		effect = {
+			prestige = 19
+			change_tag = CRT
+			SIC_763 = {add_core = THIS}
+			SAR_765 = {add_core = THIS}
+			FRA_1700 = {add_core = THIS}
+			TUN_1726 = {add_core = THIS}
+			TRI_1743 = {add_core = THIS}
+			ALD_1708 = {add_core = THIS}
+			ALD_1704 = {add_core = THIS}
+			MOR_1688 = {add_core = THIS}
+			MOR_1683 = {add_core = THIS}
+			MOR_1686 = {add_core = THIS}
+			MOR_1693 = {add_core = THIS}
+			MOR_1696 = {add_core = THIS}
+			SPA_517 = {add_core = THIS}
+			SPA_513 = {add_core = THIS}
+			SPA_512 = {add_core = THIS}
+			POR_525 = {add_core = THIS}
+			SPA_503 = {add_core = THIS}
+			SPA_487 = {add_core = THIS}
+			SPA_484 = {add_core = THIS}
+			502 = {add_core = THIS}
+			1725 = {
+				change_province_name = "Cartago"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	accept_iberians = {
+	    picture = iberia
+		potential = {
+			tag = CRT
+			NOT = {has_country_flag = iberian_culture}
+		}
+		
+		allow = {
+		    prestige = 100
+			ruling_party_ideology = socialist
+			owns = 487
+		}
+		effect = {
+			prestige = 25
+			set_country_flag = iberian_culture
+			add_accepted_culture = spanish
+			add_accepted_culture = portuguese
+			add_accepted_culture = catalan
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

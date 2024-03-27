@@ -1,0 +1,103 @@
+country_event = {
+	id = 25128
+	title = "EVTNAME25128"
+	desc = "EVTDESC25128"
+
+	major = yes	
+	trigger = {
+	    tag = ENG
+		exists = BUR
+		year = 1837
+		NOT = {has_global_flag = england-burmese_war}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA25128"
+		prestige = 5		
+		set_global_flag = england-burmese_war
+		war = {
+			target = BUR
+			attacker_goal = {
+				casus_belli = conquest
+			}
+			
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25128"
+		prestige = -30
+		set_global_flag = england-burmese_war
+		any_owned = {
+			any_pop = {
+				militancy = 3
+				consciousness = 6
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 25129
+	title = "EVTNAME25129"
+	desc = "EVTDESC25129"
+
+	major = yes	
+	trigger = {
+	    tag = ENG
+		425 = {OR = {controlled_by = THIS owned_by = THIS}}
+		NOT = {has_global_flag = angevin_question has_country_flag=commonwealth_to_usa}
+		has_global_flag = get_normandy_england
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+    immediate = {
+		set_country_flag = angevin_question
+    }
+	
+	option = {
+		name = "EVTOPTA25129"
+		prestige = 5	
+			THIS={all_core = {
+				remove_core = THIS 
+				add_core = ANG
+			}}		
+		change_tag = ANG
+		add_accepted_culture = french
+		403 = {add_core = THIS}
+		404 = {add_core = THIS}
+		442 = {add_core = THIS}
+		444 = {add_core = THIS}
+		443 = {add_core = THIS}
+		437 = {add_core = THIS}
+		434 = {add_core = THIS}
+		435 = {add_core = THIS}
+		2570 = {add_core = THIS}
+		399 = {add_core = THIS}
+		401 = {add_core = THIS}
+		402 = {add_core = THIS}
+		400 = {add_core = THIS}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "EVTOPTB25129"
+		ai_chance = {
+			factor = 11
+		}
+	}
+}

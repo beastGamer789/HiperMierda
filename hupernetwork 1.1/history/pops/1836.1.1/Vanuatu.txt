@@ -1,0 +1,35 @@
+#Southern Melanesia (28000) #see New Calyorubania.txt for balance of region
+#uncolonized in 1836
+#New Hebrides (28000/7000 POPS) 
+2535 = {
+	aristocrats = {
+		culture = indonesians
+		religion = animist
+		size = 125
+	}
+
+	clergymen = {
+		culture = indonesians
+		religion = animist
+		size = 75
+	}
+
+	artisans = {
+		culture = indonesians
+		religion = animist
+		size = 350
+	}
+
+	soldiers = {
+		culture = indonesians
+		religion = animist
+		size = 75
+	}
+
+	farmers = {
+		culture = indonesians
+		religion = animist
+		size = 6375
+	}
+
+}

@@ -1,0 +1,220 @@
+political_decisions = {
+	form_laplata = {
+        picture = la_plata
+	    potential = {
+		    OR = {
+			    tag = URU
+				tag = CHL
+				tag = PRG
+				tag = MAA
+				tag = MAP
+				tag = MRN
+				tag = ARG
+			}
+			civilized = yes
+			NOT = {
+				exists = LPL
+			}
+		}
+		allow = {
+			war = no
+			OR = {
+			AND = {
+			URU = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+			PRG = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+			ARG = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}}
+			AND = {
+			    ARG = {OR = {tag = THIS is_sphere_leader_of = THIS vassal_of = THIS}}
+			    PRG = {OR = {tag = THIS is_sphere_leader_of = THIS vassal_of = THIS}}
+			    URU = {OR = {tag = THIS is_sphere_leader_of = THIS vassal_of = THIS}}
+			}}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 15
+			primary_culture = platinean
+			add_accepted_culture = platinean
+			add_accepted_culture = guarani
+			change_tag = LPL
+			ARG = {
+				all_core = {
+				    add_core = LPL
+				}
+			}
+			PRG = {
+				all_core = {
+				    add_core = LPL
+				}
+			}
+			URU = {
+				all_core = {
+				    add_core = LPL
+				}
+			}
+			any_country = {
+			    limit = {
+				    OR = { 
+                        accepted_culture = platinean
+                        primary_culture = platinean
+					}
+					OR = {
+					    vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			any_country = {
+			    limit = {
+				    OR = { 
+                        accepted_culture = platinean
+                        primary_culture = platinean
+					}
+					OR = {
+					    vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			any_country = {
+				limit = {
+					OR = {
+					    vassal_of = THIS
+					    in_sphere = THIS
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = LPL
+					}
+					secede_province = THIS
+				}
+			}
+		}
+	}
+	cores_bolivia = {
+        picture = bolivia
+	    potential = {
+		    tag = LPL
+			NOT={has_country_flag=cores_bolivia}
+		}
+		allow = {
+            nationalism_n_imperialism = 1
+			is_greater_power = yes
+			war = no
+		    #
+		}
+		effect = {
+		    #
+			prestige = 15
+			set_country_flag=cores_bolivia
+			BOL = {
+				all_core = {
+				    add_core = LPL
+				}
+			}
+		}
+	}
+	claim_chile = {
+        picture = chile
+	    potential = {
+		    tag = LPL
+			NOT = {capital=2324}
+			NOT={has_country_flag=claim_chile}
+		}
+		allow = {
+		    2310 = {owner = {OR={vassal_of = THIS in_sphere = THIS owned_by = THIS}}}
+            nationalism_n_imperialism = 1
+			is_greater_power = yes
+			war = no
+		    #
+		}
+		effect = {
+		    #
+			prestige = 15
+			set_country_flag=claim_chile
+			add_accepted_culture = south_andean
+			CHL = {
+				all_core = {
+				    add_core = LPL
+				}
+			}
+		}
+	}
+	get_formosa = {
+        picture = formosa
+	    potential = {
+		    NOT = {year = 1870}
+			2339 = {owned_by = THIS} 
+			NOT={has_global_flag=get_formosa_colonization}
+		}
+		allow = {
+		    owns = 2339
+			prestige = 30
+			money = 10000
+		    #
+		}
+		effect = {
+		    #
+			prestige = 15
+			money = -10000
+			2367 = {secede_province = THIS}
+			2366 = {secede_province = THIS}
+			set_global_flag=get_formosa_colonization
+		}
+	}
+	get_el_chaco = {
+        picture = elchacho
+	    potential = {
+		    NOT = {year = 1870}
+			2339 = {owned_by = THIS} 
+			NOT={has_global_flag=get_el_chaco_colonization}
+		}
+		allow = {
+		    owns = 2339
+			prestige = 50
+			money = 10000
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			money = -10000
+			2337 = {secede_province = THIS}
+			2338 = {secede_province = THIS}
+			set_global_flag=get_el_chaco_colonization
+		}
+	}	
+}

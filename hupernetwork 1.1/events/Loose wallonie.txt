@@ -1,0 +1,15 @@
+country_event = {
+	id = 25691
+	title = "EVTNAME25691"
+	desc = "EVTDESC25691"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA25691"
+		any_owned = {
+		    limit = {is_core = BEL}
+			secede_province = BEL
+		}
+	}
+}

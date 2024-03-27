@@ -1,0 +1,143 @@
+country_event = {
+	id = 35010
+	title = "EVTNAME25010"
+	desc = "EVTDESC25010"
+
+	trigger = {
+	    OR={tag=MGL}
+		NOT = { has_country_modifier = mongolian_isolationism }
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+	    name = "EVTOPTA25010"
+		add_country_modifier = {
+			name = mongolian_isolationism
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25012
+	title = "EVTNAME25012"
+	desc = "EVTDESC25012"
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = "EVTOPTA25012"
+		MCK = {
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+			secede_province = QIN
+		}
+		}
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+			secede_province = MGL
+		}
+		relation = { who = MGL value = -100}
+		ai_chance = {
+        modifier = {
+            factor = 1000
+            relation = { who = MGL value = 195 }
+        }
+		}
+	}
+	option = {
+	    name = "EVTOPTB25012"
+		relation = { who = MGL value = -400}
+		ai_chance = {
+        modifier = {
+            factor = 1000
+            NOT={relation = { who = MGL value = 195 }}
+        }
+		}
+	}
+}
+country_event = {
+	id = 25013
+	title = EVTNAME25013
+	desc = EVTDESC25013
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = EVTOPTA25013
+		relation = { who = MGL value = -400}
+		ai_chance = {
+	        modifier = {
+	            factor = 1000
+	            NOT={relation = { who = MGL value = 195 }}
+	        }
+		}
+	}
+	option = {
+	    name = EVTOPTB25013
+		CHI_1490 = {add_core = MGL}
+		CHI_1557 = {add_core = MGL}
+		any_owned = {
+			limit = {
+				is_core = MGL
+			}
+			secede_province = MGL
+		}
+		relation = { who = MGL value = -100}
+		ai_chance = {
+	        modifier = {
+	            factor = 1000
+	            relation = { who = MGL value = 195 }
+	        }
+		}
+	}
+}country_event = {
+	id = 25014 
+	title = "EVTNAME25014"
+	desc = "EVTDESC25014"
+
+	major = yes	
+	trigger = {
+		tag = YUA
+		OR = {
+		    1500 = {controlled_by=THIS}
+			owns = 1500
+		}
+		OR = {
+		    1477 = {controlled_by=THIS}
+			owns = 1477
+		}
+		OR = {
+		    1612 = {controlled_by=THIS}
+			owns = 1612
+		}
+		NOT={has_global_flag=pekin_mongolconquest}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25014"
+		prestige = 50
+		set_global_flag=pekin_mongolconquest
+		add_accepted_culture = manchu
+		add_accepted_culture = korean
+		inherit = QIN
+		QIN = {all_core = {add_core = THIS}}
+		KOR = {all_core = {add_core = THIS}}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

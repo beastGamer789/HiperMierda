@@ -1,0 +1,5 @@
+owner = MRN
+controller = MRN
+add_core = MRN
+add_core = ARG
+trade_goods = cattlelife_rating = 35

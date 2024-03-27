@@ -1,0 +1,61 @@
+country_event = {
+	id = 9918
+	title = "EVTNAME9918"
+	desc = "EVTDESC9918"
+
+	trigger = {
+			tag = AKS
+			NOT = {year = 1870}
+			NOT = { has_global_flag = ETH_GETCORES }
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {set_global_flag = ETH_GETCORES}
+	option = {
+		name = "EVTOPTA9918"
+		prestige = 15
+		1867 = {secede_province = THIS}
+		1866 = {secede_province = THIS}
+		1864 = {secede_province = THIS}
+		2032 = {secede_province = THIS}
+		2025 = {secede_province = THIS}
+		2031 = {secede_province = THIS}
+		2032 = {add_core = THIS}
+		2025 = {add_core = THIS}
+		2031 = {add_core = THIS}
+		1867 = {add_core = THIS}
+		1866 = {add_core = THIS}
+		1864 = {add_core = THIS}
+		2030 = {add_core = THIS}
+	}
+}
+province_event = {
+	id = 1141
+	title = "EVTNAME1141"
+	desc = "EVTDESC1141"
+
+	trigger = {
+	    owned_by = AKS
+		OR = {
+		culture = bedouin
+		culture = berber
+		culture = mashriqi
+		culture = misri
+		culture = maghrebi
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 20
+	}
+
+	option = {
+		name = "EVTOPTA1141"
+		money = -3500
+		assimilate = yes
+	}
+	option = {
+		name = "EVTOPTB1141"
+	}
+}

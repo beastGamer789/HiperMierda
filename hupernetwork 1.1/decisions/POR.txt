@@ -1,0 +1,83 @@
+
+political_decisions = {
+
+	claim_galicia = {
+	    picture = galicia
+		potential = {
+			OR = {
+			    tag = RPB
+			    tag = POR
+			}
+			NOT = {has_country_flag = claim_galicia}
+		}
+		
+		allow = {
+		    #
+			prestige = 50
+			NOT = {badboy = 15}
+			literacy = 0.2
+		}
+		effect = {
+			prestige = 35
+			SPA_474 = {add_core = THIS}
+			set_country_flag = claim_galicia
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	form_reinounido_brasilandalgarves = {
+	    picture = reino_unido
+		potential = {
+			tag = POR
+			NOT = {exists = RPB}
+		}
+		
+		allow = {
+		    #
+			OR = {
+			    BRZ = {
+				    all_core = {
+					    owner = {
+						    OR = {
+							    tag = THIS
+								vassal_of = THIS
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+				BRZ = {vassal_of = THIS}
+				BRZ = {in_sphere = THIS}
+			}
+		}
+		effect = {
+			prestige = 35
+			change_tag = RPB
+			BRZ = {all_core = {add_core = THIS}}
+			add_accepted_culture = brazilian
+			add_accepted_culture = afro_brazilian
+			capital = 2447
+			any_country = {
+			    limit = {
+				    OR = {
+                        accepted_culture = brazilian
+                        accepted_culture = afro_brazilian
+						##
+                        primary_culture = brazilian
+                        primary_culture = afro_brazilian
+					}
+					OR = {
+					    vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

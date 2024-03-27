@@ -1,0 +1,212 @@
+country_event = {
+	id = 25193
+	title = "EVTNAME25193"
+	desc = "EVTDESC25193"
+
+	major = yes	
+	is_triggered_only = yes
+	##########immediate={set_country_flag=waiting_for_grants}
+	option = {
+		name = "EVTOPTA25193"
+		clr_country_flag=waiting_for_grants
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000
+		}
+		money = -1000
+	}
+	option = {
+		name = "EVTOPTC25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 10000
+		}
+		money = -10000
+	}
+	option = {
+		name = "EVTOPTD25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 100000
+		}
+		money = -100000
+	}
+	option = {
+		name = "EVTOPTE25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000000
+		}
+		money = -1000000
+	}
+	option = {
+		name = "EVTOPTF25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 2000000
+		}
+		money = -2000000
+	}
+}
+country_event = {
+	id = 25194
+	title = "EVTNAME25193"
+	desc = "EVTDESC25193"
+
+	major = yes	
+	is_triggered_only = yes
+	##########immediate={set_country_flag=waiting_for_grants}
+	
+	option = {
+		name = "EVTOPTA25193"
+		clr_country_flag=waiting_for_grants
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000
+		}
+		money = -1000
+	}
+}
+country_event = {
+	id = 25195
+	title = "EVTNAME25193"
+	desc = "EVTDESC25193"
+
+	major = yes	
+	is_triggered_only = yes
+	##########immediate={set_country_flag=waiting_for_grants}
+	
+	option = {
+		name = "EVTOPTA25193"
+		clr_country_flag=waiting_for_grants
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000
+		}
+		money = -1000
+	}
+	option = {
+		name = "EVTOPTC25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 10000
+		}
+		money = -10000
+	}
+}
+country_event = {
+	id = 25196
+	title = "EVTNAME25193"
+	desc = "EVTDESC25193"
+
+	major = yes	
+	is_triggered_only = yes
+	##########immediate={set_country_flag=waiting_for_grants}
+	
+	option = {
+		name = "EVTOPTA25193"
+		clr_country_flag=waiting_for_grants
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000
+		}
+		money = -1000
+	}
+	option = {
+		name = "EVTOPTC25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 10000
+		}
+		money = -10000
+	}
+	option = {
+		name = "EVTOPTD25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 100000
+		}
+		money = -100000
+	}
+}
+country_event = {
+	id = 25197
+	title = "EVTNAME25193"
+	desc = "EVTDESC25193"
+
+	major = yes	
+	is_triggered_only = yes
+	##########immediate={set_country_flag=waiting_for_grants}
+	
+	option = {
+		name = "EVTOPTA25193"
+		clr_country_flag=waiting_for_grants
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000
+		}
+		money = -1000
+	}
+	option = {
+		name = "EVTOPTC25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 10000
+		}
+		money = -10000
+	}
+	option = {
+		name = "EVTOPTD25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 100000
+		}
+		money = -100000
+	}
+	option = {
+		name = "EVTOPTE25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 1000000
+		}
+		money = -1000000
+	}
+	option = {
+		name = "EVTOPTF25193"
+		clr_country_flag=waiting_for_grants
+		FROM = {
+		    money = 2000000
+		}
+		money = -2000000
+	}
+}

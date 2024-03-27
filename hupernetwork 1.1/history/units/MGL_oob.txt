@@ -1,0 +1,8 @@
+leader = {
+	name = "Mata Jins"
+	date = 1833.1.1
+	type = land
+	personality = defence_1.1
+	background = attack_5.1
+	prestige = 0.0
+}

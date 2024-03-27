@@ -1,0 +1,201 @@
+political_decisions = {
+####################################################################
+    accept_morearabs = {
+	    picture = arabian_flag
+	    potential = {
+		    NOT={has_global_flag = accept_morearabs}
+		    tag = TKR
+		}
+		allow = {
+			prestige = 50
+			TKR =  {
+			    all_core = {
+				    owner = {
+					    tag = THIS
+					}
+				}
+			}
+			YEM_1173 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+			OMA_1166 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+			ABU_1162 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+			HDJ_1151 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+			NEJ_1156 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+			NEJ_1157 = {owner={OR={tag=THIS vassal_of=THIS in_sphere=THIS}}}
+		}
+		effect = {		
+            prestige = 40
+		any_country = {
+		    limit = {
+			    is_culture_group = arab
+				OR = {
+				    in_sphere = TUR
+				    vassal_of = TUR
+				}
+			}
+			annex_to = TUR
+		}
+			add_accepted_culture = mashriqi
+			add_accepted_culture = bedouin
+			add_accepted_culture = misri
+			add_accepted_culture = maghrebi
+			any_country = {
+				limit = {
+					is_culture_group = arab
+				}
+				all_core = {
+					add_core = TKR
+				}
+			}
+			any_country = {
+				limit = {
+					is_culture_group = arab
+					OR = {
+					    vassal_of = THIS
+					    in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    accept_enemies = {
+	    picture = enemies
+	    potential = {
+		    NOT={has_country_flag = turk_assimilation}
+		    tag = TUR
+		}
+		allow = {
+		    state_n_government = 1
+		}
+		effect = {			
+		    prestige = 50		
+			THIS={all_core = {
+				remove_core = TUR 
+				add_core = TKR
+			}}
+			change_tag = TKR
+		    add_accepted_culture = bulgarian
+		    add_accepted_culture = kurdish
+		    add_accepted_culture = bosniak
+		    add_accepted_culture = azerbaijani
+		    add_accepted_culture = albanian
+		    add_accepted_culture = sudanese
+		    add_accepted_culture = greek
+		    add_accepted_culture = persian
+			any_country = {
+			    limit = {
+				    in_sphere = THIS
+					OR={
+					    primary_culture = bulgarian
+					    primary_culture = kurdish
+					    primary_culture = bosniak
+					    primary_culture = azerbaijani
+					    primary_culture = albanian
+					    primary_culture = sudanese
+					    primary_culture = persian
+						#
+						accepted_culture = bulgarian
+						accepted_culture = kurdish
+						accepted_culture = bosniak
+						accepted_culture = azerbaijani
+						accepted_culture = albanian
+						accepted_culture = sudanese
+						accepted_culture = persian
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+			PER = {all_core={add_core=THIS}}
+			CRI = {all_core={add_core=THIS}}
+			GEO = {all_core={add_core=THIS}}
+			AZB = {all_core={add_core=THIS}}
+			RUS_1090 = {add_core=THIS}
+			RUS_1052 = {add_core=THIS}
+			set_country_flag = accept_enemies
+			goverment = hms_government
+			add_country_modifier = {
+				name = turk_modifier
+				duration = 3650
+			}
+			add_country_modifier = {
+				name = turk_modifier2
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    turk_assimilation = {
+	    picture = enemies
+	    potential = {
+		    NOT={has_country_flag = turk_assimilation}
+		    tag = TUR
+		}
+		allow = {
+		    state_n_government = 1
+			money=1000000
+		}
+		effect = {			
+		    prestige = 50
+			money=-1000000
+			set_country_flag = turk_assimilation
+			add_country_modifier = {
+				name = turk_modifier
+				duration = 3650
+			}
+			add_country_modifier = {
+				name = turk_modifier2
+				duration = -1
+			}
+			add_country_modifier = {
+				name = turk_assimilation
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    oriental_crisis1 = {
+	    picture = batalla_epica
+	    potential = {
+		    NOT={has_country_flag = oriental_crisis}
+		    tag = EGY
+			THIS = {vassal_of = TUR}
+			OR = {
+			    ai=no
+				AND = {
+				    ai = yes
+					year = 1841
+				}
+			}
+		}
+		allow = {
+		    war = no
+		}
+		effect = {			
+		    prestige = 25
+			TUR = {release_vassal = THIS}
+			TUR = {leave_alliance = THIS}
+		TUR = {
+		war = {
+		    target = EGY
+			attacker_goal = {
+			    casus_belli = oriental_crisis
+				country = TUR
+			}
+			defender_goal = {
+			    casus_belli = status_quo
+			}
+		}}
+			set_country_flag = oriental_crisis
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,8 @@
+owner = BRJ
+controller = BRJ
+add_core = BRJ
+ 
+add_core = JAI
+add_core = HND
+trade_goods = timber
+life_rating = 32

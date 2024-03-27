@@ -1,0 +1,32 @@
+country_event = {
+	id = 9986
+	title = "EVTNAME9986"
+	desc = "EVTDESC9986"
+	
+    major = yes
+	trigger = {
+	    tag = PBC
+		year = 1839
+		NOT={has_global_flag=peru_boliviadisolution}
+	}
+	mean_time_to_happen = {
+		months = 8
+	}
+	option = {
+		name = "EVTOPTA9986"
+		change_tag = BOL
+		PEU={all_core={remove_core=BOL}}
+		PEU = {
+		war = {
+		    target = SPU
+			attacker_goal = {
+			    casus_belli = annex_core_country
+			}
+		}}
+		release_vassal = PEU
+		release_vassal = SPU
+		leave_alliance = PEU
+		leave_alliance = SPU
+		set_global_flag=peru_boliviadisolution
+	}
+}

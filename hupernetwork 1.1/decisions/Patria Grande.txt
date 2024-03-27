@@ -1,0 +1,321 @@
+political_decisions = {
+    patria_grande_ideal = {
+	    picture = patria_grande
+	    potential = {
+		    idealism = 1
+			ai = no
+			OR = {
+			    tag = PBC
+				tag = ATC
+				tag = GCO
+				AND = {
+				    tag = LPL
+					has_country_flag=cores_bolivia
+					has_country_flag=claim_chile
+				}
+				AND = {
+				    tag = UCA
+					has_global_flag = usca_claim_neighbours_territories
+				}
+				AND = {
+				    tag = MEX
+					has_country_flag = we_have_tried_this_once
+					has_country_flag = mexican_batalla_epica
+				}
+			}
+		    NOT = {has_global_flag = patria_grande_ideal}
+		}
+		allow = {
+		    war = no
+			prestige = 40
+		}
+		effect = {
+		    prestige = 12
+			badboy = 30
+		    set_global_flag = patria_grande_ideal
+			PRG = {all_core = {add_core = AND}}
+			URU = {all_core = {add_core = AND}}
+			ARG = {all_core = {add_core = AND}}
+			PBC = {all_core = {add_core = AND}}
+			GCO = {all_core = {add_core = AND}}
+			UCA = {all_core = {add_core = AND}}
+			CHL = {all_core = {add_core = AND}}
+			MEX = {all_core = {add_core = AND}}
+			2190 = {remove_core = AND}
+			2131 = {remove_core = AND}
+			2549 = {remove_core = AND}
+			2242 = {remove_core = AND}
+			2532 = {remove_core = AND}
+			2401 = {remove_core = AND}
+			2338 = {remove_core = AND}
+			2337 = {remove_core = AND}
+			2366 = {remove_core = AND}
+			2367 = {remove_core = AND}
+			USA = {all_core = {remove_core = AND}}
+			TEX = {all_core = {remove_core = AND}}
+		}
+	}
+    patria_grande_revenge = {
+	    picture = patria_grande
+	    potential = {
+		    tag = AND
+		    NOT = {has_global_flag = patria_grande_exansion}
+			set_country_flag = no_more_formables
+		}
+		allow = {
+		    war = no
+			is_greater_power = yes
+		}
+		effect = {
+		    prestige = 40
+		    set_global_flag = patria_grande_exansion
+			MEX = {all_core = {add_core = AND}}
+			2190 = {add_core = AND}
+			2131 = {add_core = AND}
+			2549 = {add_core = AND}
+			2532 = {add_core = AND}
+			2242 = {add_core = AND}
+			2401 = {add_core = AND}
+			2338 = {add_core = AND}
+			2337 = {add_core = AND}
+			2366 = {add_core = AND}
+			2367 = {add_core = AND}
+			CUB = {all_core={add_core = AND}}
+			PRI = {all_core={add_core = AND}}
+			add_accepted_culture = guarani
+		}
+	}
+	get_bolivar_rest = {
+        picture = bolivar
+	    potential = {
+		    NOT = {year = 1870}
+			OR={
+			2403 = {owned_by = THIS} 
+			2275 = {owned_by = THIS}
+			}
+			NOT={has_global_flag=get_bolivar_rest_colonization}
+		}
+		allow = {
+			OR={
+			owns = 2403 
+			owns = 2275
+			}
+			prestige = 50
+			money = 10000
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			money = -10000
+			2532 = {secede_province = THIS}
+			set_global_flag=get_bolivar_rest_colonization
+		}
+	}
+	get_bolivar_rest = {
+        picture = bolivar
+	    potential = {
+		    NOT = {year = 1870}
+			OR={
+			2403 = {owned_by = THIS} 
+			2275 = {owned_by = THIS}
+			}
+			NOT={has_global_flag=get_bolivar_rest_colonization}
+		}
+		allow = {
+			OR={
+			owns = 2403 
+			owns = 2275
+			}
+			prestige = 50
+			money = 10000
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			money = -10000
+			2532 = {secede_province = THIS}
+			set_global_flag=get_bolivar_rest_colonization
+		}
+	}
+	get_tarauaca_rest = {
+        picture = tarauaca
+	    potential = {
+		    NOT = {year = 1870}
+			OR={
+			2407 = {owned_by = THIS} 
+			2321 = {owned_by = THIS}
+			}
+			NOT={has_global_flag=get_tarauaca_rest_colonization}
+		}
+		allow = {
+			OR={
+			owns = 2407 
+			owns = 2321
+			}
+			prestige = 50
+			money = 10000
+		    #
+		}
+		effect = {
+		    #
+			prestige = 20
+			money = -10000
+			2549 = {secede_province = THIS}
+			set_global_flag=get_tarauaca_rest_colonization
+		}
+	}
+	get_brasil_and_guayana = {
+        picture = brazil
+	    potential = {
+		    tag = AND
+			NOT={has_global_flag=get_brasil_and}
+			has_global_flag = patria_grande_exansion
+		}
+		allow = {
+			all_core = {owned_by = THIS}
+			nationalism_n_imperialism = 1
+		    #
+		}
+		effect = {
+		    #
+			badboy = 20
+			set_global_flag=get_brasil_and
+			add_accepted_culture = amazonian
+			add_accepted_culture = afro_brazilian
+			add_accepted_culture = brazilian
+			BRZ = {all_core={add_core = THIS}}
+			ENG_2224 = {add_core = THIS}
+			ENG_2228 = {add_core = THIS}
+			ENG_203 = {add_core = THIS}
+			HAI = {all_core={add_core = THIS}}
+			DOM = {all_core={add_core = THIS}}
+			2246 = {add_core = THIS}
+			2241 = {add_core = THIS}
+			2245 = {add_core = THIS}
+			2240 = {add_core = THIS}
+			1979 = {add_core = THIS}
+			2243 = {add_core = THIS}
+			2239 = {add_core = THIS}
+		}
+	}
+	form_hispanic_union_by_and = {
+        picture = spanish_commonwealth
+	    potential = {
+		    tag = AND
+			NOT={exists = SCM}
+			has_global_flag=get_brasil_and
+		}
+		allow = {
+			OR = {
+			AND={SPA = {OR={vassal_of = THIS in_sphere = THIS all_core{owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}} exists=SPA}
+			AND={SPC = {OR={vassal_of = THIS in_sphere = THIS all_core{owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}} exists=SPC}
+			AND={IBE = {OR={vassal_of = THIS in_sphere = THIS all_core{owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}} exists=IBE}
+			}
+		    #
+		}
+		effect = {
+		    #
+			badboy = 20
+			set_global_flag=get_brasil_and
+			IBE = {all_core = {add_core = THIS}}
+			SPC = {all_core = {add_core = THIS}}
+			SPA = {all_core = {add_core = THIS}}
+						change_tag = SCM
+add_accepted_culture = spanish
+add_accepted_culture = catalan
+add_accepted_culture = basque
+add_accepted_culture = galician
+add_accepted_culture = mexican
+add_accepted_culture = mayan
+add_accepted_culture = nahua
+add_accepted_culture = texan
+add_accepted_culture = pueblo
+add_accepted_culture = dakota
+add_accepted_culture = afro_caribbean
+add_accepted_culture = afro_caribeno
+add_accepted_culture = central_american
+add_accepted_culture = native_american_minor
+add_accepted_culture = zapotec
+add_accepted_culture = tarascan
+add_accepted_culture = herero
+add_accepted_culture = shona
+add_accepted_culture = platinean
+add_accepted_culture = patagonian
+add_accepted_culture = guarani
+add_accepted_culture = quechua
+add_accepted_culture = aimara
+add_accepted_culture = herero
+add_accepted_culture = shona
+add_accepted_culture = south_andean
+add_accepted_culture = north_andean
+			any_country = {
+			    limit = {
+				    OR = { 
+accepted_culture = spanish
+accepted_culture = catalan
+accepted_culture = basque
+accepted_culture = galician
+accepted_culture = mexican
+accepted_culture = mayan
+accepted_culture = nahua
+accepted_culture = texan
+accepted_culture = pueblo
+accepted_culture = dakota
+accepted_culture = afro_caribbean
+accepted_culture = afro_caribeno
+accepted_culture = central_american
+accepted_culture = native_american_minor
+accepted_culture = zapotec
+accepted_culture = tarascan
+accepted_culture = herero
+accepted_culture = shona
+accepted_culture = platinean
+accepted_culture = patagonian
+accepted_culture = guarani
+accepted_culture = quechua
+accepted_culture = aimara
+accepted_culture = herero
+accepted_culture = shona
+accepted_culture = south_andean
+accepted_culture = north_andean
+						
+primary_culture = spanish
+primary_culture = catalan
+primary_culture = basque
+primary_culture = galician
+primary_culture = mexican
+primary_culture = mayan
+primary_culture = nahua
+primary_culture = texan
+primary_culture = pueblo
+primary_culture = dakota
+primary_culture = afro_caribbean
+primary_culture = afro_caribeno
+primary_culture = central_american
+primary_culture = native_american_minor
+primary_culture = zapotec
+primary_culture = tarascan
+primary_culture = herero
+primary_culture = shona
+primary_culture = platinean
+primary_culture = patagonian
+primary_culture = guarani
+primary_culture = quechua
+primary_culture = aimara
+primary_culture = herero
+primary_culture = shona
+primary_culture = south_andean
+primary_culture = north_andean
+					}
+					OR = {
+					    vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+	}
+}	

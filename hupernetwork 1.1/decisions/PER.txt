@@ -1,0 +1,179 @@
+political_decisions = {
+	form_persianempire = {
+    picture = persian_empire
+	    potential = {
+		    tag = PER
+			NOT = {
+				exists = PSB
+			}
+		}
+		allow = {
+			war = no
+			KHI = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+						    vassal_of = THIS
+						    tag = THIS
+						}
+					}
+				}
+			}
+			AFG = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+						    vassal_of = THIS
+						    tag = THIS
+						}
+					}
+				}
+			}
+			BUK = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+						    vassal_of = THIS
+						    tag = THIS
+						}
+					}
+				}
+			}
+			MAK = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+						    vassal_of = THIS
+						    tag = THIS
+						}
+					}
+				}
+			}
+			KAL = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+						    vassal_of = THIS
+						    tag = THIS
+						}
+					}
+				}
+			}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 35
+			add_accepted_culture = turkmen
+            add_accepted_culture = baluchi
+            add_accepted_culture = hazara
+            add_accepted_culture = tajik
+            add_accepted_culture = uzbek
+            PER = {
+			    all_core = {
+				    remove_core = PER
+				    add_core = PSB
+				}
+			}			
+			any_owned = {
+			    add_core = PSB
+			}
+			RUS_1102 = {add_core = PSB}
+			TUR_923 = {add_core = PSB}
+			TUR_931 = {add_core = PSB}
+			TUR_935 = {add_core = PSB}
+			TUR_885 = {add_core = PSB}
+			TUR_884 = {add_core = PSB}
+			EGY_897 = {add_core = PSB}
+			EGY_903 = {add_core = PSB}
+			TUR_889 = {add_core = PSB}
+			change_tag = PSB
+		}
+	}
+	persian_manifest_destinity = {
+    picture = batalla_epica
+	    potential = {
+		    tag = PSB
+			NOT = {
+				has_country_flag = persian_manifest_destinity
+			}
+		}
+		allow = {
+			war = no
+			romanticism = 1
+			prestige = 50
+			PSB = {all_core={owner={tag=THIS}}}
+		    #
+		}
+		effect = {
+		    #
+            add_accepted_culture = kurdish
+            add_accepted_culture = bedouin
+            add_accepted_culture = mashriqi
+			EGY = {all_core={add_core=THIS}}
+			TUR_876 = {add_core=THIS}
+			TUR_855 = {add_core=THIS}
+			TUR_873 = {add_core=THIS}
+			TUR_869 = {add_core=THIS}
+			TUR_863 = {add_core=THIS}
+			TUR_881 = {add_core=THIS}
+			TUR_860 = {add_core=THIS}
+			RUS_1098 = {add_core=THIS}
+			RUS_1090 = {add_core=THIS}
+			set_country_flag = persian_manifest_destinity
+		}
+	}
+	persian_pax = {
+    picture = enemies
+	    potential = {
+		    tag = PSB
+			NOT = {
+				has_country_flag = persian_pax
+			}
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			owns = 860
+			PSB = {all_core={owner={tag=THIS}}}
+		    #
+		}
+		effect = {
+		    prestige = 34
+            add_accepted_culture = armenian
+            add_accepted_culture = turkish
+            add_accepted_culture = north_caucasian
+            add_accepted_culture = georgian
+            add_accepted_culture = misri
+			set_country_flag = persian_pax
+		}
+	}
+	the_fourth_medic_war = {
+    picture = medic_wars
+	    potential = {
+		    tag = PSB
+			NOT = {
+				has_country_flag = the_fourth_medic_war
+			}
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			prestige = 150
+			owns = 860
+			NOT = {exists = EGY}
+			PSB = {all_core={owner={tag=THIS}}}
+		    #
+		}
+		effect = {
+		    prestige = 34
+			GRE = {all_core = {add_core = THIS}}
+			set_country_flag = the_fourth_medic_war
+		}
+	}	
+}

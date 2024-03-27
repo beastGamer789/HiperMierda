@@ -1,0 +1,524 @@
+political_decisions = {
+####################################################################
+    spanish_third_reconquest = {
+	    picture = spanish_empireflag
+	    potential = {
+		    OR = {
+			    tag = IBE
+			    tag = SPC
+			    tag = SCR
+			}
+		    NOT = {
+		        has_global_flag = third_expedition
+		    }
+		}
+		allow = {
+		    year = 1838
+		}
+		effect = {
+		    prestige = 10
+			set_global_flag = third_expedition
+		}
+		ai_will_do = {
+			factor = 1
+		}
+    }
+    form_virreinato_del_peru = {
+	    picture = virreinato_delperu
+	    potential = {
+		    has_global_flag = third_expedition
+			NOT={has_global_flag = virreinato_delperu_done}
+		    OR = {
+			    tag = IBE
+			    tag = SPC
+			    tag = SCR
+			}
+			NOT = {
+			    exists = VOP
+			}
+		}
+		allow = {
+		    
+			
+			OR = {
+			     AND = {
+				      PEU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  BOL = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+					  BOL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  PEU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+					  BOL = {all_core = {OR={vassal_of = THIS in_sphere = THIS}}}
+					  PEU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+					  BOL = {all_core = {OR={vassal_of = THIS in_sphere = THIS}}}
+					  PEU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+			     PBC = {OR={vassal_of = THIS in_sphere = THIS}}
+			}
+		}
+		effect = {
+		    prestige = 25
+			set_global_flag = virreinato_delperu_done
+			PBC = {
+				all_core = {
+				    limit = {
+					    NOT = {is_core = ECU}
+					}
+				    add_core = VOP
+				}
+			}
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS} OR={tag=BOL tag=PEU tag=SPU tag=PBC}}
+				country_event = { id=11101 days=0 }
+			}
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS}}
+				any_owned = {
+					limit = {
+						is_core = VOP
+					}
+					secede_province = THIS
+				}
+			}
+			relation = {
+				who = VOP
+				value = 400
+			}
+			diplomatic_influence = {
+				who = VOP
+				value = 200
+			}	
+            release_vassal = VOP
+            create_alliance = VOP
+			relation = {
+				who = VOP
+				value = 400
+			}
+			diplomatic_influence = {
+				who = VOP
+				value = 200
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    form_virreinato_de_nueva_espana = {
+	    picture = virreinato_nuevaespana
+	    potential = {
+		    has_global_flag = third_expedition
+			NOT = {has_global_flag = virreinato_nuevaespana_done}
+		    OR = {
+			    tag = IBE
+			    tag = SPC
+			    tag = SCR
+			}
+			NOT = {
+			    exists = VNS
+			}
+		}
+		allow = {
+		    OR={
+			MEX = {OR={vassal_of = THIS in_sphere = THIS}}
+			MEX = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+			}
+			OR = {
+			     AND = {
+			OR = {
+			     UCA = {OR={vassal_of = THIS in_sphere = THIS}}
+				 AND = {
+				     GUA = {OR={vassal_of = THIS in_sphere = THIS}}
+				     ELS = {OR={vassal_of = THIS in_sphere = THIS}}
+				     HON = {OR={vassal_of = THIS in_sphere = THIS}}
+				     NIC = {OR={vassal_of = THIS in_sphere = THIS}}
+				     COS = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+			}
+				 }
+				 AND = {
+					  UCA = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+			}
+		}
+		effect = {
+		    prestige = 25
+			set_global_flag = virreinato_nuevaespana_done
+			MEX = {
+				all_core = {
+				    add_core = VNS
+				}
+			}
+			UCA = {
+				all_core = {
+				    add_core = VNS
+				}
+			}
+			inherit = UCA
+			inherit = MEX
+			inherit = GUA
+			inherit = ELS
+			inherit = HON
+			inherit = NIC
+			inherit = COS
+			
+            release_vassal = VNS
+            create_alliance = VNS
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS}}
+				any_owned = {
+					limit = {
+						is_core = VNS
+					}
+					secede_province = VNS
+				}
+			}
+			any_country = {
+				any_owned = {
+					limit = {
+						is_core = VNS
+						vassal_of = THIS
+					}
+					secede_province = VNS
+				}
+			}
+			THIS = {
+			    any_owned = {
+				    limit = {
+					    is_core = VNS
+					}
+					secede_province = VNS
+				}
+			}
+			relation = {
+				who = VNS
+				value = 400
+			}
+			diplomatic_influence = {
+				who = VNS
+				value = 200
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+    form_virreinato_de_la_plata = {
+	    picture = virreinato_delaplata
+	    potential = {
+		    has_global_flag = third_expedition
+			NOT = {has_global_flag = virreinato_delaplata_done}
+		    OR = {
+			    tag = IBE
+			    tag = SPC
+			    tag = SCR
+			}
+			NOT = {
+			    exists = VLP
+			}
+		}
+		allow = {
+			OR = {
+			     AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+					  CHL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  PRG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  URU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  ARG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  URU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+					  CHL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  ARG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+					  CHL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  PRG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+				 AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+				      CHL = {OR={vassal_of = THIS in_sphere = THIS}}
+					  PRG = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+					  CHL = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+					  PRG = {OR={vassal_of = THIS in_sphere = THIS}}
+					  URU = {OR={vassal_of = THIS in_sphere = THIS}}
+					  ARG = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+			}
+		}
+		effect = {
+		    prestige = 25
+			 set_global_flag = virreinato_delaplata_done
+		    URU = {
+			    all_core = {
+				    add_core = VLP
+				}
+			}
+		    PRG = {
+			    all_core = {
+				    add_core = VLP
+				}
+			}
+		    ARG = {
+			    all_core = {
+				    add_core = VLP
+				}
+			}
+		    CHL = {
+			    all_core = {
+				    limit = {
+					    NOT = {is_core = BOL}
+					    NOT = {is_core = PEU}
+					}
+				    add_core = VLP
+				}
+			}
+			inherit = URU
+			inherit = PRG
+			inherit = ARG
+			inherit = CHL
+			any_country = {
+				any_owned = {
+			        limit = {OR={vassal_of = THIS in_sphere = THIS}}
+					limit = {
+						is_core = VLP
+					}
+					secede_province = THIS
+				}
+			}
+            release_vassal = VLP
+            create_alliance = VLP
+			any_country = {
+				any_owned = {
+					limit = {
+						is_core = VLP
+					}
+					secede_province = VLP
+				}
+			}
+			relation = {
+				who = VLP
+				value = 400
+			}
+			diplomatic_influence = {
+				who = VLP
+				value = 200
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+    annex_two_sicilies = {
+	    picture = two_sicilies_carlist
+	    potential = {
+		    OR = {
+			    tag = SCR
+			    tag = SPC
+			    tag = IBE
+			}
+		    NOT = {has_country_flag = twosicilies_annexedbyspaincarlist}
+			exists = SIC
+			SIC = {vassal_of = THIS}
+			SIC = {government = carlist_goverment}
+			year = 1845
+		}
+		allow = {
+		    prestige = 50
+			NOT = {badboy = 0.33}
+		}
+		effect = {
+		    prestige = 25	
+			badboy = 12.5
+			inherit = SIC
+			SIC = {all_core = {add_core = THIS}}
+			set_country_flag = twosicilies_annexedbyspaincarlist
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    form_virreinato_de_nueva_granada = {
+	    picture = virreinato_denuevagranada
+	    potential = {
+		    has_global_flag = third_expedition
+			NOT = {has_global_flag = virreinato_denuevagranada_done}
+		    OR = {
+			    tag = IBE
+			    tag = SPC
+			    tag = SCR
+			}
+			NOT = {
+			    exists = VNG
+			}
+		}
+		allow = {
+			 
+			OR = {
+			     AND = {
+		     OR = {
+			     GCO = {OR={vassal_of = THIS in_sphere = THIS}}
+				 AND = {
+				     NOT={exists=PNM}
+				     CLM = {OR={vassal_of = THIS in_sphere = THIS}}
+				     ECU = {OR={vassal_of = THIS in_sphere = THIS}}
+				     VNZ = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+				 AND = {
+				     exists=PNM
+				     PNM = {OR={vassal_of = THIS in_sphere = THIS}}
+					 CLM = {OR={vassal_of = THIS in_sphere = THIS}}
+				     ECU = {OR={vassal_of = THIS in_sphere = THIS}}
+				     VNZ = {OR={vassal_of = THIS in_sphere = THIS}}
+				 }
+			 }
+				 }
+				 AND = {
+					  GCO = {all_core = {owner={OR={tag = THIS vassal_of = THIS in_sphere = THIS}}}}
+				 }
+			}
+		}
+		effect = {
+		    prestige = 25
+			set_global_flag = virreinato_denuevagranada_done
+		    GCO = {
+			    all_core = {
+				    add_core = VNG
+				}
+			}
+		    VNZ = {
+			    all_core = {
+				    add_core = VNG
+				}
+			}
+			inherit = VNZ
+			inherit = ECU
+			inherit = PNM
+			inherit = CLM
+			inherit = GCO
+			any_country = {
+			    limit = {OR={vassal_of = THIS in_sphere = THIS}}
+				any_owned = {
+					limit = {
+						is_core = VNG
+					}
+					secede_province = THIS
+				}
+			}
+            release_vassal = VNG
+            create_alliance = VNG
+			relation = {
+				who = VNG
+				value = 400
+			}
+			diplomatic_influence = {
+				who = VNG
+				value = 200
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    form_spanish_commonwealth = {
+	    picture = spanish_commonwealth
+	    potential = {
+		    OR = {
+			    tag = SPC
+			    tag = IBE
+			    tag = SCR
+			}
+			NOT={exists = SCM}
+		    VOP = {vassal_of = THIS}
+		    VNS = {vassal_of = THIS}
+		    VLP = {vassal_of = THIS}
+		    VNG = {vassal_of = THIS}
+			
+		}
+		allow = {
+		    prestige = 50
+			THIS = {all_core = {is_core = THIS}}
+		}
+		effect = {
+			inherit = VNG
+			inherit = VLP
+			inherit = VNS
+			inherit = VOP
+			change_tag = SCM
+			SPC = {all_core = {remove_core = SPC}}
+			SCR = {all_core = {remove_core = SCR}}
+		    VOP = {all_core = {add_core = THIS}}
+		    VNS = {all_core = {add_core = THIS}}
+		    VLP = {all_core = {add_core = THIS}}
+		    VNG = {all_core = {add_core = THIS}}
+add_accepted_culture = spanish
+add_accepted_culture = catalan
+add_accepted_culture = basque
+add_accepted_culture = galician
+add_accepted_culture = mexican
+add_accepted_culture = mayan
+add_accepted_culture = nahua
+add_accepted_culture = texan
+add_accepted_culture = pueblo
+add_accepted_culture = dakota
+add_accepted_culture = afro_caribbean
+add_accepted_culture = afro_caribeno
+add_accepted_culture = central_american
+add_accepted_culture = native_american_minor
+add_accepted_culture = zapotec
+add_accepted_culture = tarascan
+add_accepted_culture = herero
+add_accepted_culture = shona
+add_accepted_culture = platinean
+add_accepted_culture = patagonian
+add_accepted_culture = guarani
+add_accepted_culture = quechua
+add_accepted_culture = aimara
+add_accepted_culture = herero
+add_accepted_culture = shona
+add_accepted_culture = south_andean
+add_accepted_culture = north_andean
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

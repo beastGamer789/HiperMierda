@@ -1,0 +1,19 @@
+political_decisions = {
+####################################################################
+    british_india_annex = {
+	    picture = india
+	    potential = {
+		    tag = BRJ
+			ai = no
+			NOT = {
+			    has_global_flag = india_annexed
+			}
+		}
+		effect = {
+		    set_global_flag = india_annexed
+			ENG = {
+			    country_event = { id=58301 days=0 }
+			}
+		}
+	}
+}

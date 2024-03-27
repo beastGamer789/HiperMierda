@@ -1,0 +1,6 @@
+owner = MAA
+controller = MAA
+add_core = MAA
+add_core = CHL
+trade_goods = wool
+life_rating = 25

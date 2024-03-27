@@ -1,0 +1,64 @@
+army = {
+	name = "Ejército de Buenos Aires"
+	location = 2348
+	regiment = {
+		name= "1. División de Infantería"
+		type = hussar
+		home = 2348
+	}
+
+	regiment = {
+		name= "2. División de Infantería"
+		type = infantry
+		home = 2348
+	}
+
+	regiment = {
+		name= "3. División de Infantería"
+		type = infantry
+		home = 2348
+	}
+
+	regiment = {
+		name= "4. División de Infantería"
+		type = infantry
+		home = 2349
+	}
+	
+	regiment = {
+		name= "5. División de Infantería"
+		type = infantry
+		home = 2349
+	}
+	
+	regiment = {
+		name= "6. División de Infantería"
+		type = artillery
+		home = 2349
+	}
+	
+	regiment = {
+		name= "7. División de Infantería"
+		type = artillery
+		home = 2349
+	}
+	
+	regiment = {
+		name= "8. División de Infantería"
+		type = artillery
+		home = 2349
+	}
+	
+	regiment = {
+		name= "9. División de Infantería"
+		type = artillery
+		home = 2352
+	}
+	
+	regiment = {
+		name= "10. División de Infantería"
+		type = artillery
+		home = 2379
+	}
+
+}

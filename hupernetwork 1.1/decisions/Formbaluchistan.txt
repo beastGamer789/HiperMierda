@@ -1,0 +1,86 @@
+political_decisions = {
+	unify_baluchistan = {
+	    picture = baluchistan
+		potential = {
+			OR = {
+				tag = PAN
+				tag = MAK
+				tag = AFG
+				tag = SIN
+				tag = KAL
+				primary_culture = baluchi
+				primary_culture = panjabi
+				primary_culture = kashmiri
+			}
+			NOT = {
+				exists = BHS
+			}
+		}
+		allow = {
+		    1218 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		    1219 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		    1220 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		    1221 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		    1222 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		    1223 = {owner={OR={tag = THIS vassal_of = THIS  in_sphere = THIS}}}
+		}
+		effect = {
+			change_tag = BHS
+		    KAL_1221 = {add_core = BHS}
+		    PAN_1224 = {add_core = BHS}
+		    PAN_1227 = {add_core = BHS}
+		    SIN = {add_core = BHS}
+			AFG = {all_core={add_core = BHS}}
+		    add_accepted_culture = panjabi
+		    add_accepted_culture = baluchi
+		    add_accepted_culture = kashmiri
+		    add_accepted_culture = pashtun
+		    add_accepted_culture = sindi
+		    add_accepted_culture = nepali
+		    add_accepted_culture = kashmiri
+			research_points = 20000
+			
+			any_country = {
+				limit = {
+					OR={vassal_of = THIS in_sphere = THIS}
+				}
+				any_owned = {
+					limit = {
+						is_core = BHS
+					}
+					secede_province = THIS
+				}
+			}
+			
+			any_country = {
+				limit = {
+				OR = {
+				    vassal_of = THIS
+					in_sphere = THIS
+				}
+				OR = {
+			primary_culture = kashmiri
+			primary_culture = panjabi
+			primary_culture = nepali
+			primary_culture = sindi
+			primary_culture = kashmiri
+			primary_culture = baluchi
+			primary_culture = pashtun
+			primary_culture = avadhi
+			
+			
+			accepted_culture = kashmiri
+			accepted_culture = panjabi
+			accepted_culture = nepali
+			accepted_culture = sindi
+			accepted_culture = kashmiri
+			accepted_culture = baluchi
+			accepted_culture = pashtun
+			accepted_culture = avadhi
+			    }
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+	}
+}

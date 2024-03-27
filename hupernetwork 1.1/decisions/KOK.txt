@@ -1,0 +1,196 @@
+political_decisions = {
+	persiankokandallinace = {
+	    picture = kokandpersia
+		potential = {
+		    tag = KOK
+			ai=no
+			NOT = {exists = PRC}
+			OR = {
+			    PER = {all_core = {owned_by = THIS}}
+				PER = {exists = yes}
+			}
+			OR = {
+			    PER = {is_vassal = no}
+				PER = {all_core = {OR={owned_by = THIS in_sphere = THIS vassal_of = THIS}}}
+				owns = 1121
+				alliance_with = PER
+			}
+			OR = {
+			    PER = {exists = no}
+				neighbour = PER
+			}
+		}
+	
+		allow = {
+		    OR={
+			relation = { who = PER value = 200 }
+			PER = {exists=no}
+			}
+		}
+		
+		effect = {
+		    change_tag = PRC
+			research_points= 10000
+			prestige = 10
+			PER = {country_event = {id=11101 days=0 }}
+			PER = {all_core = {add_core = THIS}}
+			add_accepted_culture = uzbek
+			add_accepted_culture = persian
+			add_accepted_culture = baluchi
+			add_accepted_culture = azerbaijani
+			add_accepted_culture = turkmen
+			add_accepted_culture = kirgiz
+		}
+	}
+	afgan_kokand = {
+	    picture = afgan_kokand
+	    potential = {
+		    tag = PRC
+			NOT={has_country_flag=afgan_kokand}
+		}
+		allow = {
+		    prestige = 50
+			all_core = {owned_by = THIS}
+		}
+		effect = {
+		    set_country_flag=afgan_kokand
+			AFG = {all_core = {add_core = THIS}}
+			1218 = {remove_core = THIS}
+		}
+	}
+	afgan_kokand2 = {
+	    picture = afgan_kokand2
+	    potential = {
+		    tag = PRC
+			NOT={has_country_flag=afgan_kokand2}
+			has_country_flag=afgan_kokand
+		}
+		allow = {
+			AFG = {exists = no}
+		}
+		effect = {
+		    set_country_flag=afgan_kokand2
+			prestige = 6
+			AFG = {all_core = {add_core = THIS}}
+			1218 = {remove_core = THIS}
+			add_accepted_culture = tajik
+			add_accepted_culture = pashtun
+			add_accepted_culture = hazara
+		}
+	}
+	form_ilkhanate = {
+	    picture = ilkhanate
+	    potential = {
+		    tag = PRC
+			NOT={exists=ILK}
+			has_country_flag=afgan_kokand2
+			NOT={has_country_flag=go_to_baluchistan_prc}
+		}
+		allow = {
+			civilized = yes
+			prestige=100
+			KOK={all_core={owned_by=THIS}}
+			BUK={all_core={owned_by=THIS}}
+			PRC={all_core={owned_by=THIS}}
+			PER={all_core={owned_by=THIS}}
+			KHI={all_core={owned_by=THIS}}
+		}
+		effect = {
+			prestige = 12
+			change_tag = ILK
+			capital=1124
+			1124 = {
+				change_province_name = "Soltaniyeh"
+			}
+			add_accepted_culture = armenian
+			add_accepted_culture = bedouin
+			add_accepted_culture = mashriqi
+			add_accepted_culture = turkish
+			KOK={all_core={remove_core=KOK}}
+			BUK={all_core={remove_core=KOK}}
+			PER={all_core={remove_core=KOK}}
+			KHI={all_core={remove_core=KOK}}
+			TUR_885 = {add_core=THIS}
+			EGY_903 = {add_core=THIS}
+			EGY_897 = {add_core=THIS}
+			RUS_1102 = {add_core=THIS}
+			RUS_1098 = {add_core=THIS}
+			RUS_1090 = {add_core=THIS}
+			TUR_884 = {add_core=THIS}
+			TUR_889 = {add_core=THIS}
+			TUR_931 = {add_core=THIS}
+			TUR_935 = {add_core=THIS}
+			TUR_923 = {add_core=THIS}
+		}
+	}
+	go_to_baluchistan_prc = {
+	    picture = baluchistan 
+	    potential = {
+		    OR={tag=ILK
+		    tag = MOG
+		    tag = PRC
+		    tag = TIM}
+			has_country_flag=afgan_kokand2
+			NOT={has_country_flag=go_to_baluchistan_prc}
+		}
+		allow = {
+		    all_core = {owned_by=THIS}
+		}
+		effect = {
+			prestige = 10
+			set_country_flag=go_to_baluchistan_prc
+			add_accepted_culture = kashmiri 
+			add_accepted_culture = panjabi
+			add_accepted_culture = baluchi
+		    KAL_1221 = {add_core = THIS}
+		    PAN_1224 = {add_core = THIS}
+		    PAN_1227 = {add_core = THIS}
+		    SIN = {add_core = THIS}
+			AFG = {all_core={add_core=THIS}}
+		}
+	}
+	timurid_legacy1 = {
+	    picture = timurids
+	    potential = {
+			has_country_flag = timurid_crown
+			NOT={tag=MOG}
+			NOT={exists = TIM}
+		}
+		allow = {
+		    war = no
+		}
+		effect = {
+			prestige = 10
+			change_tag = TIM
+			add_accepted_culture = uzbek
+			add_accepted_culture = azerbaijani
+			add_accepted_culture = turkmen
+			add_accepted_culture = baluchi
+			add_accepted_culture = persian
+		}
+	}
+	the_mughal_empire = {
+	    picture = mughal
+	    potential = {
+		    OR={tag = TIM tag=BHS}
+			owns = 1235
+			NOT={exists = MOG}
+		}
+		allow = {
+		    war = no
+			owns = 1251
+			owns = 1311
+			owns = 1292
+			owns = 1285
+			owns = 1264
+		}
+		effect = {
+			prestige = 10
+			change_tag = MOG
+			capital = 1235
+			HND={all_core={add_core=THIS}}
+			nationalvalue = nv_asianboy
+			add_accepted_culture = indian
+		}
+	}
+}

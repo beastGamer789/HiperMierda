@@ -1,0 +1,11 @@
+owner = PAP
+controller = PAP
+add_core = PAP
+add_core = ITA
+terrain = rome
+trade_goods = iron
+life_rating = 35
+1861.1.1 = {
+	add_core = ITA
+}
+1861.1.1 = { railroad = 2 }

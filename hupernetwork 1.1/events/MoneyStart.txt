@@ -1,0 +1,24 @@
+country_event = {
+	id = 25021
+	title = "EVTNAME25021"
+	desc = "EVTDESC25021"
+	
+	trigger = {
+	    NOT = {
+		    has_country_flag = money_Start
+		}
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+    immediate = {
+		set_country_flag = money_Start
+		money = 300000
+    }
+	
+	option = {
+		name = "EVTOPTA25021"
+	}
+}

@@ -1,0 +1,7 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = ARM
+fort = 3
+trade_goods = iron
+life_rating = 35

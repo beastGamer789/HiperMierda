@@ -1,0 +1,9 @@
+leader = {
+	name = "Persona el Milf"
+	date = 1836.1.1
+	type = land
+	personality = defence_4.1
+	background = attack_2.1
+	prestige = 0.1
+	picture = "pancho12"
+}

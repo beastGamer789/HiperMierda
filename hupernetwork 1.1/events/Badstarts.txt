@@ -1,0 +1,25 @@
+country_event = {
+	id = 25225
+	title = "EVTNAME25225"
+	desc = "EVTDESC25225"
+	
+	trigger = {
+	    NOT = {
+		    has_global_flag = french_die
+		}
+		tag = FRA
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25225"
+		add_country_modifier = {
+			name = french_militancy
+			duration = 8030
+		}
+		set_global_flag = french_die
+	}
+}

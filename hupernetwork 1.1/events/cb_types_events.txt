@@ -1,0 +1,98 @@
+country_event = {
+	id = 68208
+	title = "EVTNAME68208"
+	desc = "EVTDESC68208"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    any_country = {
+		    limit = {
+			    exists = yes
+				is_culture_group = THIS
+				is_cultural_union = no
+				is_independant = yes
+				NOT={tag = THIS}
+				have_core_in = THIS
+			}
+			country_event = {id = 68209 days = 0}
+		}
+	    any_country = {
+		    limit = {
+			    exists = no
+				is_culture_group = THIS
+				is_cultural_union = no
+				have_core_in = THIS
+				NOT={tag = THIS}
+				NOT={tag = GAV}
+				NOT={tag = NGF}
+			}
+			country_event = {id = 68210 days = 0}
+		}
+		FROM = {set_country_flag = won_humilliationcbunificationwar}
+	}
+	option = {
+		name = "EVTOPTA68208"
+		country_event = {id = 68211 days = 0}
+	}
+}
+country_event = {
+	id = 68209
+	title = "EVTNAME68209"
+	desc = "EVTDESC68209"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		all_core = {
+		    limit = {owned_by = FROM}
+			secede_province = THIS
+		}
+	}
+	option={name = "EVTOPTA68209"
+		any_country = {
+		    limit={has_country_flag = won_humilliationcbunificationwar}
+			diplomatic_influence = { who = THIS value = 300 level = 5 influence_value = 200}
+		}}
+}
+country_event = {
+	id = 68210
+	title = "EVTNAME68210"
+	desc = "EVTDESC68210"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM={release_vassal = THIS}
+		all_core = {
+		    limit = {owned_by = FROM}
+			secede_province = THIS
+		}
+		FROM={release_vassal = THIS}
+	}
+	option={name = "EVTOPA68210"
+		any_country = {
+		    limit={has_country_flag = won_humilliationcbunificationwar}
+		    diplomatic_influence = { who = THIS value = 300 level = 5 influence_value = 100}
+		}}
+}
+country_event = {
+	id = 68211
+	title = "EVTNAME68211"
+	desc = "EVTDESC68211"
+	picture = rebellion
+	
+	is_triggered_only = yes
+	
+	option={
+	    name = "EVTOPTA68211"
+	    prestige = -100 
+		any_country = {
+		    limit={has_country_flag = won_humilliationcbunificationwar}
+			clr_country_flag = won_humilliationcbunificationwar
+		}
+	}
+}

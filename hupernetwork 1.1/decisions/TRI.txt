@@ -1,0 +1,21 @@
+
+political_decisions = {
+	form_libya = {
+	    picture = libya
+		potential = {
+			tag = TRI
+			NOT = {exists=LBI}
+		}
+		allow = {
+		    war = no
+			EGY_1754 = {owned_by = THIS}
+		}
+		effect = {
+			prestige = 19
+			change_tag = LBI
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

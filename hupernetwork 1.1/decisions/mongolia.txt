@@ -1,0 +1,100 @@
+political_decisions = {
+	mgl_wantcores = {
+	    picture = yuan
+	    potential = {
+		    #   
+			NOT = {has_country_flag = mgl_wantcores}
+			tag = MGL
+		}
+		allow = {
+		    #
+		}
+		effect = {
+		    #
+			set_country_flag = mgl_wantcores
+			QIN = {country_event = { id=25012 days =0 }}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	mgl_ultimatum = {
+	    picture = yuan
+	    potential = {
+		    #   
+			tag = MGL
+			QIN = {has_country_modifier = chinese_war}
+			all_core = {owned_by = THIS}
+			NOT = {has_country_flag = mgl_ultimatum}
+		}
+		allow = {
+		    #
+		}
+		effect = {
+		    #
+			set_country_flag = mgl_ultimatum
+			QIN = {country_event = { id=25013 days =0 }}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	yuan_formation = {
+	    picture = yuan
+	    potential = {
+		    #   
+			tag = MGL
+			QIN = {has_country_modifier = lost_opiumwar}
+		}
+		allow = {
+		    #
+		}
+		effect = {
+		    #
+			change_tag = YUA
+			add_accepted_culture = han
+			add_accepted_culture = tibetan
+			add_accepted_culture = uighur
+			inherit = MCK
+			inherit = XIN
+			inherit = YNN
+			inherit = TIB
+			TIB = {all_core = {add_core = THIS}}
+			YNN = {all_core = {add_core = THIS}}
+			XIN = {all_core = {add_core = THIS}}
+			MCK = {all_core = {add_core = THIS}}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	yuan_domination = {
+	    picture = yuan
+	    potential = {
+		    #   
+			tag = YUA
+			NOT={has_country_flag = yuan_domination}
+		}
+		allow = {
+		    #
+		}
+		effect = {
+		    #
+			set_country_flag = yuan_domination
+			QIN = {release_vassal = YUA leave_alliance = YUA}
+		war = {
+			target = QIN
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

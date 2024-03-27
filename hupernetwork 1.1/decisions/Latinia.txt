@@ -1,0 +1,105 @@
+
+political_decisions = {
+	cores_to_latinia = {
+	    potential = {
+		    #
+			tag = LTI
+			prestige = 750
+			NOT = {has_country_flag = latinia_reclamations}
+		}
+		allow = {
+		    prestige = 50
+			war = no
+			LTI = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+				            vassal_of = THIS
+						}
+					}
+				}
+			}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 150
+			any_country = {
+				limit = {
+				vassal_of = THIS
+				OR = {
+				    accepted_culture = french
+				    accepted_culture = italian
+				    accepted_culture = italian
+				    accepted_culture = spanish
+				    accepted_culture = romanian
+				    accepted_culture = catalan
+				    accepted_culture = basque
+				    accepted_culture = portuguese
+				    accepted_culture = galician
+					
+				    accepted_culture = south_andean
+				    accepted_culture = north_andean
+				    accepted_culture = platinean
+				    accepted_culture = brazilian
+				    accepted_culture = quechua
+				    accepted_culture = aimara
+				    accepted_culture = central_american
+				    accepted_culture = texan
+				    accepted_culture = mayan
+				    accepted_culture = mexican
+				    accepted_culture = french_canadian
+					#
+				    primary_culture = french
+				    primary_culture = italian
+				    primary_culture = italian
+				    primary_culture = spanish
+				    primary_culture = romanian
+				    primary_culture = catalan
+				    primary_culture = basque
+				    primary_culture = portuguese
+					
+				    primary_culture = south_andean
+				    primary_culture = north_andean
+				    primary_culture = platinean
+				    primary_culture = brazilian
+				    primary_culture = quechua
+				    primary_culture = aimara
+				    primary_culture = central_american
+				    primary_culture = texan
+				    primary_culture = mayan
+				    primary_culture = mexican
+				    primary_culture = french_canadian
+				    primary_culture = galician
+					}
+				}
+				country_event = { id=11101 days=0 }
+			}
+		add_accepted_culture = south_andean
+		add_accepted_culture = north_andean
+		add_accepted_culture = platinean
+		add_accepted_culture = brazilian
+		add_accepted_culture = quechua
+		add_accepted_culture = aimara
+		add_accepted_culture = central_american
+		add_accepted_culture = texan
+		add_accepted_culture = mayan
+		add_accepted_culture = mexican
+        add_accepted_culture = french add_accepted_culture = swiss_french_canadian
+		ARG = {all_core={add_core=LTI}}
+		CHL = {all_core={add_core=LTI}}
+		BRZ = {all_core={add_core=LTI}}
+		BOL = {all_core={add_core=LTI}}
+		PEU = {all_core={add_core=LTI}}
+		ECU = {all_core={add_core=LTI}}
+		CLM = {all_core={add_core=LTI}}
+		VNZ = {all_core={add_core=LTI}}
+		PNM = {all_core={add_core=LTI}}
+		UCA = {all_core={add_core=LTI}}
+		MEX = {all_core={add_core=LTI}}
+		QUE = {all_core={add_core=LTI}}
+		add_country_flag = latinia_reclamations
+		}
+	}	
+}

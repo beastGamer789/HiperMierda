@@ -1,0 +1,82 @@
+leader = {
+	name = "Pedro Alcántara Herrán"
+	date = 1836.1.1
+	type = land
+	personality = defence_2.1
+	background = attack_1.1
+}
+
+leader = {
+	name = "Tomás Cipriano de Mosquera"
+	date = 1836.1.1
+	type = land
+	personality = defence_1.1
+	background = attack_2.1
+}
+
+army = {
+	name = "Ejército de Colombia"
+	location = 2253
+	regiment = {
+		name= "1. Brigada de Infantería"
+		type = hussar
+		home = 2247
+	}
+
+	regiment = {
+		name= "2. Brigada de Infantería"
+		type = infantry
+		home = 2247
+	}
+
+	regiment = {
+		name= "3. Brigada de Infantería"
+		type = infantry
+		home = 2247
+	}
+
+	regiment = {
+		name= "5. Brigada de Caballería"
+		type = infantry
+		home = 2247
+	}
+	
+	regiment = {
+		name= "6. Brigada de Caballería"
+		type = infantry
+		home = 2247
+	}
+	
+	regiment = {
+		name= "7. Brigada de Caballería"
+		type = artillery
+		home = 2247
+	}
+	
+	regiment = {
+		name= "8. Brigada de Caballería"
+		type = artillery
+		home = 2247
+	}
+	
+	regiment = {
+		name= "9. Brigada de Caballería"
+		type = artillery
+		home = 2247
+	}
+	
+	regiment = {
+		name= "11. Brigada de Caballería"
+		type = artillery
+		home = 2256
+		
+	}
+	
+		regiment = {
+		name= "12. Brigada de Caballería"
+		type = artillery
+		home = 2247
+	}
+	
+
+}

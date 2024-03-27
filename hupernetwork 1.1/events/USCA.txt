@@ -1,0 +1,48 @@
+country_event = {
+    id = 4850
+    title = "EVTNAME4850"
+    desc = "EVTDESC4850"
+    picture = rebellion
+
+    trigger = {
+        year = 1840
+        tag = UCA
+        NOT = {
+            has_global_flag = usca_doesntexist
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    option = {
+        name = "EVTOPTA4850"
+        set_global_flag = usca_doesntexist
+        change_tag = GUA
+        HON = {
+            all_core = {
+                secede_province = HON
+                remove_core = THIS
+            }
+        }
+        COS = {
+            all_core = {
+                secede_province = COS
+                remove_core = THIS
+            }
+        }
+        ELS = {
+            all_core = {
+                secede_province = ELS
+                remove_core = THIS
+            }
+        }
+        NIC = {
+            all_core = {
+                secede_province = NIC
+                remove_core = THIS
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+country_event = {
+	id = 68020
+	title = "EVTNAME68020"
+	desc = "EVTDESC68020"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+		OR={tag = ITA tag=ART tag=RME}
+		owns = 729
+		owns = 726
+		NOT={has_country_flag=veniceconquest}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	immediate = {set_country_flag = veniceconquest nationalvalue=nv_equality}
+	
+	option = {
+		name = "EVTOPTA68020"
+		prestige = 68
+	}
+}

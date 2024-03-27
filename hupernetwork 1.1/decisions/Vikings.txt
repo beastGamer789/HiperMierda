@@ -1,0 +1,85 @@
+political_decisions = {
+####################################################################
+	form_norse = {
+	    picture = norse
+	    potential = {
+		    #   
+			NOT = {
+			    exists = VKN
+			}
+			tag = SCA
+			has_country_flag = baltic_mission
+			has_country_flag = toscotland
+			
+		}
+		allow = {
+			war = no
+			prestige = 150
+			all_core = {owned_by = THIS}
+			nationalism_n_imperialism = 1
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			change_tag = VKN
+		}
+	}
+	northumbria = {
+	    picture = norse
+	    potential = {
+		    #   
+			NOT = {
+			    has_country_flag = northumbria
+			}
+			tag = VKN
+			
+		}
+		allow = {
+			war = no
+			owns = 533
+		    #
+		}
+		effect = {
+		    #
+			set_country_flag = northumbria
+			533 = {add_core = NTA}
+			ENG_284 = {add_core = NTA}
+			ENG_291 = {add_core = NTA}
+			ENG_280 = {add_core = NTA}
+			release_vassal = NTA
+			casus_belli = { target = ENG type = liberate_country moNTAs = 72 }
+		}
+	}
+	english_succesion = {
+	    picture = norse
+	    potential = {
+		    #   
+			NOT = {
+			    has_country_flag = english_succesion
+			}
+			has_country_flag = northumbria
+			tag = VKN
+			
+		}
+		allow = {
+			war = no
+			NTA = {is_vassal_of = THIS}
+			NTA = {all_core = {owned_by = NTA}}
+		    #
+		}
+		effect = {
+		    #
+			set_global_flag = english_succesion
+			inherit = NTA
+			badboy = 25
+			add_accepted_culture = british
+		war = {
+			target = ENG
+			attacker_goal = {
+				casus_belli = conquest
+			}
+		}
+		}
+	}	
+}

@@ -1,0 +1,33 @@
+army = {
+	name = "Artillery"
+	location = 1602
+	regiment = {
+		name= "1.al Nahyah"
+		type = artillery
+		home = 1603
+	}
+	regiment = {
+		name= "1.al Nahyah"
+		type = artillery
+		home = 1603
+	}
+	regiment = {
+		name= "1.al Nahyah"
+		type = artillery
+		home = 1601
+	}
+	regiment = {
+		name= "1.al Nahyah"
+		type = artillery
+		home = 1602
+	}
+}
+
+leader = {
+	name = "Mata Jins"
+	date = 1833.1.1
+	type = land
+	personality = defence_5.1
+	background = attack_1.1
+	prestige = 0.0
+}

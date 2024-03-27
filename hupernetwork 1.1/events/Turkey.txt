@@ -1,0 +1,18 @@
+country_event = {
+	id = 48560
+	title = "EVTNAME48560"
+	desc = "EVTDESC48560"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48560"
+		prestige = -30
+		TUR = {
+		    all_core = {
+			     limit={NOT={continent=africa} owned_by=THIS}
+				 secede_province = TUR
+			}
+		}
+	}
+}

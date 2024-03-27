@@ -1,0 +1,6 @@
+owner = IMJ
+controller = IMJ
+add_core = IMJ
+add_core = TKG
+trade_goods = tea
+life_rating = 35

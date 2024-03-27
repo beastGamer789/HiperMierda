@@ -1,0 +1,266 @@
+country_event = {
+	id = 48101
+	title = "EVTNAME48101"
+	desc = "EVTDESC48101"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48101"
+		ai_chance = {
+		factor = 4
+        modifier = {
+            factor = 14
+            alliance_with = FROM
+        }
+        modifier = {
+            factor = 10
+            is_sphere_leader_of = FROM
+        }
+        modifier = {
+            factor = 1
+            relation = { who = FROM value = 160 }
+        }
+        modifier = {
+            factor = 1
+            relation = { who = FROM value = 100 }
+        }}
+        FROM = {
+            change_variable = {
+                which = congo_question
+                value = 1
+            }
+        }
+		set_country_flag = voted_yes_to_congo
+	}
+	option = {
+		name = "EVTOPTB48101"
+		ai_chance = {
+		factor = 1
+        modifier = {
+		    factor = 12
+            NOT = {
+                relation = { who = FROM value = 0 }
+            }
+        }
+        modifier = {
+		    factor = 16
+            NOT = {
+                relation = { who = FROM value = -100 }
+            }
+        }
+        modifier = {
+		    factor = 9999
+			OR = {
+			    1983 = {tag=THIS}
+			    1982 = {tag=THIS}
+			    1985 = {tag=THIS}
+			}
+        }}	
+	}
+}
+country_event = {
+	id = 48102
+	title = "EVTNAME48102"
+	desc = "EVTDESC48102"
+	
+	trigger = {
+	    OR = {
+          THIS = {
+              check_variable = {
+                  which = congo_question
+                  value = 4
+              }
+          }}
+		  NOT = {
+		      has_global_flag = congo_finished
+		  }
+		  KON = {
+		      owns = 1983
+		      owns = 1982
+		  }
+		  has_country_flag = we_claimed_congo
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPTA48102"
+		set_global_flag = congo_finished
+		prestige = 120
+		1983 = {secede_province = THIS}
+		1996 = {secede_province = THIS}
+		1998 = {secede_province = THIS}
+		1997 = {secede_province = THIS}
+		1991 = {secede_province = THIS}
+		1993 = {secede_province = THIS}
+		1990 = {secede_province = THIS}
+		1995 = {secede_province = THIS}
+		1992 = {secede_province = THIS}
+		1994 = {secede_province = THIS}
+		1987 = {secede_province = THIS}
+		1989 = {secede_province = THIS}
+		1988 = {secede_province = THIS}
+		1984 = {secede_province = THIS}
+		1986 = {secede_province = THIS}
+		1985 = {secede_province = THIS}
+		1982 = {secede_province = THIS}
+		KON = {
+		     owns = 1983
+		     owns = 1982
+		}
+        FROM = {
+            set_variable = {
+                which = congo_question
+                value = 0
+            }
+        }
+	}
+}
+country_event = {
+	id = 48103
+	title = "EVTNAME48103"
+	desc = "EVTDESC48103"
+	
+	trigger = {
+		has_country_flag = we_claimed_congo
+	    OR = {
+		NOT={
+          THIS = {
+              check_variable = {
+                  which = congo_question
+                  value = 4
+              }
+          }}}
+		  NOT = {
+		      has_global_flag = congo_finished
+		  }
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPTA48103"
+		set_global_flag = congo_finished
+        FROM = {
+            set_variable = {
+                which = congo_question
+                value = 0
+            }
+        }
+	}
+}
+country_event = {
+	id = 48104
+	title = "EVTNAME48104"
+	desc = "EVTDESC48104"
+	
+	trigger = {
+	    OR = {
+          THIS = {
+              check_variable = {
+                  which = congo_question
+                  value = 4
+              }
+        }}
+		  NOT = {
+		      has_global_flag = congo_finished
+			  tag = KON
+		  }
+		  THIS = {
+		      owns = 1983
+		      owns = 1982
+		  }
+		  
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPTA48104"
+		set_global_flag = congo_finished
+		prestige = -45
+		any_country = {
+		    limit = {
+			     OR = {
+				      has_country_flag = we_claimed_congo
+				      has_country_flag = voted_yes_to_congo
+				 }
+			}
+				 relation = { who = THIS value = 150 }
+		}
+		any_country = {
+		    limit = {
+			     OR = {
+				      has_country_flag = we_claimed_congo
+				 }
+			}
+				 country_event = { id=48105 days=0 }
+		}
+		ai_chance = {
+		    factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB48104"
+		set_global_flag = congo_finished
+		prestige = 45
+		any_country = {
+		    limit = {
+			     OR = {
+				      has_country_flag = we_claimed_congo
+				      has_country_flag = voted_yes_to_congo
+				 }
+			}
+				 relation = { who = THIS value = -150 }
+				 casus_belli = { target = THIS type = cut_down_to_size months = 72 }
+		}
+		any_country = {
+		    limit = {
+			     OR = {
+				      has_country_flag = we_claimed_congo
+				 }
+			}
+				 country_event = { id=917291 days=0 }
+		}
+		ai_chance = {
+		    factor = 0
+		}
+	}
+}
+country_event = {
+	id = 48105
+	title = "EVTNAME48105"
+	desc = "EVTDESC48105"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA48105"
+		owner = {1983 = {secede_province = THIS}}
+		owner = {1996 = {secede_province = THIS}}
+		owner = {1998 = {secede_province = THIS}}
+		owner = {1997 = {secede_province = THIS}}
+		owner = {1991 = {secede_province = THIS}}
+		owner = {1993 = {secede_province = THIS}}
+		owner = {1990 = {secede_province = THIS}}
+		owner = {1995 = {secede_province = THIS}}
+		owner = {1992 = {secede_province = THIS}}
+		owner = {1994 = {secede_province = THIS}}
+		owner = {1987 = {secede_province = THIS}}
+		owner = {1989 = {secede_province = THIS}}
+		owner = {1988 = {secede_province = THIS}}
+		owner = {1984 = {secede_province = THIS}}
+		owner = {1986 = {secede_province = THIS}}
+		owner = {1985 = {secede_province = THIS}}
+		owner = {1982 = {secede_province = THIS}}
+	}
+}
+country_event = {
+	id = 48106
+	title = "EVTNAME48106"
+	desc = "EVTDESC48106"
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = "EVTOPTA48106"
+	}
+}

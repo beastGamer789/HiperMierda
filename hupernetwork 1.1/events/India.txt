@@ -1,0 +1,48 @@
+country_event = {
+	id = 25020
+	title = "EVTNAME25020"
+	desc = "EVTDESC25020"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+		OR = {
+		    is_vassal = no
+			is_substate = no
+		}
+		war = no
+		NOT = {has_global_flag = BRJ_independent}
+		tag = BRJ
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {set_global_flag = BRJ_independent
+		add_country_modifier = {
+			name = india_independence
+			duration = 3600
+		}}
+	
+	option = {
+		name = "EVTOPTA25020"
+		prestige = 15
+		change_tag = HNF
+		BRJ = {
+		    all_core = {
+			    remove_core = BRJ
+			}
+		}
+		HNF = {
+		    all_core = {
+			    remove_core = HNF
+			}
+		}
+		HND = {
+		    all_core = {
+			    add_core = HNF
+			}
+		}
+	}
+}

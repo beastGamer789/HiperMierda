@@ -1,0 +1,127 @@
+political_decisions = {
+####################################################################
+	form_holy = {
+	    picture = holy_roman_empire
+	    potential = {
+		    #   
+			NOT = {
+			    exists = GER
+			    exists = HRM
+				has_global_flag = holy_roman_empirealreadyexists
+			}
+			OR = {
+			    tag = ASG
+			}
+			
+		}
+		allow = {
+		    prestige = 50
+			war = no
+			NOT={
+			    exists = GER
+			}
+			PRU_682 = {owner={OR={tag = THIS in_sphere = THIS vassal_of = THIS}}}
+			ASG = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		    #
+		}
+		effect = {
+		    #
+			set_global_flag = holy_roman_empirealreadyexists
+			prestige = 25
+			change_tag = HRM
+			add_accepted_culture = dutch
+			add_accepted_culture = italian add_accepted_culture = swiss_italian
+			add_accepted_culture = italian add_accepted_culture = swiss_italian
+			add_accepted_culture = german add_accepted_culture = swiss_german
+			add_accepted_culture = italian add_accepted_culture = swiss_italian
+			any_country = {
+				limit = {
+					in_sphere = THIS
+				}
+				any_owned = {
+					limit = {
+						is_core = HRM
+					}
+					secede_province = THIS
+				}
+			}
+			any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+			any_country = {
+				limit = {
+					OR={
+					is_culture_group = germanic
+					tag = TUS
+					tag = LUC
+					tag = MOD
+					tag = PAR
+					}
+					in_sphere = THIS
+				}
+				country_event = { id=11101 days=0 }
+			}
+			GAV = {all_core = {add_core = HRM}}
+			GER = {all_core = {add_core = HRM}}
+			726 = { add_core = HRM }
+			727 = { add_core = HRM }
+			733 = { add_core = HRM }
+			729 = { add_core = HRM }
+			732 = { add_core = HRM }
+			731 = { add_core = HRM }
+			730 = { add_core = HRM }
+			728 = { add_core = HRM }
+			465 = { add_core = HRM }
+			466 = { add_core = HRM }
+			738 = { add_core = HRM }
+			739 = { add_core = HRM }
+			740 = { add_core = HRM }
+			746 = { add_core = HRM }
+			744 = { add_core = HRM }
+			745 = { add_core = HRM }
+			747 = { add_core = HRM }
+			748 = { add_core = HRM }
+			745 = { add_core = HRM }
+			395 = { add_core = HRM }
+			396 = { add_core = HRM }
+			397 = { add_core = HRM }
+			398 = { add_core = HRM }
+			392 = { add_core = HRM }
+			394 = { add_core = HRM }
+			393 = { add_core = HRM }
+			382 = { add_core = HRM }
+			379 = { add_core = HRM }
+			381 = { add_core = HRM }
+			380 = { add_core = HRM }
+			385 = { add_core = HRM }
+			386 = { add_core = HRM }
+			383 = { add_core = HRM }
+			384 = { add_core = HRM }
+			377 = { add_core = HRM }
+			375 = { add_core = HRM }
+			376 = { add_core = HRM }
+			378 = { add_core = HRM }
+			391 = { add_core = HRM }
+			390 = { add_core = HRM }
+			387 = { add_core = HRM }
+			389 = { add_core = HRM }
+			388 = { add_core = HRM }
+			NET={all_core={remove_core=HRM}}
+			LUX={all_core={remove_core=HRM}}
+			BEL={all_core={remove_core=HRM}}
+		}
+	}	
+}

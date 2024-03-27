@@ -1,0 +1,355 @@
+country_event = {
+	id = 25006
+	title = "EVTNAME25006"
+	desc = "EVTDESC25006"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+	    OR = {
+			tag = QIN
+		}
+		OR = {AND={
+		civilized = yes
+		1612 = {controlled_by_rebels = yes}}
+		NOT={government=absolute_monarchy}}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPTA25006"
+		prestige = -130
+		change_tag = CHI
+		primary_culture = han
+		add_accepted_culture = manchu
+		government = absolute_monarchy
+		add_country_modifier = {
+		    name = china
+			duration = -1
+		}
+		QIN = {
+		    all_core = {
+			    remove_core = QIN
+				add_core = CHI
+			}
+		}
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+			any_pop = {
+				militancy = -10
+			}
+		}
+	}
+}
+country_event = {
+	id = 25007
+	title = "EVTNAME25007"
+	desc = "EVTDESC25007"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+	    OR = {
+			tag = TPG
+		}
+		civilized = yes
+		2221 = {controlled_by_rebels = yes}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = "EVTOPTA25007"
+		prestige = -130
+		change_tag = CHI
+		primary_culture = han
+		add_country_modifier = {
+		    name = china
+			duration = -1
+		}
+		TPG = {
+		    all_core = {
+			    remove_core = TPG
+				add_core = CHI
+			}
+		}
+		any_owned = {
+			limit = { controlled_by = REB }
+			change_controller = THIS
+		    government = absolute_monarchy
+			any_pop = {
+				militancy = -10
+			}
+		}
+	}
+}
+country_event = {
+	id = 25008
+	title = "EVTNAME25008"
+	desc = "EVTDESC25008"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+	    exists = QIN
+		tag = ENG
+		QIN = {owns=1496}
+		NOT={has_global_flag= opium_happened}
+		year = 1839
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+	    name = "EVTOPTA25008"
+		prestige = -50
+		any_owned = {
+			any_pop = {
+				militancy = 3
+				consciousness = 6
+			}
+		}
+		QIN={country_event={id=26009 days=0}}
+		set_global_flag = opium_happened
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+	    name = "EVTOPTB25008"
+		set_global_flag = opium_happened		
+		war = {
+			target = QIN
+			attacker_goal = {
+				casus_belli = demand_hongkong
+                state_province_id = 1496
+			}
+			
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25009
+	title = "EVTNAME25009"
+	desc = "EVTDESC25009"
+	picture = rebellion
+
+	major = yes	
+	is_triggered_only=yes
+	immediate={
+		prestige = -75
+		any_owned = {
+			any_pop = {
+				militancy = 6
+				consciousness = 8
+			}
+	    }
+		add_country_modifier = {
+			name = lost_opiumwar
+			duration = -1
+		}
+		set_global_flag = lost_opiumwar
+	}
+	option = {
+	    name = "EVTOPTA25009"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 26009
+	title = "EVTNAME26009"
+	desc = "EVTDESC26009"
+	picture = rebellion
+
+	major = yes	
+	trigger = {
+	    tag = QIN
+		QIN={owns=1496}
+		NOT = {has_global_flag = lost_opiumwar}
+		has_global_flag = opium_happened
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate={
+		prestige = 75
+		any_owned = {
+			any_pop = {
+				militancy = -6
+				consciousness = -8
+			}
+	    }
+		add_country_modifier = {
+			name = won_opiumwar
+			duration = -1
+		}
+		set_global_flag = lost_opiumwar
+		remove_country_modifier=lost_opiumwar
+	}
+	option = {
+	    name = "EVTOPTA26009"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25010
+	title = "EVTNAME25010"
+	desc = "EVTDESC25010"
+
+	trigger = {
+	    OR={tag=QIN}
+		NOT = { has_country_modifier = uncivilized_isolationism }
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+	    name = "EVTOPTA25010"
+		add_country_modifier = {
+			name = uncivilized_isolationism
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25011
+	title = "EVTNAME25011"
+	desc = "EVTDESC25011"
+
+	trigger = {
+	    tag = QIN
+		ai = yes
+		NOT = {has_global_flag = liberation_china}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+	    name = "EVTOPTA25011"
+		set_global_flag = liberation_china
+		1496 = {secede_province=THIS}
+		add_country_modifier = {
+			name = uncivilized_isolationism
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25112
+	title = "EVTNAME25112"
+	desc = "EVTDESC25112"
+
+	trigger = {
+	    war_with = QIN
+		capital_scope = { continent = europe }
+		NOT = {has_country_modifier = chinese_war}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+	    name = "EVTOPTA25112"
+		QIN = {country_event = { id=25113 days = -1 }}
+		add_country_modifier = {
+			name = chinese_war
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 25113
+	title = "EVTNAME25113"
+	desc = "EVTDESC25113"
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = "EVTOPTA25113"
+		add_country_modifier = {
+			name = chinese_war
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 25114
+	title = "EVTNAME25114"
+	desc = "EVTDESC25114"
+
+	trigger = {
+		NOT = {war_with = QIN}
+		has_country_modifier = chinese_war
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+	    name = "EVTOPTA25114"
+		remove_country_modifier = chinese_war
+	}
+}
+#country_event = {
+#	id = 25115
+#	title = "EVTNAME25115"
+#	desc = "EVTDESC25115"
+#
+#	trigger = {
+#		OR = {tag = CHI tag = QIN tag = TPG}
+#		NOT={has_country_flag = civilized_china}
+#		civilized = yes
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 30
+#	}
+#	
+#	immediate = {
+#	    set_country_flag = civilized_china
+#	}
+#	
+#	option = {
+#	    name = "EVTOPA25115"
+#		any_owned = {
+#		    add_province_modifier = {
+#			    name = china2
+#				duration = -1
+#			}
+#		}
+#	}
+#}

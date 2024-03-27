@@ -1,0 +1,43 @@
+political_decisions = {
+	claim_congo = {
+	    picture = congo_flag
+	    potential = {
+		    capital_scope = { continent = europe }
+			is_greater_power = no
+			year = 1850
+			NOT = {has_global_flag = congo_claimed}
+		}
+		allow = {
+		     war = no
+			 raider_group_doctrine = 1
+			 idealism = 1
+			 num_of_ports = 1
+			 prestige = 10
+		}
+		effect = {
+		    prestige = 10
+		    set_global_flag = congo_claimed
+			set_country_flag = we_claimed_congo
+			any_country = {
+			    limit = {
+				     is_greater_power = yes
+					 capital_scope = {continent=europe} 
+				}
+				country_event = { id=48101 days=0 }
+			}
+            THIS = {
+                set_variable = {
+                    which = congo_question
+                    value = 0
+                }
+            }
+		}
+		ai_chance = {
+		    factor = 1
+			modifier = {
+			    factor = 9
+				tag = BEL
+			}
+        }
+	}	
+}

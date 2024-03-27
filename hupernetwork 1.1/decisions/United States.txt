@@ -1,0 +1,32 @@
+
+political_decisions = {
+
+	refuse_treaty_gante = {
+	    picture = treaty_gente
+	    potential = {
+		    #   
+			tag = USA
+			has_country_flag = hasmanifestdestiny
+			NOT = {has_global_flag = refuse_treaty_gante}
+			
+		}
+		allow = {
+		    prestige = 150
+			war = no
+			USA = {all_core={owner={tag = THIS}}} 
+			nationalism_n_imperialism = 1
+		    #
+		}
+		effect = {
+		    #
+			prestige = -100
+			set_global_flag = refuse_treaty_gante
+			add_accepted_culture = anglo_canadian
+			add_accepted_culture = french_canadian
+			CAN = {all_core = {add_core = THIS}}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

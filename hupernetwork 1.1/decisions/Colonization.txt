@@ -1,0 +1,54 @@
+political_decisions = {
+    claim_borneo = {
+	    picture = borneo
+	    potential = {
+		    NOT = {has_global_flag=borneo_claimed}
+			owns = 1393
+		}
+		allow = {
+		    prestige = 15
+		    war = no
+			NOT = {year=1870}
+			OR = {
+			    NOT = {tag = BRU}
+				ai=no
+				owns = 1423
+				1423={owner={in_sphere=THIS}}
+				1427={owner={in_sphere=THIS}}
+			}
+		}
+		effect = {
+		    prestige = 20
+			owner = {1397 = {secede_province = THIS}}
+			owner = {1426 = {secede_province = THIS}}
+			owner = {1428 = {secede_province = THIS}}
+			owner = {1425 = {secede_province = THIS}}
+			owner = {1429 = {secede_province = THIS}}
+			owner = {1422 = {secede_province = THIS}}
+			set_global_flag=borneo_claimed
+		}
+	}
+	get_libyan_desert = {
+	    picture = libyan_sahara
+		potential = {
+		    TRI_1743 = {owned_by = THIS}
+		    EGY_1754 = {owned_by = THIS}
+			NOT = {year=1870}
+			NOT = {has_global_flag = libia_desert_taken}
+		}
+		allow = {
+		    war = no
+			prestige = 50
+			NOT = {year=1870}
+		}
+		effect = {
+			prestige = 35
+			set_global_flag = libia_desert_taken
+			TRI_1739 = {secede_province = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}	
+

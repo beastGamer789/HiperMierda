@@ -1,0 +1,145 @@
+CHI = {
+	value = -200
+	truce_until="1837.1.1"
+}
+
+leader = {
+		name = "Tokugawa Nariaki"
+		date = 1836.1.1
+		type = land
+		personality = defence_4.1
+	    background = attack_4.1
+		prestige = 0.1
+	
+	}
+
+army = {
+	name = "Ejercito de ame"
+	
+	location = 1677
+	regiment = {
+		name= "1.Edo"
+		type = hussar
+		home = 1650
+	}
+
+	regiment = {
+		name= "2.Edo"
+		type = infantry
+		home = 1649
+	}
+
+	regiment = {
+		name= "3.Edo"
+		type = infantry
+		home = 1652
+	}
+
+    regiment = {
+		name= "1.Choshu"
+		type = infantry
+		home = 1640
+	}
+
+	regiment = {
+		name= "2.Choshu"
+		type = infantry
+		home = 1638
+	}
+
+	regiment = {
+		name= "3.Choshu"
+		type = artillery
+		home = 1641
+	}
+
+	location = 1662
+	regiment = {
+		name= "1.1 Satsuma"
+		type = artillery
+		home = 1662
+	}
+
+	regiment = {
+		name= "2.1 Satsuma"
+		type = artillery
+		home = 1660
+	}
+
+	regiment = {
+		name= "3.1 Satsuma"
+		type = artillery
+		home = 1661
+	}
+
+	regiment = {
+		name= "1.Tosa"
+		type = artillery
+		home = 1665
+	}
+
+}
+
+army = {
+	name = "Army of Daimyo Date"
+	location = 1668
+	regiment = {
+		name= "1.Sendai"
+		type = hussar
+		home = 1668
+	}
+
+	regiment = {
+		name= "2.Sendai"
+		type = artillery
+		home = 1673
+	}
+
+	regiment = {
+		name= "3.Sendai"
+		type = artillery
+		home = 1669
+	}
+
+	regiment = {
+		name= "1.Kaga"
+		type = artillery
+		home = 1645
+	}
+
+	regiment = {
+		name= "2.Kaga"
+		type = artillery
+		home = 1675
+	}
+	
+	regiment = {
+		name= "2.Tosa"
+		type = artillery
+		home = 1667
+	}
+
+	regiment = {
+		name= "3.Tosa"
+		type = artillery
+		home = 1666
+	}
+
+	regiment = {
+		name= "3.Kaga"
+		type = artillery
+		home = 1677
+	}
+
+}
+
+navy = {
+	name = "Imperial Fleet"
+	location = 1657
+	ship = {
+		name= "1 Yusosentai"
+		type = clipper_transport
+	}
+
+}
+

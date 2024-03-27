@@ -1,0 +1,146 @@
+TIN;Tiny;Tiny;Tiny;;Diminuto;;;;;;;;;x
+SMA;Small;Small;Small;;Pequeño;;;;;;;;;x
+MED;Medium;Medium;Medium;;Mediano;;;;;;;;;x
+LRG;Large;Large;Large;;Largo;;;;;;;;;x
+HUG;Huge;Huge;Huge;;Gigante;;;;;;;;;x
+STR;Strategic;Strategic;Strategic;;Estratégico;;;;;;;;;x
+acquire_state_tiny;Acquire State Tiny;Acquire State Tiny;Acquire State Tiny;;Adquirir Estado Diminuto;;;;;;;;;x
+acquire_state_tiny_desc;Acquire State Tiny;Acquire State Tiny;Acquire State Tiny;;Adquirir Estado Diminuto;;;;;;;;;x
+acquire_state_tiny_short;Acquire $STATE$; Prendre l'?at de $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_state_tiny_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$;$STATE$ von $RECIPIENT$ erobern.;;Adquirir $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_state_small_short;Acquire $STATE$; Prendre l'?at de $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_state_small_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$;$STATE$ von $RECIPIENT$ erobern.;;Adquirir $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_state_small_desc;Acquire State Small;Acquire State Small;Acquire State Small;;Adquirir Estado Pequeño;;;;;;;;;x
+acquire_state_small;Acquire State Small;Acquire State Small;Acquire State Small;;Adquirir Estado Pequeño;;;;;;;;;x
+acquire_state_medium_short;Acquire $STATE$; Prendre l'?at de $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_state_medium_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$;$STATE$ von $RECIPIENT$ erobern.;;Adquirir $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_state_medium_desc;Acquire State Medium;Acquire State Medium;Acquire State Medium;;Adquirir Estado Mediano;;;;;;;;;x
+acquire_state_medium;Acquire State Medium;Acquire State Medium;Acquire State Medium;;Adquirir Estado Mediano;;;;;;;;;x
+acquire_state_large_short;Acquire $STATE$; Prendre l'?at de $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_state_large_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$;$STATE$ von $RECIPIENT$ erobern.;;Adquirir $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_state_large_desc;Acquire State Large;Acquire State Large;Acquire State Large;;Adquirir Estado Largo;;;;;;;;;x
+acquire_state_large;Acquire State Large;Acquire State Large;Acquire State Large;;Adquirir Estado Largo;;;;;;;;;x
+acquire_state_huge_short;Acquire $STATE$; Prendre l'?at de $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_state_huge_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$;$STATE$ von $RECIPIENT$ erobern.;;Adquirir $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_state_huge_desc;Acquire State Huge;Acquire State Huge;Acquire State Huge;;Adquirir Estado Gigante;;;;;;;;;x
+acquire_state_huge;Acquire State Huge;Acquire State Huge;Acquire State Huge;;Adquirir Estado Gigante;;;;;;;;;x
+demand_concession_casus_belli_tiny_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;Demandez à ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonie abspaltet.;;Exigir que $RECIPIENT$ escinda territorio para formar una concesión colonial.;;;;;;;;;x;;
+demand_concession_casus_belli_tiny_short;Demand $STATE$;Demande $STATE$;Fordern Sie $STATE$;;Exigir $STATE$;;;;;;;;;x;;
+demand_concession_casus_belli_tiny_desc;Demand Concession Tiny;Demand Concession Tiny;;Demand Concession Tiny;;Demandar Concesión Diminuta;;;;;;;;;x
+demand_concession_casus_belli_tiny;Demand Concession Tiny;Demand Concession Tiny;;Demand Concession Tiny;;Demandar Concesión Diminuta;;;;;;;;;x
+demand_concession_casus_belli_small_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;Demandez à ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonie abspaltet.;;Exigir que $RECIPIENT$ escinda territorio para formar una concesión colonial.;;;;;;;;;x;;
+demand_concession_casus_belli_small_short;Demand $STATE$;Demande $STATE$;Fordern Sie $STATE$;;Exigir $STATE$;;;;;;;;;x;;
+demand_concession_casus_belli_small_desc;Demand Concession Small;;Demand Concession Small;Demand Concession Small;;Demandar Concesión Pequeña;;;;;;;;;x
+demand_concession_casus_belli_small;Demand Concession Small;;Demand Concession Small;Demand Concession Small;;Demandar Concesión Pequeña;;;;;;;;;x
+demand_concession_casus_belli_medium_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;Demandez à ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonie abspaltet.;;Exigir que $RECIPIENT$ escinda territorio para formar una concesión colonial.;;;;;;;;;x;;
+demand_concession_casus_belli_medium_short;Demand $STATE$;Demande $STATE$;Fordern Sie $STATE$;;Exigir $STATE$;;;;;;;;;x;;
+demand_concession_casus_belli_medium_desc;Demand Concession Medium;Demand Concession Medium;;Demand Concession Medium;;Demandar Concesión Mediana;;;;;;;;;x
+demand_concession_casus_belli_medium;Demand Concession Medium;Demand Concession Medium;;Demand Concession Medium;;Demandar Concesión Mediana;;;;;;;;;x
+demand_concession_casus_belli_large_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;Demandez à ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonie abspaltet.;;Exigir que $RECIPIENT$ escinda territorio para formar una concesión colonial.;;;;;;;;;x;;
+demand_concession_casus_belli_large_short;Demand $STATE$;Demande $STATE$;Fordern Sie $STATE$;;Exigir $STATE$;;;;;;;;;x;;
+demand_concession_casus_belli_large_desc;Demand Concession Large;Demand Concession Large;;Demand Concession Large;;Demandar Concesión Grande;;;;;;;;;x
+demand_concession_casus_belli_large;Demand Concession Large;Demand Concession Large;;Demand Concession Large;;Demandar Concesión Grande;;;;;;;;;x
+demand_concession_casus_belli_huge_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;Demandez à ce que $RECIPIENT$ fasse sécession d'un territoire pour former une concession coloniale.;Verlangen Sie, dass $RECIPIENT$ Gebiete zur Gründung einer Kolonie abspaltet.;;Exigir que $RECIPIENT$ escinda territorio para formar una concesión colonial.;;;;;;;;;x;;
+demand_concession_casus_belli_huge_short;Demand $STATE$;Demande $STATE$;Fordern Sie $STATE$;;Exigir $STATE$;;;;;;;;;x;;
+demand_concession_casus_belli_huge_desc;Demand Concession Huge;Demand Concession Huge;;Demand Concession Huge;;Demandar Concesión Gigante;;;;;;;;;x
+demand_concession_casus_belli_huge;Demand Concession Huge;Demand Concession Huge;;Demand Concession Huge;;Demandar Concesión Gigante;;;;;;;;;x
+free_peoples_tiny_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zur?k;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;x;;;;
+free_peoples_tiny_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x;;;;
+free_peoples_tiny_desc;Return Tiny Core;Return Tiny Core;Return Tiny Core;;Devolver Núcleo Diminuto;;;;;;;;;x
+free_peoples_tiny;Return Tiny Core;Return Tiny Core;Return Tiny Core;;Devolver Núcleo Diminuto;;;;;;;;;x
+free_peoples_small_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zur?k;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;x;;;;
+free_peoples_small_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x;;;;
+free_peoples_small_desc;Return Small Core;Return Small Core;Return Small Core;;Devolver Núcleo Pequeño;;;;;;;;;x
+free_peoples_small;Return Small Core;Return Small Core;Return Small Core;;Devolver Núcleo Pequeño;;;;;;;;;x
+free_peoples_medium_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zur?k;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;x;;;;
+free_peoples_medium_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x;;;;
+free_peoples_medium_desc;Return Medium Core;Return Medium Core;Return Medium Core;;Devolver Núcleo Mediano;;;;;;;;;x
+free_peoples_medium;Return Medium Core;Return Medium Core;Return Medium Core;;Devolver Núcleo Mediano;;;;;;;;;x
+free_peoples_large_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zur?k;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;x;;;;
+free_peoples_large_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x;;;;
+free_peoples_large_desc;Return Large Core;Return Large Core;Return Large Core;;Devolver Núcleo Grande;;;;;;;;;x
+free_peoples_large;Return Large Core;Return Large Core;Return Large Core;;Devolver Núcleo Grande;;;;;;;;;x
+free_peoples_huge_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zur?k;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;x;;;;
+free_peoples_huge_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x;;;;
+free_peoples_huge_desc;Return Huge Core;Return Huge Core;Return Huge Core;;Devolver Núcleo Gigante;;;;;;;;;x
+free_peoples_huge;Return Huge Core;Return Huge Core;Return Huge Core;;Devolver Núcleo Gigante;;;;;;;;;x
+acquire_core_state_tiny_setup;Acquire core $STATE$ from $RECIPIENT$;Prendre territoire cl?$STATE$ ?$RECIPIENT$;Kernprovinzregion $STATE$ von $RECIPIENT$ erobern.;;Adquirir el n?leo de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_core_state_tiny_short;Acquire $STATE$; Prendre le territoire cl?de $STATE$;Kernprovinzregion $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_core_state_tiny_desc;Acquire Tiny Core;Acquire Tiny Core;Acquire Tiny Core;;Adquirir Núcleo Diminuto;;;;;;;;;x
+acquire_core_state_tiny;Acquire Tiny Core;Acquire Tiny Core;Acquire Tiny Core;;Adquirir Núcleo Diminuto;;;;;;;;;x
+acquire_core_state_small_setup;Acquire core $STATE$ from $RECIPIENT$;Prendre territoire cl?$STATE$ ?$RECIPIENT$;Kernprovinzregion $STATE$ von $RECIPIENT$ erobern.;;Adquirir el n?leo de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_core_state_small_short;Acquire $STATE$; Prendre le territoire cl?de $STATE$;Kernprovinzregion $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_core_state_small_desc;Acquire Small Core;Acquire Small Core;Acquire Small Core;;Adquirir Núcleo Pequeño;;;;;;;;;x
+acquire_core_state_small;Acquire Small Core;Acquire Small Core;Acquire Small Core;;Adquirir Núcleo Pequeño;;;;;;;;;x
+acquire_core_state_medium_setup;Acquire core $STATE$ from $RECIPIENT$;Prendre territoire cl?$STATE$ ?$RECIPIENT$;Kernprovinzregion $STATE$ von $RECIPIENT$ erobern.;;Adquirir el n?leo de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_core_state_medium_short;Acquire $STATE$; Prendre le territoire cl?de $STATE$;Kernprovinzregion $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_core_state_medium_desc;Acquire Medium Core;Acquire Medium Core;Acquire Medium Core;;Adquirir Núcleo Mediano;;;;;;;;;x
+acquire_core_state_medium;Acquire Medium Core;Acquire Medium Core;Acquire Medium Core;;Adquirir Núcleo Mediano;;;;;;;;;x
+acquire_core_state_large_setup;Acquire core $STATE$ from $RECIPIENT$;Prendre territoire cl?$STATE$ ?$RECIPIENT$;Kernprovinzregion $STATE$ von $RECIPIENT$ erobern.;;Adquirir el n?leo de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_core_state_large_short;Acquire $STATE$; Prendre le territoire cl?de $STATE$;Kernprovinzregion $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_core_state_large_desc;Acquire Large Core;Acquire Large Core;Acquire Large Core;;Adquirir Núcleo Grande;;;;;;;;;x
+acquire_core_state_large;Acquire Large Core;Acquire Large Core;Acquire Large Core;;Adquirir Núcleo Grande;;;;;;;;;x
+acquire_core_state_huge_setup;Acquire core $STATE$ from $RECIPIENT$;Prendre territoire cl?$STATE$ ?$RECIPIENT$;Kernprovinzregion $STATE$ von $RECIPIENT$ erobern.;;Adquirir el n?leo de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+acquire_core_state_huge_short;Acquire $STATE$; Prendre le territoire cl?de $STATE$;Kernprovinzregion $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+acquire_core_state_huge_desc;Acquire Huge Core;Acquire Huge Core;Acquire Huge Core;;Adquirir Núcleo Grande;;;;;;;;;x
+acquire_core_state_huge;Acquire Huge Core;Acquire Huge Core;Acquire Huge Core;;Adquirir Núcleo Grande;;;;;;;;;x
+place_in_the_sun_tiny_setup;Acquire colony $STATE$ from $RECIPIENT$;Prendre colonie $STATE$ ?$RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erobern.;;Adquirir la colonia de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+place_in_the_sun_tiny_short;Acquire $STATE$; Prendre l'?at de $STATE$;Kolonie $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+place_in_the_sun_tiny_desc;Tiny Colony;Tiny Colony;Tiny Colony;;Colonia Diminuta;;;;;;;;;x
+place_in_the_sun_tiny;Tiny Colony;Tiny Colony;Tiny Colony;;Colonia Diminuta;;;;;;;;;x
+place_in_the_sun_small_setup;Acquire colony $STATE$ from $RECIPIENT$;Prendre colonie $STATE$ ?$RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erobern.;;Adquirir la colonia de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+place_in_the_sun_small_short;Acquire $STATE$; Prendre l'?at de $STATE$;Kolonie $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+place_in_the_sun_small_desc;Small Colony;Small Colony;Small Colony;;Colonia Pequeña;;;;;;;;;x
+place_in_the_sun_small;Small Colony;Small Colony;Small Colony;;Colonia Pequeña;;;;;;;;;x
+place_in_the_sun_medium_setup;Acquire colony $STATE$ from $RECIPIENT$;Prendre colonie $STATE$ ?$RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erobern.;;Adquirir la colonia de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+place_in_the_sun_medium_short;Acquire $STATE$; Prendre l'?at de $STATE$;Kolonie $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+place_in_the_sun_medium_desc;Medium Colony;Medium Colony;Medium Colony;;Colonia Mediana;;;;;;;;;x
+place_in_the_sun_medium;Medium Colony;Medium Colony;Medium Colony;;Colonia Mediana;;;;;;;;;x
+place_in_the_sun_large_setup;Acquire colony $STATE$ from $RECIPIENT$;Prendre colonie $STATE$ ?$RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erobern.;;Adquirir la colonia de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+place_in_the_sun_large_short;Acquire $STATE$; Prendre l'?at de $STATE$;Kolonie $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+place_in_the_sun_large_desc;Large Colony;Large Colony;Large Colony;;Colonia Grande;;;;;;;;;x
+place_in_the_sun_large;Large Colony;Large Colony;Large Colony;;Colonia Grande;;;;;;;;;x
+place_in_the_sun_huge_setup;Acquire colony $STATE$ from $RECIPIENT$;Prendre colonie $STATE$ ?$RECIPIENT$;Kolonie $STATE$ von $RECIPIENT$ erobern.;;Adquirir la colonia de $STATE$ de manos de $RECIPIENT$;;;;;;;;;x;;;;
+place_in_the_sun_huge_short;Acquire $STATE$; Prendre l'?at de $STATE$;Kolonie $STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x;;;;
+place_in_the_sun_huge_desc;Huge Colony;Huge Colony;Huge Colony;;Colonia Gigante;;;;;;;;;x
+place_in_the_sun_huge;Huge Colony;Huge Colony;Huge Colony;;Colonia Gigante;;;;;;;;;x
+demand_for_ally_tiny;Tiny Demand for ally T;Tiny Demand for ally;Tiny Demand for ally;;Demanda diminuta a un aliado;;;;;;;;;x
+demand_for_ally_tiny_setup;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;;Demandar $STATE$ a $THIRD$.;;;;;;;;;x
+demand_for_ally_tiny_short;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_tiny_desc;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_small;Small Demand for ally T;Small Demand for ally;Small Demand for ally;;Demanda pequeña a un aliado;;;;;;;;;x
+demand_for_ally_small_setup;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;;Demandar $STATE$ a $THIRD$.;;;;;;;;;x
+demand_for_ally_small_short;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_small_desc;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_medium;Medium Demand for ally T;Medium Demand for ally;Medium Demand for ally;;Demanda mediana a un aliado;;;;;;;;;x
+demand_for_ally_medium_setup;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;;Demandar $STATE$ a $THIRD$.;;;;;;;;;x
+demand_for_ally_medium_short;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_medium_desc;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_large;Large Demand for ally T;Large Demand for ally;Large Demand for ally;;Demanda grande a un aliado;;;;;;;;;x
+demand_for_ally_large_setup;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;;Demandar $STATE$ a $THIRD$.;;;;;;;;;x
+demand_for_ally_large_short;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_large_desc;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_huge;Huge Demand for ally T;Huge Demand for ally;Huge Demand for ally;;Demanda gigante a un aliado;;;;;;;;;x
+demand_for_ally_huge_setup;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;Demand $STATE$ to $THIRD$.;;Demandar $STATE$ a $THIRD$.;;;;;;;;;x
+demand_for_ally_huge_short;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+demand_for_ally_huge_desc;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;Transfer $STATE$ to $THIRD$;;Transferir $STATE$ a $THIRD$;;;;;;;;;x
+free_allied_cores_tiny;Free Tiny Allied Cores;Free Tiny Allied Cores;Free Tiny Allied Cores;;Liberar Nucleos Aliados Diminutos ;;;;;;;;;x
+free_allied_cores_tiny_desc;Free allied cores from a country;Free allied cores from a country;Free allied cores from a country;;Liberar Nucleos Aliados de un pais;;;;;;;;;x
+free_allied_cores_tiny_short;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x
+free_allied_cores_tiny_setup;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;;Liberar $THIRD$ de $SECONDS $STATE$;;;;;;;;;x
+free_allied_cores_small;Free Small Allied Cores;Free Tiny Allied Cores;Free Tiny Allied Cores;;Liberar Nucleos Aliados Pequeños;;;;;;;;;x
+free_allied_cores_small_desc;Free allied cores from a country;Free allied cores from a country;Free allied cores from a country;;Liberar Nucleos Aliados de un pais;;;;;;;;;x
+free_allied_cores_small_short;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x
+free_allied_cores_small_setup;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;;Liberar $THIRD$ de $SECONDS $STATE$;;;;;;;;;x
+free_allied_cores_medium;Free Medium Allied Cores;Free Tiny Allied Cores;Free Tiny Allied Cores;;Liberar Nucleos Aliados Medianos;;;;;;;;;x
+free_allied_cores_medium_desc;Free allied cores from a country;Free allied cores from a country;Free allied cores from a country;;Liberar Nucleos Aliados de un pais;;;;;;;;;x
+free_allied_cores_medium_short;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x
+free_allied_cores_medium_setup;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;;Liberar $THIRD$ de $SECONDS $STATE$;;;;;;;;;x
+free_allied_cores_large;Free Large Allied Cores;Free Tiny Allied Cores;Free Tiny Allied Cores;;Liberar Nucleos Aliados Grandes;;;;;;;;;x
+free_allied_cores_large_desc;Free allied cores from a country;Free allied cores from a country;Free allied cores from a country;;Liberar Nucleos Aliados de un pais;;;;;;;;;x
+free_allied_cores_large_short;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x
+free_allied_cores_large_setup;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;;Liberar $THIRD$ de $SECONDS $STATE$;;;;;;;;;x
+free_allied_cores_huge;Free Huge Allied Cores;Free Tiny Allied Cores;Free Tiny Allied Cores;;Liberar Diminutos Aliados Gigantes;;;;;;;;;x
+free_allied_cores_huge_desc;Free allied cores from a country;Free allied cores from a country;Free allied cores from a country;;Liberar Nucleos Aliados de un pais;;;;;;;;;x
+free_allied_cores_huge_short;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;$THIRD$ acquires $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;x
+free_allied_cores_huge_setup;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;Free $THIRD$ from $SECOND$ $STATE$;;Liberar $THIRD$ de $SECONDS $STATE$;;;;;;;;;x

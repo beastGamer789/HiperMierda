@@ -1,0 +1,232 @@
+#Taiping Rebellion
+country_event = {
+	id = 160001
+	title = "EVTNAME160001"
+	desc = "EVTDESC160001"
+	picture = rebellion
+	news = yes
+	news_desc_long = "EVTDESC160001_NEWS_LONG"
+	news_desc_medium = "EVTDESC160001_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC160001_NEWS_SHORT"
+
+	major = yes	
+	trigger = {
+		tag = QIN
+		NOT = { has_global_flag = taiping_has_happened }
+		year = 1847
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = "EVTOPTA160001"
+		any_owned = {
+			limit = {
+				is_core = TPG
+				not = { province_id = 1616 }
+			}
+			secede_province = TPG
+		}
+		TPG = {
+			capital = 2221
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		TPG = {
+		    
+		add_country_modifier = {
+		    name = china
+			duration = -1
+		}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					has_pop_religion = sunni
+					has_pop_culture = nanfaren
+					has_pop_culture = zhuang
+					has_pop_culture = yue
+				}
+			}
+			militancy = 5
+		}
+		war = {
+			target = TPG
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+        random_owned = {
+            TPG = {activate_technology = flintlock_rifles }
+        }
+		set_global_flag = taiping_has_happened
+	}
+	
+	option = {
+		name = "EVTOPTB160001"
+        random_owned = {
+            TPG = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+		any_owned = {
+			limit = {
+				is_core = TPG
+				not = { province_id = 1616 }
+			}
+			secede_province = TPG
+		}
+		TPG = {
+			capital = 2221
+			any_pop = {
+				consciousness = -5
+				militancy = -5
+			}
+		}
+		
+		TPG = {
+		    
+		add_country_modifier = {
+		    name = china
+			duration = -1
+		}
+		}
+		soldiers = {
+			militancy = 8
+		}
+		any_pop = {
+			limit = {
+				OR = {
+					has_pop_religion = sunni
+					has_pop_culture = nanfaren
+					has_pop_culture = zhuang
+					has_pop_culture = yue
+				}
+			}
+			militancy = 5
+		}		
+		war = {
+			target = TPG
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		set_global_flag = taiping_has_happened
+		change_tag_no_core_switch = TPG
+		add_country_modifier = {
+			name = "western_influences"
+			duration = -1
+		}
+		QIN = {
+			all_core = {
+		        add_core = TPG
+			}
+		}
+		GXI = {
+			all_core = {
+		        add_core = TPG
+			}
+		}
+		MCK = {
+			all_core = {
+		        add_core = TPG
+			}
+		}
+		YNN = {
+			all_core = {
+		        add_core = TPG
+			}
+		}
+		SXI = {
+			all_core = {
+		        add_core = TPG
+			}
+		}
+	}
+}
+
+#Anti-Manchu feeling
+province_event = {
+	id = 160502
+	title = "EVTNAME160502"
+	desc = "EVTDESC160502"
+	picture = rebellion
+	
+	trigger = {
+		owner = { tag = QIN }
+		not = { average_consciousness = 3 }
+		NOT = { has_global_flag = taiping_has_happened }
+		year = 1840
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		
+		modifier = {
+			factor = 0.7
+			has_province_modifier = local_opium_habit
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = western_presence		
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = foreign_smugglers
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = foreign_trading_post
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = european_military_mission
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = legation_quarter
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = kettler_denkmal
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA160502"
+		any_pop = {
+			limit = { is_primary_culture = no }
+			militancy = 5
+			consciousness = 3
+			reduce_pop = 0.98
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB160502"
+		any_pop = {
+			limit = { is_primary_culture = no }
+			consciousness = 5
+			militancy = 3
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}

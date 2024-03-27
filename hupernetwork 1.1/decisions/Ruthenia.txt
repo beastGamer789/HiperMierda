@@ -1,0 +1,206 @@
+
+political_decisions = {
+	ruthenia_exists1 = {
+	    picture = ruthenia
+	    potential = {
+			OR = {
+			    tag = BYE
+				tag = UKR
+			}
+			NOT = {
+				has_global_flag = ruthenia_exists
+			}
+		}
+		allow = {
+		    prestige = 30
+			war = no
+		    #
+		}
+		effect = {
+		    #
+			set_global_flag = ruthenia_exists
+			RUS_676 = { add_core = TNT }
+			RUS_958 = { add_core = TNT }
+			RUS_980 = { add_core = TNT }
+			RUS_676 = { add_core = TNT }
+			RUS_965 = { add_core = TNT }
+			964 = { add_core = TNT }
+			967 = { add_core = TNT }
+			966 = { add_core = TNT }
+			RUS_977 = { add_core = TNT }
+			RUS_1016 = { add_core = TNT }
+			RUS_943 = { add_core = TNT }
+			RUS_965 = { add_core = TNT }
+			RUS_718 = { add_core = TNT }
+			RUS_706 = { add_core = TNT }
+			RUS_710 = { add_core = TNT }
+			944 = { add_core = TNT }
+			949 = { add_core = TNT }
+			948 = { add_core = TNT }
+			945 = { add_core = TNT }
+			946 = { add_core = TNT }
+			947 = { add_core = TNT }
+			956 = { add_core = TNT }
+			955 = { add_core = TNT }
+			957 = { add_core = TNT }
+			937 = { add_core = TNT }
+			719 = { add_core = TNT }
+			936 = { add_core = TNT }
+			939 = { add_core = TNT }
+			938 = { add_core = TNT }
+			940 = { add_core = TNT }
+			1016 = { add_core = TNT }
+			1015 = { add_core = TNT }
+			1014 = { add_core = TNT }
+			1010 = { add_core = TNT }
+			1009 = { add_core = TNT }
+			1045 = { add_core = TNT }
+			1046 = { add_core = TNT }
+			979 = { add_core = TNT }
+			1047 = { add_core = TNT }
+			702 = { add_core = TNT }
+			952 = { add_core = TNT }
+			953 = { add_core = TNT }
+			951 = { add_core = TNT }
+			703 = { add_core = TNT }
+			714 = { add_core = TNT }
+			704 = { add_core = TNT }
+			705 = { add_core = TNT }
+			365 = { add_core = TNT }
+			364 = { add_core = TNT }
+			363 = { add_core = TNT }
+			362 = { add_core = TNT }
+			361 = { add_core = TNT }
+			360 = { add_core = TNT }
+			359 = { add_core = TNT }
+			358 = { add_core = TNT }
+			357 = { add_core = TNT }
+			356 = { add_core = TNT }
+			355 = { add_core = TNT }
+			354 = { add_core = TNT }
+			RUS_713 = { add_core = TNT }
+		}
+	}	
+
+	form_ruthenia1 = {
+	    picture = ruthenia
+	    potential = {
+		    #   
+			NOT = {
+			    exists = TNT
+			}
+			OR = {
+			    tag = BYE
+				tag = UKR
+			}
+			has_global_flag = ruthenia_exists
+			
+		}
+		allow = {
+		    prestige = 50
+			war = no
+			TNT = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    tag = THIS
+							vassal_of = THIS
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			change_tag = TNT
+			capital = 958
+			add_accepted_culture = byelorussian
+			add_accepted_culture = ukrainian
+			add_accepted_culture = russian
+			add_accepted_culture = polish
+			353 = { add_core = TNT }
+			351 = { add_core = TNT }
+			349 = { add_core = TNT }
+			350 = { add_core = TNT }
+			352 = { add_core = TNT }
+			994 = { add_core = TNT }
+			996 = { add_core = TNT }
+			997 = { add_core = TNT }
+			1004 = { add_core = TNT }
+			1003 = { add_core = TNT }
+			1005 = { add_core = TNT }
+			2580 = { add_core = TNT }
+			698 = { add_core = TNT }
+			697 = { add_core = TNT }
+			695 = { add_core = TNT }
+			696 = { add_core = TNT }
+			694 = { add_core = TNT }
+			693 = { add_core = TNT }
+			690 = { add_core = TNT }
+			1006 = { add_core = TNT }
+			any_country = {
+				limit = {
+					in_sphere = THIS
+				}
+				any_owned = {
+					limit = {
+						is_core = TNT
+					}
+					secede_province = THIS
+				}
+			}
+			any_country = {
+			    limit = {
+				     vassal_of = THIS
+					 OR = {
+					     primary_culture = byelorussian
+					     primary_culture = russian
+					     primary_culture = ukrainian
+					     primary_culture = polish
+					     accepted_culture = byelorussian
+					     accepted_culture = russian
+					     accepted_culture = ukrainian
+					     accepted_culture = polish
+					 }
+				}
+				country_event = { id=11101 days=0 }
+			}
+		}
+	}
+    the_rising_empire_ruthenia = {
+	    picture = ruthenia
+	    potential = {
+		    tag = TNT
+			is_greater_power = yes
+		}
+		allow = {
+		    prestige = 100
+			military_score = 150
+		}
+		effect = {
+			RUS_1090 = {add_core=THIS}
+			RUS_1052 = {add_core=THIS}
+			RUS_1102 = {add_core=THIS}
+			RUS_1098 = {add_core=THIS}
+			RUS_1041 = {add_core=THIS}
+			RUS_1037 = {add_core=THIS}
+			RUS_340 = {add_core=THIS}
+			RUS_336 = {add_core=THIS}
+			RUS_339 = {add_core=THIS}
+			RUS_1182 = {add_core=THIS}
+			RUS_1060 = {add_core=THIS}
+			RUS_998 = {add_core=THIS}
+			RUS_981 = {add_core=THIS}
+			RUS_990 = {add_core=THIS}
+			RUS_1020 = {add_core=THIS}
+			RUS_2589 = {add_core=THIS}
+			RUS_1026 = {add_core=THIS}
+			RUS_2685 = {add_core=THIS}
+			RUS_1008 = {add_core=THIS}
+			RUS_1048 = {add_core=THIS}
+		}
+	}
+}

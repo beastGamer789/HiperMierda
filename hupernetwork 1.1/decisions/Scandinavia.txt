@@ -1,0 +1,263 @@
+
+political_decisions = {
+	sca_annex_finland = {
+	    picture = concede_finland
+		potential = {
+			tag = SCA
+			exists = FIN
+		}
+		
+		allow = {
+		    FIN = {in_sphere = THIS}
+		}
+		effect = {
+			prestige = 19
+			inherit = FIN
+			FIN = {all_core = {add_core = THIS}}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mission_tobaltic = {
+	    picture = baltic_mission
+		potential = {
+			tag = SCA
+			NOT = {has_country_flag = baltic_mission}
+		}
+		
+		allow = {
+		    prestige = 160
+			is_greater_power = yes
+		}
+		effect = {
+			prestige = 19
+			set_country_flag = baltic_mission
+            add_accepted_culture = estonian
+			RUS_349 = {add_core = THIS}
+			MEC_544 = {add_core = THIS}
+			PRU_547 = {add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mission_toscotland = {
+	    picture = toscotland
+		potential = {
+			tag = SCA
+			NOT = {has_country_flag = toscotland}
+			has_country_flag = baltic_mission
+		}
+		
+		allow = {
+			all_core = {owned_by = THIS}
+			war = no
+		}
+		effect = {
+			prestige = 19
+			set_country_flag = toscotland
+            add_accepted_culture = scottish
+			ENG_266 = {add_core = THIS}
+			ENG_271 = {add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_scursia = {
+	    picture = scursia
+	    potential = {
+		    #   
+			NOT = {
+			    exists = SCU
+				has_country_flag = toscotland
+			}
+			has_country_flag = baltic_mission
+			
+		}
+		allow = {
+		    prestige = 50
+			NOT = {has_country_flag = toscotland}
+			994 = {controlled_by = THIS}
+			1008 = {controlled_by = THIS}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			change_tag = SCU
+			SCA={all_core={remove_core=SCA}}
+			994 = {
+				change_province_name = "Sankt Petersborg"
+			}
+			add_accepted_culture = russian
+			RUS_360 = {add_core = THIS}
+			RUS_354 = {add_core = THIS}
+			RUS_947 = {add_core = THIS}
+			RUS_998 = {add_core = THIS}
+			RUS_1009 = {add_core = THIS}
+			RUS_1003 = {add_core = THIS}
+			RUS_943 = {add_core = THIS}
+			RUS_981 = {add_core = THIS}
+			RUS_1008 = {add_core = THIS}
+			RUS_994 = {add_core = THIS}
+			RUS_990 = {add_core = THIS}
+			RUS_339 = {add_core = THIS}
+			any_country = {
+			    limit = {
+				    OR={
+					    primary_culture = russian
+						accepted_culture = russian
+					}
+					OR={
+					    in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = {id=11101 days=0}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	expand_scursia = {
+	    picture = scursia
+	    potential = {
+		    #
+			tag = SCU
+			NOT={has_country_flag = expand_scursia}
+			
+		}
+		allow = {
+		    prestige = 150
+			all_core = {owned_by = THIS}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			RUS = {all_core ={add_core=THIS}}
+			set_country_flag = expand_scursia
+			any_country = {
+			    limit = {
+				    OR={
+					    primary_culture = russian
+						accepted_culture = russian
+					}
+					OR={
+					    in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = {id=11101 days=0}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_germaninav = {
+	    picture = germaninav
+	    potential = {
+		    #   
+			NOT = {
+			    exists = GAV
+				has_country_flag = toscotland
+			}
+			has_country_flag = baltic_mission
+			
+		}
+		allow = {
+		    prestige = 50
+			NOT = {has_country_flag = toscotland}
+			530 = {owned_by = THIS}
+			695 = {controlled_by = THIS}
+			549 = {controlled_by = THIS}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			change_tag = GAV
+			SCA={all_core={remove_core=SCA}}
+			capital = 538
+			add_accepted_culture = german
+			any_country = {
+			    limit = {
+				    OR={
+					    primary_culture = german
+						accepted_culture = german
+					}
+					OR={
+					    in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = {id=11101 days=0}
+			}
+			MEC_544={add_core = THIS}
+			PRU_547={add_core = THIS}
+			PRU_546={add_core = THIS}
+			PRU_690={add_core = THIS}
+			PRU_695={add_core = THIS}
+			535={add_core = THIS}
+			532={add_core = THIS}
+			531={add_core = THIS}
+			528={add_core = THIS}
+			PRU_682={add_core = THIS}
+			PRU_701={add_core = THIS}
+			PRU_549={add_core = THIS}
+			HAN_534={add_core = THIS}
+			PRU_581={add_core = THIS}
+			HAN_543={add_core = THIS}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	germaninav_expansion = {
+	    picture = germaninav2
+	    potential = {
+		    #   
+			NOT = {
+				has_country_flag = germaninav_expansion
+			}
+			tag = GAV
+			
+		}
+		allow = {
+		    prestige = 150
+			all_core = {owner={OR={tag=THIS in_sphere=THIS vassal_of=THIS}}}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			set_country_flag = germaninav_expansion
+			any_country = {
+			    limit = {
+				    OR={
+					    primary_culture = german
+						accepted_culture = german
+					}
+					OR={
+					    in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				country_event = {id=11101 days=0}
+			}
+			GER={all_core={add_core=THIS}}
+			533={all_core={add_core=THIS}}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

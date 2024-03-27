@@ -1,0 +1,268 @@
+#ARMY#################################################################################
+infantry_incivilized = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	
+	dig_in_cap = 1
+	combat_width = -1
+	army_base = {
+		default_organisation = 5
+		supply_consumption = 0.10
+	}
+}
+infantry_new_incivilized = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	
+	army_base = {
+		default_organisation = 10
+		supply_consumption = 0.10
+	}
+}
+infantry_newer_incivilized = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	
+	army_base = {
+		default_organisation = 5
+		supply_consumption = 0.10
+	}
+}
+incivilized_forts = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	army_base = {
+		default_organisation = 2.5
+		supply_consumption = 0.5
+	}
+	
+	activate_building = fort	
+	max_fort = 1
+}
+infantry_civilized_incivilized = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	
+	activate_unit = infantry
+}
+infantry_artillery_incivilized = {
+	area = army_incivilized
+	year = 1836
+	cost = 0 #0
+	unciv_military = yes
+	
+	activate_unit = artillery
+}
+#PRODUCTION#################################################################################
+basic_mining = {
+	area = production_incivilized
+	year = 1836
+	cost = 0 #3600
+    
+    
+	mine_rgo_eff = 0.01
+}
+basic_farming = {
+	area = production_incivilized
+	year = 1836
+	cost = 0 #3600
+    
+    
+	farm_rgo_eff = 0.01
+}
+intermedium_farming = {
+	area = production_incivilized
+	year = 1836
+	cost = 0 #3600
+    
+    
+	farm_rgo_eff = 0.01	
+}
+intermedium_mining = {
+	area = production_incivilized
+	year = 1836
+	
+	mine_rgo_eff = 0.01
+}
+advanced_farming = {
+	area = production_incivilized
+	year = 1836
+	cost = 0 #3600
+    
+    
+	farm_rgo_eff = 0.01
+}
+advanced_mining = {
+	area = production_incivilized
+	year = 1836
+	cost = 0 #3600
+    
+    
+	mine_rgo_eff = 0.01
+}
+#NAVAL#################################################################################
+naval_bases = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	activate_building = naval_base
+}
+navy_organisation = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	navy_base = {
+		default_organisation = 5
+	}
+}
+navy_newsystem = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	navy_base = {
+		default_organisation = 5
+	}
+}
+navy_organisationsystem = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	navy_base = {
+		default_organisation = 5
+	}
+}
+navy_organisation2 = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	navy_base = {
+		default_organisation = 5
+	}
+}
+navy_westernorganisation = {
+	area = naval_incivilized
+	year = 1836
+	cost = 0 #3600
+	unciv_military = yes
+	
+	navy_base = {
+		default_organisation = 20
+	}
+}
+#SOCIETY########################################################
+society_basicschools = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	education_efficiency = 0.075
+}
+society_schoolsmedicinesystem = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	supply_limit = 0.075
+}
+society_semiadvancedschools = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	education_efficiency = 0.075
+}
+society_advancedschoolsmedicinesystem = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	supply_limit = 0.075
+}
+society_westernschools = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	education_efficiency = 0.075
+}
+society_westernschoolsmedicinesystem = {
+	area = societyandmedicine_incivilized
+	year = 1836
+	cost = 0 #3600
+
+	supply_limit = 0.075
+}
+#ADMINISTRATIVE###############################
+administrative_incivilizedresearch = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	increase_research = 0.10
+	
+}
+administrative_bettertaxationsystem = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	tax_eff = 1
+	
+}
+administrative_newresearch = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	increase_research = 0.20
+	
+}
+administrative_advancedtaxationsystem = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	tax_eff = 2
+	
+}
+administrative_westernresearch = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	increase_research = 0.35
+	
+}
+administrative_railroads = {
+	area = administrative_incivilized
+	year = 1836
+	cost = 0 #3600
+
+
+	activate_building = railroad
+}

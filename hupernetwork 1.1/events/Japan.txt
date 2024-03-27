@@ -1,0 +1,429 @@
+country_event = {
+	id = 25120
+	title = "EVTNAME25120"
+	desc = "EVTDESC25120"
+
+	major = yes	
+	trigger = {
+	    year = 1838
+		tag = TKG
+		NOT = {owns = 1644}
+		NOT={has_global_flag=ezo_islandsquestion}
+		money = 1000
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25120"
+		prestige = 15
+		money = -100000
+		set_global_flag=ezo_islandsquestion
+		JAP_1088 = {secede_province = THIS add_core = THIS}
+		1654 = {secede_province = THIS add_core = THIS}
+		1087 = {add_core = THIS}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25121
+	title = "EVTNAME25121"
+	desc = "EVTDESC25121"
+
+	major = yes	
+	trigger = {
+		war = no
+		exists = IMJ
+		tag = TKG
+		exists = TKG
+		IMJ = {civilized=yes}
+		NOT = {has_global_flag = japan_civil_war_starts}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA25121"
+		prestige = 5
+		set_global_flag = japan_civil_war_starts
+		release_vassal = IMJ
+		release_vassal = SAT
+		release_vassal = YZW
+		release_vassal = SEN
+		release_vassal = KAG
+		release_vassal = CHO
+		leave_alliance = IMJ
+		leave_alliance = SAT
+		leave_alliance = YZW
+		leave_alliance = CHO
+		leave_alliance = SEN
+		leave_alliance = KAG
+		IMJ = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		SAT = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		YZW = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		KAG = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		SEN = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		CHO = {
+		war = {
+		    target = TKG
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = conquest
+			}
+			call_ally = yes
+		}}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25122
+	title = "EVTNAME25122"
+	desc = "EVTDESC25122"
+
+	major = yes	
+	trigger = {
+		OR = {
+			tag = IMJ
+			tag = CHO
+			tag = KAG
+			tag = SAT
+			tag = SEN
+			tag = TOS
+			tag = YZW
+		}
+		OR = {
+		    1649 = {controlled_by=THIS}
+			owns = 1649
+		}
+		NOT={has_global_flag=edo_ocupation}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25122"
+		prestige = 5
+		inherit = CHO
+		inherit = KAG
+		inherit = SAT
+		inherit = SEN
+		inherit = TKG
+		inherit = TOS
+		inherit = YZW
+		inherit = IMJ
+		1679 = {add_core = THIS}
+		TKG = {all_core = {add_core = THIS remove_core = TKG}}
+		CHO = {all_core = {remove_core = CHO}}
+		KAG = {all_core = {remove_core = KAG}}
+		SAT = {all_core = {remove_core = SAT}}
+		SEN = {all_core = {remove_core = SEN}}
+		TOS = {all_core = {remove_core = TOS}}
+		YZW = {all_core = {remove_core = YZW}}
+		research_points = 25000
+		JAP_1088 = {add_core = EZO}
+		release_vassal = EZO
+		EZO = {all_core={secede_province=EZO}}
+		set_global_flag=edo_ocupation
+		capital = 1649
+		JAP_1088 = {dd_core = THIS}
+		1654 = {add_core = THIS}
+		1087 = {add_core = THIS}
+		1678 = {add_core = THIS}
+		1679 = {add_core = THIS}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 25123
+	title = "EVTNAME25123"
+	desc = "EVTDESC25123"
+
+	major = yes	
+	trigger = {
+	    exists = EZO
+		tag = IMJ
+		civilized = yes
+		NOT={has_global_flag=ezorebellion2}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA25123"
+		prestige = 15
+		release_vassal = EZO
+		set_global_flag=ezorebellion2
+		war = {
+		    target = EZO
+			attacker_goal = {
+			    casus_belli = conquest
+			}
+			defender_goal = {
+			    casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25123"
+		prestige = -15
+		release_vassal = EZO
+		set_global_flag=ezorebellion2
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 25124
+	title = "EVTNAME25124"
+	desc = "EVTDESC25124"
+
+	major = yes	
+	trigger = {
+	    NOT = {exists = EZO}
+		tag = IMJ
+		civilized = yes
+		EZO = {all_core = {owned_by = THIS}}
+		NOT={has_global_flag=ezorebellion}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA25124"
+		prestige = 15
+		JAP_1088 = {
+		    any_pop = {
+			    militancy = 5
+				consciousness = 6
+			}
+		}
+		set_global_flag=ezorebellion
+		add_accepted_culture = ainu
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB25124"
+		prestige = -15
+		release_vassal = EZO
+		EZO = {all_core={secede_province=EZO}}
+		EZO = {all_core={remove_core=THIS}}
+		set_global_flag=ezorebellion
+		any_owned = {
+			any_pop = {
+				militancy = 8
+				consciousness = 10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 8173
+	title = "EVTNAME8173"
+	desc = "EVTDESC8173"
+
+	major = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8173"
+		prestige = -15
+		IMJ = {country_event = { id=8174 days=0 }}
+	}
+	option = {
+		name = "EVTOPTB8173"
+		prestige = 15
+		IMJ = {country_event = { id=8176 days=0 }}
+	}
+}
+country_event = {
+	id = 8174
+	title = "EVTNAME8174"
+	desc = "EVTDESC8174"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8173"
+		prestige = -15
+		any_country = {
+		    limit = {
+			    is_our_vassal = FROM
+			}
+			country_event = { id=8175 days=0 }
+		}
+		THIS = {
+		    create_alliance = KOR
+		    create_vassal = KOR
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 8175
+	title = "EVTNAME8175"
+	desc = "EVTDESC8175"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8175"
+		prestige = 15
+		THIS = {
+		war = {
+		    target = KOR
+			attacker_goal = {
+			    casus_belli = get_puppet
+			}
+			call_ally = yes
+		}}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB8175"
+		prestige = -50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 8176
+	title = "EVTNAME8176"
+	desc = "EVTDESC8176"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8176"
+		prestige = 15
+		any_country = {
+		    limit = {
+			    is_our_vassal = FROM
+			}
+			create_alliance = KOR
+		}
+		THIS = {
+		war = {
+		    target = KOR
+			attacker_goal = {
+			    casus_belli = get_puppet
+			}
+			call_ally = yes
+		}}
+		any_country = {
+		    limit = {
+			    is_our_vassal = FROM
+			}
+			release_vassal = KOR
+			set_country_flag = korean_war
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB8176"
+		prestige = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 8177
+	title = "EVTNAME8177"
+	desc = "EVTDESC8177"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8177"
+		prestige = 50
+		FROM = {inherit = THIS}
+		FROM = {release_vassal = THIS}
+		FROM = {diplomatic_influence = { who = THIS value = 300 level = 5 influence_value = 100}}
+		FROM = {relation = { who = THIS value = 300}}
+	}
+}

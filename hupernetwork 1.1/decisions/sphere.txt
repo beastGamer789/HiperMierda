@@ -1,0 +1,40 @@
+political_decisions = {
+	puppet_sphere = {
+	    potential = {
+			is_greater_power = yes
+			ai = no
+			NOT = {has_country_modifier = puppet_sphere}
+		}
+		allow = {
+		     war = no
+		}
+		effect = {
+		    badboy = 1
+			set_country_flag=puppet_sphere
+			
+		add_country_modifier = {
+			name = puppet_sphere
+			duration = 912
+		}
+		}
+	}
+	puppet_sphere2 = {
+	    potential = {
+			is_greater_power = yes
+			ai = no
+			NOT = {has_country_modifier = puppet_sphere_conquer}
+		}
+		allow = {
+		     war = no
+		}
+		effect = {
+		    badboy = 10
+			set_country_flag=puppet_sphere_conquer
+			
+		add_country_modifier = {
+			name = puppet_sphere_conquer
+			duration = 1825
+		}
+		}
+	}
+}

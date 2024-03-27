@@ -1,0 +1,6 @@
+owner = QIN
+controller = QIN
+add_core = QIN
+add_core = GXI
+trade_goods = tropical_wood
+life_rating = 32

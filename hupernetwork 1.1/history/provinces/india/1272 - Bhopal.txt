@@ -1,0 +1,8 @@
+owner = BRJ
+controller = BRJ
+add_core = BRJ
+ 
+add_core = BHO
+add_core = HND
+trade_goods = dye
+life_rating = 32

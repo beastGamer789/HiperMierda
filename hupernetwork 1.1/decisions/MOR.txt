@@ -1,0 +1,75 @@
+
+political_decisions = {
+
+	grand_morocco = {
+	    picture = grand_morocco
+		potential = {
+			tag = MOR
+			NOT = {has_country_flag = grand_morocco}
+			has_country_flag = owns_tindouf
+		}
+		
+		allow = {
+		    #
+			prestige = 50
+			bronze_muzzle_loaded_artillery = 1
+			owns = 1716
+			year = 1842
+		}
+		effect = {
+			prestige = 35
+			set_country_flag = grand_morocco
+			ALD_1704 = {add_core = THIS}
+			FRA_1700 = {add_core = THIS}
+			MOR_1688 = {add_core = THIS}
+			SPA_512 = {add_core = THIS}
+			SPA_513 = {add_core = THIS}
+			SPA_517 = {add_core = THIS}
+			MOR_1696 = {add_core = THIS}
+			government = empire
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	reclaim_tindouf = {
+	    picture = grand_morocco
+		potential = {
+			tag = MOR
+			NOT = {has_country_flag = owns_tindouf}
+		}
+		
+		allow = {
+		    #
+			prestige = 10
+			year = 1837
+		}
+		effect = {
+			prestige = 25
+			1716 = {add_core = THIS}
+			1716 = {secede_province = THIS}
+			set_country_flag = owns_tindouf
+		}
+	}
+	claim_western_sahara = {
+	    picture = grand_morocco
+		potential = {
+			tag = MOR
+			NOT = {has_country_flag = owns_western_sahara}
+			has_country_flag = owns_tindouf
+		}
+		
+		allow = {
+		    #
+			owns = 2136
+			owns = 1696
+			NOT = {year = 1870}
+		}
+		effect = {
+			prestige = 35
+			1773 = {secede_province = THIS}
+			1774 = {secede_province = THIS}
+			set_country_flag = owns_western_sahara
+		}
+	}
+}

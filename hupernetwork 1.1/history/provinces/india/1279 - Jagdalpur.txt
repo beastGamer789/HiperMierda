@@ -1,0 +1,8 @@
+owner = BRJ
+controller = BRJ
+add_core = BRJ
+add_core = BAS
+add_core = HND
+	colonial = 2
+trade_goods = grain
+life_rating = 32

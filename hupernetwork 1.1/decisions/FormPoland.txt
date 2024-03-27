@@ -1,0 +1,26 @@
+political_decisions = {
+    form_poland = {
+	    picture = poland
+	    potential = {
+		    OR = {
+			    tag = KRA
+				AND = {
+				    tag = CPL
+					is_independant = yes
+				}
+			}
+			NOT = {
+			    exists = POL
+			}
+		}
+		allow = {
+		    war = no
+			prestige = 50
+			owns = 706
+		}
+		effect = {
+		    prestige = 25
+			change_tag = POL
+		}
+	}
+}

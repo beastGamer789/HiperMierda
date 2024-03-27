@@ -1,0 +1,9 @@
+owner = ENG
+controller = ENG
+ 
+add_core = MUG
+add_core = HND
+trade_goods = tea
+terrain = delhi
+life_rating = 32
+colonial = 2

@@ -1,0 +1,83 @@
+
+political_decisions = {
+
+	form_iberia = {
+	    picture = iberia
+	    potential = {
+		    #   
+			NOT = {
+			    exists = IBE
+				tag = SCM
+				has_country_flag = iberia_formed
+			}
+			is_culture_group = iberian
+			
+		}
+		allow = {
+		    prestige = 80
+			war = no
+			OR={
+			IBE = {
+			    all_core = {
+				    owner = {
+					    OR = {
+						    in_sphere = THIS
+							vassal_of = THIS
+							tag = THIS
+						}
+					}
+				}
+			}
+			POR = {OR={vassal_of = THIS in_sphere = THIS}}
+			SPC	= {OR={vassal_of = THIS in_sphere = THIS}}
+			SPA	= {OR={vassal_of = THIS in_sphere = THIS}}
+			}
+		    #
+		}
+		effect = {
+		    #
+			prestige = 25
+			change_tag = IBE
+			set_country_flag = iberia_formed
+			add_accepted_culture = portuguese
+			add_accepted_culture = basque
+			add_accepted_culture = catalan
+			add_accepted_culture = spanish
+			any_country = {
+				limit = {
+					OR = {
+					    in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = IBE
+					}
+					secede_province = THIS
+				}
+			}
+			any_country = {
+				limit = {
+				OR = {
+				    vassal_of = THIS
+					in_sphere = THIS
+				}
+				OR = {
+			primary_culture = portuguese
+			primary_culture = basque
+			primary_culture = catalan
+			primary_culture = spanish
+			    }
+				}
+				country_event = { id=11101 days=0 }
+			}
+			464 = {add_core = THIS}
+			460 = {add_core = THIS}
+			SPA = {all_core = {add_core = THIS}}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}
